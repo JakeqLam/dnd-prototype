@@ -1,0 +1,11 @@
+LightOccluder2D
+DirectionalLight2D
+PointLight2D
+CanvasModulate
+Timer
+Node2D
+Node
+TileMap
+CollisionShape2D
+Area2D
+CharacterBody2D

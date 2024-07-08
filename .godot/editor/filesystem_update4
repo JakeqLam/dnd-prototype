@@ -1,0 +1,5 @@
+res://Mob.tscn
+res://scripts/mob.gd
+res://Player.tscn
+res://scripts/Player.gd
+res://world.tscn
