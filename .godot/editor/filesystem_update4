@@ -1,5 +1,3 @@
-res://Mob.tscn
-res://scripts/mob.gd
 res://Player.tscn
-res://scripts/Player.gd
-res://world.tscn
+res://Mob.tscn
+res://entity/Player/PlayerKnight.tscn
