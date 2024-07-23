@@ -1,11 +1,1 @@
-res://world.tscn
-res://scripts/global.gd
-res://UI/UI.tscn
-res://Unit_Base.tscn
 res://Knight.tscn
-res://Unit_Base.gd
-res://Camera2D.gd
-res://Knight.gd
-res://scripts/Player.tscn
-res://scripts/Player.gd
-res://scripts/Mob.tscn
