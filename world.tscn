@@ -1,11 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=12 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="Script" path="res://scripts/global.gd" id="1_mwe6s"]
-[ext_resource type="PackedScene" uid="uid://rkdnhqgf2hpj" path="res://Mob.tscn" id="2_5gfqk"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="2_j55q0"]
 [ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://assets/tilesets/plains.png" id="3_71mun"]
-[ext_resource type="PackedScene" uid="uid://4vwrqjegqwpj" path="res://Player.tscn" id="3_ohkvk"]
 [ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://assets/tilesets/grass.png" id="4_bfjrf"]
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://assets/tilesets/objects/objects.png" id="5_jyxe5"]
+[ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://Knight.tscn" id="6_1u1g3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
+bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.717647, 0.298039, 0.560784)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 6
+anti_aliasing = false
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g8by"]
 texture = ExtResource("3_71mun")
@@ -327,6 +342,16 @@ sources/2 = SubResource("TileSetAtlasSource_kjsmq")
 y_sort_enabled = true
 script = ExtResource("1_mwe6s")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+script = ExtResource("2_j55q0")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpijq")
+
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 position = Vector2(450, 107)
@@ -339,8 +364,12 @@ layer_1/y_sort_enabled = true
 layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(851943, 2, 5, 720894, 2, 5, 1048570, 2, 5, -65538, 2, 5, -65561, 2, 5, -327701, 2, 5, 720869, 2, 5, 1114087, 2, 5, 1048555, 2, 5, 1114111, 2, 5, -327687, 2, 5, -327683, 2, 5, 983013, 524290, 5, 1114109, 524290, 5, 1179630, 655362, 5, 851968, 655362, 5, -27, 655362, 7, -393226, 655362, 7, -131072, 655362, 7, -262168, 131074, 1, -262153, 131074, 1, 917481, 131074, 1, 983036, 131074, 1, 393216, 131074, 1, 589798, 131074, 1, 983028, 524290, 5, 327674, 655362, 5, -65555, 655362, 5, 786426, 65538, 1, 786411, 65538, 1, -7, 2, 5, 589802, 2, 5, 589819, 2, 5, 983023, 2, 5, 1114101, 2, 5, 262141, 2, 5, 327655, 2, 5, 131049, 2, 5, -196619, 2, 5, -262160, 2, 5, 131051, 393218, 7, 65532, 393218, 7, 524286, 393218, 7, -11, 393218, 7)
 
-[node name="Player" parent="." instance=ExtResource("3_ohkvk")]
-position = Vector2(180, 213)
+[node name="Units" type="Node2D" parent="."]
 
-[node name="mob" parent="." instance=ExtResource("2_5gfqk")]
-position = Vector2(302, 210)
+[node name="Knight" parent="Units" instance=ExtResource("6_1u1g3")]
+position = Vector2(242, 172)
+
+[node name="Knight2" parent="Units" instance=ExtResource("6_1u1g3")]
+position = Vector2(253, 200)
+
+[connection signal="area_selected" from="Camera2D" to="Units/Knight" method="_on_camera_2d_area_selected"]
