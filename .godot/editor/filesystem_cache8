@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721713665
+::res://::1721760119
 Camera2D.gd::GDScript::-1::1721713547::0::1::::<>Camera2D<>::
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1721713547::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 Knight.gd::GDScript::-1::1721713547::0::1::::<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1721713547::0::1::::<><>::uid://bse7yjdllukj4::::res://Unit_Base.tscn<>res://Knight.gd<>uid://uac60mxbct7l::::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight-Walk.png
+Knight.tscn::PackedScene::963521029383266819::1721715374::0::1::::<><>::uid://bse7yjdllukj4::::res://Unit_Base.tscn<>res://Knight.gd<>uid://uac60mxbct7l::::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight-Walk.png
 Unit_Base.gd::GDScript::-1::1721713547::0::1::::<>CharacterBody2D<>::
-Unit_Base.tscn::PackedScene::3660063660876019303::1721713547::0::1::::<><>::res://Unit_Base.gd
-world.tscn::PackedScene::6469066510429512572::1721713547::0::1::::<><>::res://scripts/global.gd<>res://Camera2D.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Knight.tscn
+Unit_Base.tscn::PackedScene::3660063660876019303::1721715374::0::1::::<><>::res://Unit_Base.gd
+world.tscn::PackedScene::6469066510429512572::1721715374::0::1::::<><>::res://scripts/global.gd<>res://Camera2D.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Knight.tscn
 ::res://assets/::1721713547
 ::res://assets/fonts/::1721713547
 FONTLOG.txt::TextFile::-1::1721713547::0::1::::<><>::

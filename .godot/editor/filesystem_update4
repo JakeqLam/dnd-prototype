@@ -1,1 +1,8 @@
 res://Knight.tscn
+res://world.tscn
+res://Unit_Base.tscn
+res://AnimationPlayer.gd
+res://Unit_Base.gd
+res://scripts/global.gd
+res://Camera2D.gd
+res://Knight.gd

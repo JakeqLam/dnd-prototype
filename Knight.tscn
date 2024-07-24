@@ -7,6 +7,7 @@
 
 [sub_resource type="Animation" id="Animation_fkxt2"]
 length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,6 +44,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [6]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="Animation" id="Animation_xjg5s"]
 resource_name = "Idle"
@@ -63,26 +76,38 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/path = NodePath("Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [6]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/path = NodePath("Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_jgqou"]
@@ -125,6 +150,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [8]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vcnj6"]
 _data = {
@@ -133,29 +170,28 @@ _data = {
 "walk": SubResource("Animation_jgqou")
 }
 
-[node name="Knight" groups=["units"] instance=ExtResource("1_7ginh")]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(66, 58)
+[node name="Knight" instance=ExtResource("1_7ginh")]
+z_index = 1
+position = Vector2(48, 51)
 script = ExtResource("2_jgudi")
 
 [node name="Sprite2D" parent="." index="0"]
 z_index = 1
-y_sort_enabled = true
 texture = ExtResource("2_s431i")
 hframes = 6
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, -2)
+y_sort_enabled = true
+position = Vector2(0, 1)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_vcnj6")
 }
+autoplay = "idle"
 
 [node name="Selection" parent="." index="3"]
 offset_left = -9.0
 offset_top = 0.0
 offset_right = 9.0
 offset_bottom = 15.0
-metadata/_edit_use_anchors_ = true

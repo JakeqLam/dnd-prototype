@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Unit_Base.gd" id="1_knqiq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
-radius = 11.0454
+radius = 9.8995
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06236"]
 bg_color = Color(0, 0.435294, 0.266667, 0)
@@ -20,10 +20,12 @@ corner_radius_bottom_left = 20
 anti_aliasing = false
 anti_aliasing_size = 0.5
 
-[node name="Unit_Base" type="CharacterBody2D"]
+[node name="Unit_Base" type="CharacterBody2D" groups=["units"]]
+y_sort_enabled = true
 script = ExtResource("1_knqiq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pogrd")

@@ -3,18 +3,15 @@ extends Node2D
 var units = []
 
 func _ready():
-	units =  get_tree().get_nodes_in_group("units")
-
+	units = get_tree().get_nodes_in_group("units")
 
 func _on_area_selected(object):
-	print("selecting units in world")
 	var start = object.start
 	var end = object.end
 	var area = []
 	area.append(Vector2(min(start.x, end.x), min(start.y, end.y)))
 	area.append(Vector2(max(start.x, end.x), max(start.y, end.y)))
 	var ut = get_units_in_area(area)
-	print(area)
 	
 	for u in units:
 		u.set_selected(false)
@@ -25,7 +22,6 @@ func get_units_in_area(area):
 	var u = []
 	#Check the x and y position of unit and see if they are located in that box
 	for unit in units:
-		print(unit.position)
 		if (unit.position.x > area[0].x) and (unit.position.x < area[1].x):
 			if (unit.position.y > area[0].y) and (unit.position.y < area[1].y):
 				u.append(unit)
