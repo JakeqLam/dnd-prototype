@@ -1,8 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721800806
+::res://::1721836981
 dungeon.webp::CompressedTexture2D::5664106018678720293::1718917090::1718917200::1::::<><>::
 export_presets.cfg::TextFile::-1::1718911281::0::1::::<><>::
-world.tscn::PackedScene::6469066510429512572::1721800778::0::1::::<><>::res://scripts/global.gd<>res://UI/Camera2D.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://player/Knight/Knight.tscn<>uid://b3iower5ond5n::::res://assets/tilesets/more-tilesets/decor_16x16.png
 ::res://assets/::1720040504
 ::res://assets/fonts/::1719536101
 FONTLOG.txt::TextFile::-1::1718910449::0::1::::<><>::
@@ -74,7 +73,7 @@ Skeleton_01_Yellow_Die.png::CompressedTexture2D::4713534453371611569::1719292477
 Skeleton_01_Yellow_Hurt.png::CompressedTexture2D::4196198029932585564::1719292477::1719292515::1::::<><>::
 Skeleton_01_Yellow_Idle.png::CompressedTexture2D::5321898154796334620::1719292477::1719292515::1::::<><>::
 Skeleton_01_Yellow_Walk.png::CompressedTexture2D::5612650905688422605::1719292477::1719292515::1::::<><>::
-::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/::1721348857
+::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/::1721801647
 ::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/::1718917173
 ::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/Archer/::1719268456
 Archer-Attack01.png::CompressedTexture2D::1428909817148161393::1718917173::1719268456::1::::<><>::
@@ -293,27 +292,6 @@ Priest-Hurt.png::CompressedTexture2D::2559694462980596569::1718917179::171926845
 Priest-Idle.png::CompressedTexture2D::6502789767661447768::1718917179::1719268451::1::::<><>::
 Priest-Walk.png::CompressedTexture2D::5323198122360503560::1718917179::1719268451::1::::<><>::
 Priest.png::CompressedTexture2D::553201642734840697::1718917179::1719268452::1::::<><>::
-::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Skeleton/::1718917179
-::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Skeleton/Skeleton/::1719268452
-Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1718917179::1719268451::1::::<><>::
-Skeleton-Attack02.png::CompressedTexture2D::2783350852339034933::1718917179::1719268451::1::::<><>::
-Skeleton-Block.png::CompressedTexture2D::4883683375007123437::1718917179::1719268451::1::::<><>::
-Skeleton-Death.png::CompressedTexture2D::689894335646728258::1718917179::1719268452::1::::<><>::
-Skeleton-Hurt.png::CompressedTexture2D::9188129486203123845::1718917179::1719268452::1::::<><>::
-Skeleton-Idle.png::CompressedTexture2D::8678196982033497486::1718917179::1719268452::1::::<><>::
-Skeleton-Shadow.png::CompressedTexture2D::3482967776917988533::1718917179::1719268452::1::::<><>::
-Skeleton-Shadow_death.png::CompressedTexture2D::779901705068685349::1718917179::1719268452::1::::<><>::
-Skeleton-Walk.png::CompressedTexture2D::2817703295886687070::1718917179::1719268452::1::::<><>::
-Skeleton.png::CompressedTexture2D::4097070633895388971::1718917179::1719268452::1::::<><>::
-::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Skeleton/Skeleton with shadows/::1719268452
-Skeleton-Attack01.png::CompressedTexture2D::8570243184252674692::1718917179::1719268452::1::::<><>::
-Skeleton-Attack02.png::CompressedTexture2D::5052785196599825659::1718917180::1719268452::1::::<><>::
-Skeleton-Block.png::CompressedTexture2D::6607021163071869499::1718917180::1719268452::1::::<><>::
-Skeleton-Death.png::CompressedTexture2D::281707329139154940::1718917180::1719268452::1::::<><>::
-Skeleton-Hurt.png::CompressedTexture2D::6392591117918774076::1718917180::1719268452::1::::<><>::
-Skeleton-Idle.png::CompressedTexture2D::4676028186673354027::1718917180::1719268452::1::::<><>::
-Skeleton-Walk.png::CompressedTexture2D::4354106392436745150::1718917180::1719268452::1::::<><>::
-Skeleton.png::CompressedTexture2D::6583495299705292044::1718917180::1719268452::1::::<><>::
 ::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Slime/::1718917180
 ::res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Slime/Slime/::1719268454
 Slime-Attack.png::CompressedTexture2D::2635083645401379124::1718917180::1719268452::1::::<><>::
@@ -436,16 +414,40 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1720039701::17200
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1720039701::1720041815::1::::<><>::
 ::res://assets/tilesets/particles/::1720041893
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1720039701::1720041893::1::::<><>::
-::res://enemy/::1721800727
+::res://enemy/::1721836947
 Enemy_AI.gd::GDScript::-1::1721800270::0::1::::<>CharacterBody2D<>::
-Enemy_AI.tscn::PackedScene::3001562458658102313::1721800727::0::1::::<><>::res://enemy/Enemy_AI.gd
-::res://environments/::1721800806
-::res://player/::1721800727
+Enemy_AI.tscn::PackedScene::3001562458658102313::1721836947::0::1::::<><>::res://enemy/Enemy_AI.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png<>uid://b7vdrbhufxdct::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Idle.png<>uid://b3bfq4skpiq5s::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Walk.png
+::res://enemy/Skeleton/::1721836885
+Skeleton.tscn::PackedScene::6622532255378078562::1721836885::0::1::::<><>::uid://bi08kbg8m8xg0::::res://enemy/Enemy_AI.tscn
+::res://enemy/Skeleton/Skeleton/::1718917179
+::res://enemy/Skeleton/Skeleton/Skeleton/::1721801649
+Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1718917179::1721801649::1::::<><>::
+Skeleton-Attack02.png::CompressedTexture2D::2783350852339034933::1718917179::1721801649::1::::<><>::
+Skeleton-Block.png::CompressedTexture2D::4883683375007123437::1718917179::1721801649::1::::<><>::
+Skeleton-Death.png::CompressedTexture2D::689894335646728258::1718917179::1721801649::1::::<><>::
+Skeleton-Hurt.png::CompressedTexture2D::9188129486203123845::1718917179::1721801649::1::::<><>::
+Skeleton-Idle.png::CompressedTexture2D::8678196982033497486::1718917179::1721801649::1::::<><>::
+Skeleton-Shadow.png::CompressedTexture2D::3482967776917988533::1718917179::1721801649::1::::<><>::
+Skeleton-Shadow_death.png::CompressedTexture2D::779901705068685349::1718917179::1721801649::1::::<><>::
+Skeleton-Walk.png::CompressedTexture2D::2817703295886687070::1718917179::1721801649::1::::<><>::
+Skeleton.png::CompressedTexture2D::4097070633895388971::1718917179::1721801649::1::::<><>::
+::res://enemy/Skeleton/Skeleton/Skeleton with shadows/::1721801649
+Skeleton-Attack01.png::CompressedTexture2D::8570243184252674692::1718917179::1721801649::1::::<><>::
+Skeleton-Attack02.png::CompressedTexture2D::5052785196599825659::1718917180::1721801649::1::::<><>::
+Skeleton-Block.png::CompressedTexture2D::6607021163071869499::1718917180::1721801649::1::::<><>::
+Skeleton-Death.png::CompressedTexture2D::281707329139154940::1718917180::1721801649::1::::<><>::
+Skeleton-Hurt.png::CompressedTexture2D::6392591117918774076::1718917180::1721801649::1::::<><>::
+Skeleton-Idle.png::CompressedTexture2D::4676028186673354027::1718917180::1721801649::1::::<><>::
+Skeleton-Walk.png::CompressedTexture2D::4354106392436745150::1718917180::1721801649::1::::<><>::
+Skeleton.png::CompressedTexture2D::6583495299705292044::1718917180::1721801649::1::::<><>::
+::res://environments/::1721835894
+world.tscn::PackedScene::6469066510429512572::1721835894::0::1::::<><>::res://scripts/global.gd<>res://UI/Camera2D.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://b3iower5ond5n::::res://assets/tilesets/more-tilesets/decor_16x16.png<>uid://ny0byqchvrkt::::res://player/Knight/Knight.tscn
+::res://player/::1721836403
 Player_AI.gd::GDScript::-1::1721799332::0::1::::<>CharacterBody2D<>::
-Player_AI.tscn::PackedScene::3660063660876019303::1721800727::0::1::::<><>::res://player/Player_AI.gd
-::res://player/Knight/::1721800780
-Knight.gd::GDScript::-1::1721800725::0::1::::<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1721800808::0::1::::<><>::uid://bse7yjdllukj4::::res://player/Player_AI.tscn<>res://player/Knight/Knight.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://player/Knight/Knight-art/Knight with shadows/Knight-Walk.png
+Player_AI.tscn::PackedScene::3660063660876019303::1721836403::0::1::::<><>::res://player/Player_AI.gd
+::res://player/Knight/::1721836372
+Knight.gd::GDScript::-1::1721836372::0::1::::<>CharacterBody2D<>::
+Knight.tscn::PackedScene::963521029383266819::1721835894::0::1::::<><>::uid://bse7yjdllukj4::::res://player/Player_AI.tscn<>res://player/Knight/Knight.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://player/Knight/Knight-art/Knight with shadows/Knight-Walk.png
 ::res://player/Knight/Knight-art/::1721800764
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1719291331::1721800745::1::::<><>::
 ::res://player/Knight/Knight-art/Knight with shadows/::1721800745
