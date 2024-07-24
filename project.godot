@@ -14,7 +14,7 @@ config/name="dungeon-prototype"
 config/description="test
 "
 config/tags=PackedStringArray("2d", "demo", "official")
-run/main_scene="res://world.tscn"
+run/main_scene="res://environments/world.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://dungeon.webp"
 
