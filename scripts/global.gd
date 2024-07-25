@@ -18,6 +18,20 @@ func _on_area_selected(object):
 	for u in ut:
 		u.set_selected(!u.selected)
 
+func _on_unit_select(object):
+	var target = get_global_mouse_position()
+	for u in units:
+		u.set_selected(false)
+	
+	#Select the closest unit within 10px
+	for unit in units:
+		var unitX = unit.position.x - target.x
+		var unitY = unit.position.y - target.y
+		if (unitX < 10) and (unitX > -10):
+			if(unitY < 10) and (unitY > -10):
+				unit.set_selected(!unit.selected)
+
+#Grabbing units in a drag box
 func get_units_in_area(area):
 	var u = []
 	#Check the x and y position of unit and see if they are located in that box

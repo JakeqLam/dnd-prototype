@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=15 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="Script" path="res://scripts/global.gd" id="1_4ss6r"]
 [ext_resource type="Script" path="res://UI/Camera2D.gd" id="2_5e57s"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://assets/tilesets/objects/objects.png" id="5_qikpr"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://assets/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
 [ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://player/Knight/Knight.tscn" id="7_q4pke"]
+[ext_resource type="PackedScene" uid="uid://c1maeyk00yk7k" path="res://enemy/Skeleton/Skeleton.tscn" id="8_xnefd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
 bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
@@ -448,3 +449,8 @@ position = Vector2(184, 151)
 
 [node name="Knight3" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(223, 191)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="Skeleton" parent="enemies" instance=ExtResource("8_xnefd")]
+position = Vector2(301, 193)

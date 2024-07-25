@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bse7yjdllukj4"]
+[gd_scene load_steps=5 format=3 uid="uid://bse7yjdllukj4"]
 
 [ext_resource type="Script" path="res://player/Player_AI.gd" id="1_ocgvk"]
+[ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png" id="2_dlj0c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 12.0416
@@ -26,6 +27,8 @@ script = ExtResource("1_ocgvk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
+texture = ExtResource("2_dlj0c")
+hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pogrd")
@@ -35,10 +38,10 @@ shape = SubResource("CircleShape2D_pogrd")
 [node name="Selection" type="Panel" parent="."]
 visibility_layer = 2
 y_sort_enabled = true
-offset_left = 10.0
-offset_top = 9.0
-offset_right = 50.0
-offset_bottom = 49.0
+offset_left = -13.0
+offset_top = -7.0
+offset_right = 12.0
+offset_bottom = 17.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -18,20 +18,20 @@ var end: Vector2 = Vector2()
 var endV: Vector2 = Vector2()
 var isDragging: bool = false
 
+signal unit_select
 signal area_selected
 signal start_move_selection
+
 @onready var box = get_node("../UI/Panel")
 
 func _ready():
 	connect("area_selected", Callable(get_parent(), "_on_area_selected"))
+	connect("unit_select", Callable(get_parent(), "_on_unit_select"))
 	
 func _process(delta):
-	
-	
 	#WASD camera support
 	var inputX = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
 	var inputY = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
-	
 	
 	position.x = lerp(position.x, position.x + inputX*SPEED * zoom.x, SPEED*delta)
 	position.y = lerp(position.y, position.y + inputY*SPEED * zoom.x, SPEED*delta)
@@ -55,6 +55,7 @@ func _process(delta):
 		endV = mousePos
 		draw_area(true)
 	if Input.is_action_just_released("left_click"):
+		emit_signal("unit_select", self)
 		if startV.distance_to(mousePos) > 20:
 			end = mousePosGlobal
 			endV= mousePos
@@ -76,10 +77,10 @@ func _input(event):
 		if event.is_pressed():
 			zooming = true
 			if event.is_action("wheel_down"):
-				zoomFactor -= 0.1 * ZOOM_SPEED
+				zoomFactor -= 0.08 * ZOOM_SPEED
 				zoomPos = get_global_mouse_position()
 			if event.is_action("wheel_up"):
-				zoomFactor += 0.1 * ZOOM_SPEED
+				zoomFactor += 0.08 * ZOOM_SPEED
 				zoomPos = get_global_mouse_position()
 		else:
 			zooming = false

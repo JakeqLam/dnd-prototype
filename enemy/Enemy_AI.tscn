@@ -176,7 +176,9 @@ anti_aliasing = false
 anti_aliasing_size = 0.5
 
 [node name="Enemy_AI" type="CharacterBody2D" groups=["units"]]
+z_index = 1
 y_sort_enabled = true
+position = Vector2(63, 58)
 script = ExtResource("1_bohvo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -198,10 +200,10 @@ autoplay = "idle"
 
 [node name="Selection" type="Panel" parent="."]
 visibility_layer = 2
-y_sort_enabled = true
 offset_left = -8.0
 offset_right = 10.0
 offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

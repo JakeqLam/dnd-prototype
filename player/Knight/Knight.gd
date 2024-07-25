@@ -1,4 +1,4 @@
-extends "res://enemy/Enemy_AI.gd"
+extends "res://player/Player_AI.gd"
 
 func specialAttack():
 	print("kaboom")

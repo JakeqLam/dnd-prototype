@@ -18,8 +18,9 @@ var Speed = 50
 
 func _ready():
 	animationPlayer.play("idle")
-	set_selected(selected)
+	set_selected(selected) #init to false
 
+#selecting a unit
 func set_selected(value):
 	selected = value
 	selection.visible = value
@@ -38,7 +39,11 @@ func _physics_process(_delta):
 		if selected:
 			target = get_global_mouse_position()
 	velocity = position.direction_to(target) * speed
-	if position.distance_to(target) > 25:
+	if position.distance_to(target) > 10:
+		if position.x > target.x:
+			animatedSprite.flip_h = true
+		elif position.x < target.x:
+			animatedSprite.flip_h = false
 		animationPlayer.play("walk")
 		move_and_slide()
 	else:
