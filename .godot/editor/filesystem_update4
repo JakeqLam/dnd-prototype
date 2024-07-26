@@ -5,3 +5,5 @@ res://Units/Unit.tscn
 res://Units/Skeleton.tscn
 res://Units/Skeleton.gd
 res://Units/Skeleton/Skeleton.tscn
+res://Units/Unit.gd
+res://Units/Knight/Knight.tscn

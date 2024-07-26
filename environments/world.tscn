@@ -443,7 +443,6 @@ layer_1/tile_data = PackedInt32Array(851943, 2, 5, 720894, 2, 5, -65538, 2, 5, -
 
 [node name="Knight" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(203, 240)
-isPlayer = true
 
 [node name="Knight2" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(184, 151)

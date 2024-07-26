@@ -281,5 +281,6 @@ libraries = {
 
 [node name="Selection" parent="." index="3"]
 offset_left = -9.0
-offset_top = 0.0
+offset_top = -1.0
 offset_right = 9.0
+offset_bottom = 16.0

@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c8dy8jd4cu2j6" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png" id="7_f20lt"]
 [ext_resource type="Texture2D" uid="uid://dp8tax823r2xo" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png" id="8_fwm6t"]
 
-
 [sub_resource type="Animation" id="Animation_fkxt2"]
 length = 0.001
 loop_mode = 2
@@ -431,9 +430,12 @@ autoplay = "idle"
 offset_left = -9.0
 offset_top = 0.0
 offset_right = 9.0
-offset_bottom = 15.0
+offset_bottom = 16.0
 
 [node name="EnemyDetector" parent="." index="4"]
+visible = true
+
+[node name="AttackDetector" parent="." index="5"]
 visible = true
 
 [node name="CollisionShape2D" parent="AttackDetector" index="0"]
