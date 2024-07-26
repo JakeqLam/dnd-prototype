@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/global.gd" id="1_4ss6r"]
 [ext_resource type="Script" path="res://UI/Camera2D.gd" id="2_5e57s"]
-[ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://assets/tilesets/plains.png" id="3_3vju1"]
-[ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://assets/tilesets/grass.png" id="4_w7spt"]
-[ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://assets/tilesets/objects/objects.png" id="5_qikpr"]
-[ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://assets/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
-[ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://player/Knight/Knight.tscn" id="7_q4pke"]
-[ext_resource type="PackedScene" uid="uid://c1maeyk00yk7k" path="res://enemy/Skeleton/Skeleton.tscn" id="8_xnefd"]
+[ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://Environments/tilesets/plains.png" id="3_3vju1"]
+[ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://Environments/tilesets/grass.png" id="4_w7spt"]
+[ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
+[ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
+[ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://Units/Knight/Knight.tscn" id="7_q4pke"]
+[ext_resource type="PackedScene" uid="uid://bw4md1mc31gwl" path="res://Units/Skeleton/Skeleton.tscn" id="8_gx68c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
 bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
@@ -443,14 +443,17 @@ layer_1/tile_data = PackedInt32Array(851943, 2, 5, 720894, 2, 5, -65538, 2, 5, -
 
 [node name="Knight" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(203, 240)
+isPlayer = true
 
 [node name="Knight2" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(184, 151)
+isPlayer = true
 
 [node name="Knight3" parent="units" instance=ExtResource("7_q4pke")]
 position = Vector2(223, 191)
+isPlayer = true
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="Skeleton" parent="enemies" instance=ExtResource("8_xnefd")]
-position = Vector2(301, 193)
+[node name="Skeleton" parent="enemies" instance=ExtResource("8_gx68c")]
+position = Vector2(143, 114)

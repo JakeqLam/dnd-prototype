@@ -1,4 +1,7 @@
-res://player/Knight/Knight.tscn
-res://player/Unit.tscn
-res://player/Knight/Knight.gd
-res://player/Unit.gd
+res://environments/world.tscn
+res://Units/player/Knight/Knight.gd
+res://Units/enemy/Skeleton/Skeleton.gd
+res://Units/Unit.tscn
+res://Units/Skeleton.tscn
+res://Units/Skeleton.gd
+res://Units/Skeleton/Skeleton.tscn

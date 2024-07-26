@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b380rw27p0txs"
-path="res://.godot/imported/Wizard-Hurt.png-ef5c4324ce88bc2f52544bbbb422fe21.ctex"
+path="res://.godot/imported/Wizard-Hurt.png-fe665f874599f68effb106add4dac2dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Wizard/Wizard with shadows/Wizard-Hurt.png"
-dest_files=["res://.godot/imported/Wizard-Hurt.png-ef5c4324ce88bc2f52544bbbb422fe21.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Wizard/Wizard with shadows/Wizard-Hurt.png"
+dest_files=["res://.godot/imported/Wizard-Hurt.png-fe665f874599f68effb106add4dac2dd.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bko150hhkx372"
-path="res://.godot/imported/Priest-Death.png-3063d1a0dcc3f901625be8eea5cd8264.ctex"
+path="res://.godot/imported/Priest-Death.png-11257bf4abe227f5a37544e9e3cffa7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Priest/Priest/Priest-Death.png"
-dest_files=["res://.godot/imported/Priest-Death.png-3063d1a0dcc3f901625be8eea5cd8264.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Priest/Priest/Priest-Death.png"
+dest_files=["res://.godot/imported/Priest-Death.png-11257bf4abe227f5a37544e9e3cffa7a.ctex"]
 
 [params]
 
