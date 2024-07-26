@@ -1,8 +1,9 @@
+CollisionShape2D
+Area2D
 Node2D
 Panel
 AnimationPlayer
 Sprite2D
-CollisionShape2D
 CharacterBody2D
 CanvasLayer
 Control
@@ -11,4 +12,3 @@ LightOccluder2D
 DirectionalLight2D
 PointLight2D
 CanvasModulate
-Timer

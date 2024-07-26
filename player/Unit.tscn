@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bse7yjdllukj4"]
+[gd_scene load_steps=7 format=3 uid="uid://c4k2h4u7q7aq5"]
 
-[ext_resource type="Script" path="res://player/Player_AI.gd" id="1_ocgvk"]
-[ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png" id="2_dlj0c"]
+[ext_resource type="Script" path="res://player/Unit.gd" id="1_ifeju"]
+[ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png" id="2_wt4qs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 12.0416
@@ -21,13 +21,20 @@ corner_radius_bottom_left = 20
 anti_aliasing = false
 anti_aliasing_size = 0.5
 
-[node name="Player_AI" type="CharacterBody2D" groups=["units"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6k7nc"]
+radius = 60.0083
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dyygc"]
+radius = 14.2121
+height = 38.1838
+
+[node name="Player_Unit" type="CharacterBody2D" groups=["units"]]
 y_sort_enabled = true
-script = ExtResource("1_ocgvk")
+script = ExtResource("1_ifeju")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
-texture = ExtResource("2_dlj0c")
+texture = ExtResource("2_wt4qs")
 hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -44,4 +51,17 @@ offset_right = 12.0
 offset_bottom = 17.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
 
+[node name="EnemyDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_6k7nc")
+
+[node name="AttackDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector"]
+shape = SubResource("CapsuleShape2D_dyygc")
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="AttackDetector" to="." method="_on_attack_detector_body_entered"]

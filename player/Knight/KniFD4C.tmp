@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://ny0byqchvrkt"]
 
-[ext_resource type="PackedScene" uid="uid://c4k2h4u7q7aq5" path="res://player/Unit.tscn" id="1_671un"]
+[ext_resource type="PackedScene" uid="uid://c4k2h4u7q7aq5" path="res://player/Player_Unit.tscn" id="1_671un"]
 [ext_resource type="Script" path="res://player/Knight/Knight.gd" id="2_jgudi"]
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png" id="2_s431i"]
 [ext_resource type="Texture2D" uid="uid://b0yt31lb6jm23" path="res://player/Knight/Knight-art/Knight with shadows/Knight-Walk.png" id="3_cio4o"]
@@ -75,6 +75,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_amw7o"]
 resource_name = "attack_1"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -190,6 +191,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_r2h23"]
 resource_name = "death"
 length = 0.8
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -432,13 +434,9 @@ offset_top = 0.0
 offset_right = 9.0
 offset_bottom = 15.0
 
-[node name="EnemyDetector" parent="." index="4"]
-visible = true
-
 [node name="CollisionShape2D" parent="AttackDetector" index="0"]
 position = Vector2(15, -3)
 rotation = 2.4644
 disabled = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="body_entered" from="EnemyDetector" to="." method="_on_enemy_detector_body_entered"]

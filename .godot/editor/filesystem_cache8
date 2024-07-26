@@ -1,8 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721858870
+::res://::1721978263
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1721713547::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
-Camera2D.gd::GDScript::-1::1721858870::0::1::::<>Camera2D<>::
 ::res://assets/::1721713547
 ::res://assets/fonts/::1721713547
 FONTLOG.txt::TextFile::-1::1721713547::0::1::::<><>::
@@ -415,12 +414,12 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1721713547::17217
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1721713547::1721713547::1::::<><>::
 ::res://assets/tilesets/particles/::1721713547
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1721713547::1721713547::1::::<><>::
-::res://enemy/::1721858897
-Enemy_AI.gd::GDScript::-1::1721844972::0::1::::<>CharacterBody2D<>::
-Enemy_AI.tscn::PackedScene::3001562458658102313::1721858897::0::1::::<><>::res://enemy/Enemy_AI.gd<>uid://b7vdrbhufxdct::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Idle.png<>uid://b3bfq4skpiq5s::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Walk.png
-::res://enemy/Skeleton/::1721858897
-Skeleton.gd::GDScript::-1::1721845174::0::1::::<>CharacterBody2D<>::
-Skeleton.tscn::PackedScene::6622532255378078562::1721858897::0::1::::<><>::uid://bi08kbg8m8xg0::::res://enemy/Enemy_AI.tscn<>res://enemy/Skeleton/Skeleton.gd
+::res://enemy/::1721971585
+Enemy_Unit.gd::GDScript::-1::1721971388::0::1::::<>CharacterBody2D<>::
+Enemy_Unit.tscn::PackedScene::3001562458658102313::1721971585::0::1::::<><>::res://enemy/Enemy_Unit.gd<>uid://b7vdrbhufxdct::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Idle.png<>uid://b3bfq4skpiq5s::::res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Walk.png
+::res://enemy/Skeleton/::1721971585
+Skeleton.gd::GDScript::-1::1721971357::0::1::::<>CharacterBody2D<>::
+Skeleton.tscn::PackedScene::6622532255378078562::1721971585::0::1::::<><>::uid://bi08kbg8m8xg0::::res://enemy/Enemy_Unit.tscn<>res://enemy/Skeleton/Skeleton.gd
 ::res://enemy/Skeleton/Skeleton/::1721844972
 ::res://enemy/Skeleton/Skeleton/Skeleton/::1721844972
 Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1721844972::1721844972::1::::<><>::
@@ -442,14 +441,14 @@ Skeleton-Hurt.png::CompressedTexture2D::6392591117918774076::1721844972::1721844
 Skeleton-Idle.png::CompressedTexture2D::4676028186673354027::1721844972::1721844972::1::::<><>::
 Skeleton-Walk.png::CompressedTexture2D::4354106392436745150::1721844972::1721844972::1::::<><>::
 Skeleton.png::CompressedTexture2D::6583495299705292044::1721844972::1721844972::1::::<><>::
-::res://environments/::1721858942
-world.tscn::PackedScene::6469066510429512572::1721859010::0::1::::<><>::res://scripts/global.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://b3iower5ond5n::::res://assets/tilesets/more-tilesets/decor_16x16.png<>uid://ny0byqchvrkt::::res://player/Knight/Knight.tscn<>uid://c1maeyk00yk7k::::res://enemy/Skeleton/Skeleton.tscn
-::res://player/::1721858897
-Player_AI.gd::GDScript::-1::1721853548::0::1::::<>CharacterBody2D<>::
-Player_AI.tscn::PackedScene::3660063660876019303::1721858897::0::1::::<><>::res://player/Player_AI.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png
-::res://player/Knight/::1721858897
-Knight.gd::GDScript::-1::1721848474::0::1::::<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1721858897::0::1::::<><>::uid://bse7yjdllukj4::::res://player/Player_AI.tscn<>res://player/Knight/Knight.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://player/Knight/Knight-art/Knight with shadows/Knight-Walk.png
+::res://environments/::1721971359
+world.tscn::PackedScene::6469066510429512572::1721971359::0::1::::<><>::res://scripts/global.gd<>res://UI/Camera2D.gd<>uid://djny0ed3vcei4::::res://assets/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://assets/tilesets/grass.png<>uid://b73stj2stjpgn::::res://assets/tilesets/objects/objects.png<>uid://b3iower5ond5n::::res://assets/tilesets/more-tilesets/decor_16x16.png<>uid://ny0byqchvrkt::::res://player/Knight/Knight.tscn<>uid://c1maeyk00yk7k::::res://enemy/Skeleton/Skeleton.tscn
+::res://player/::1721978239
+Unit.gd::GDScript::-1::1721977959::0::1::::Unit<>CharacterBody2D<>::
+Unit.tscn::PackedScene::6830615025341583550::1721978239::0::1::::<><>::res://player/Unit.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png
+::res://player/Knight/::1721978253
+Knight.gd::GDScript::-1::1721978248::0::1::::Knight<>CharacterBody2D<>::
+Knight.tscn::PackedScene::963521029383266819::1721978253::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://player/Unit.tscn<>res://player/Knight/Knight.gd<>uid://uac60mxbct7l::::res://player/Knight/Knight-art/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://player/Knight/Knight-art/Knight with shadows/Knight-Walk.png<>uid://b3mk747e50x3a::::res://player/Knight/Knight-art/Knight with shadows/Knight-Attack01.png<>uid://dlwk5i84ve2an::::res://player/Knight/Knight-art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://player/Knight/Knight-art/Knight with shadows/Knight-Hurt.png<>uid://dp8tax823r2xo::::res://player/Knight/Knight-art/Knight with shadows/Knight-Block.png
 ::res://player/Knight/Knight-art/::1721844972
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1721844972::1721844972::1::::<><>::
 ::res://player/Knight/Knight-art/Knight with shadows/::1721844972
@@ -474,7 +473,8 @@ Knight-Shadow.png::CompressedTexture2D::4795201708570046046::1721844972::1721844
 Knight-Shadow_death.png::CompressedTexture2D::2013706950776857148::1721844972::1721844972::1::::<><>::
 Knight-Walk.png::CompressedTexture2D::4454839365919842523::1721844972::1721844972::1::::<><>::
 Knight.png::CompressedTexture2D::2832740204748281349::1721844972::1721844972::1::::<><>::
-::res://scripts/::1721856282
-global.gd::GDScript::-1::1721856282::0::1::::<>Node2D<>::
-::res://UI/::1721858992
-UI.tscn::PackedScene::8409377180418272875::1721713547::0::1::::<><>::res://Camera2D.gd
+::res://scripts/::1721883671
+global.gd::GDScript::-1::1721883671::0::1::::<>Node2D<>::
+::res://UI/::1721968276
+Camera2D.gd::GDScript::-1::1721860101::0::1::::<>Camera2D<>::
+UI.tscn::PackedScene::8409377180418272875::1721968276::0::1::::<><>::res://UI/Camera2D.gd

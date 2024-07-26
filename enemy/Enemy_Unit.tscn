@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bi08kbg8m8xg0"]
+[gd_scene load_steps=15 format=3 uid="uid://bi08kbg8m8xg0"]
 
-[ext_resource type="Script" path="res://enemy/Enemy_AI.gd" id="1_bohvo"]
-[ext_resource type="Texture2D" uid="uid://b7vdrbhufxdct" path="res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Idle.png" id="3_ixanw"]
-[ext_resource type="Texture2D" uid="uid://b3bfq4skpiq5s" path="res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Walk.png" id="4_1qkid"]
+[ext_resource type="Script" path="res://enemy/Enemy_Unit.gd" id="1_t8o7h"]
+[ext_resource type="Texture2D" uid="uid://b7vdrbhufxdct" path="res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Idle.png" id="2_86sas"]
+[ext_resource type="Texture2D" uid="uid://b3bfq4skpiq5s" path="res://enemy/Skeleton/Skeleton/Skeleton with shadows/Skeleton-Walk.png" id="3_87qr1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3h2vf"]
 radius = 11.0454
@@ -44,8 +44,17 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_ixanw")]
+"values": [ExtResource("2_86sas")]
 }
+
+[sub_resource type="Animation" id="Animation_b443e"]
+resource_name = "attack_1"
+
+[sub_resource type="Animation" id="Animation_pnvwh"]
+resource_name = "death"
+
+[sub_resource type="Animation" id="Animation_h06wd"]
+resource_name = "hurt"
 
 [sub_resource type="Animation" id="Animation_xjg5s"]
 resource_name = "Idle"
@@ -61,7 +70,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_ixanw")]
+"values": [ExtResource("2_86sas")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -138,7 +147,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_1qkid")]
+"values": [ExtResource("3_87qr1")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -156,6 +165,9 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vcnj6"]
 _data = {
 "RESET": SubResource("Animation_fkxt2"),
+"attack_1": SubResource("Animation_b443e"),
+"death": SubResource("Animation_pnvwh"),
+"hurt": SubResource("Animation_h06wd"),
 "idle": SubResource("Animation_xjg5s"),
 "walk": SubResource("Animation_jgqou")
 }
@@ -175,16 +187,22 @@ corner_radius_bottom_left = 20
 anti_aliasing = false
 anti_aliasing_size = 0.5
 
-[node name="Enemy_AI" type="CharacterBody2D" groups=["units"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7r7k"]
+radius = 60.0083
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nscno"]
+radius = 26.9258
+
+[node name="Enemy_Unit" type="CharacterBody2D" groups=["units"]]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(63, 58)
-script = ExtResource("1_bohvo")
+script = ExtResource("1_t8o7h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
-texture = ExtResource("3_ixanw")
+texture = ExtResource("2_86sas")
 hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -205,5 +223,17 @@ offset_right = 10.0
 offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
 metadata/_edit_use_anchors_ = true
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_n7r7k")
+
+[node name="AttackDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_nscno")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
