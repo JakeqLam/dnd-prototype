@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpcehk8uwopwx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8iptx"]
+radius = 20.025
+
+[node name="Hurtbox" type="Area2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.117647, 1, 0, 1)
+shape = SubResource("CircleShape2D_8iptx")

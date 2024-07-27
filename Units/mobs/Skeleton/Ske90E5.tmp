@@ -414,6 +414,11 @@ z_index = 1
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("2_nemj3")
+maxHP = null
+defence = null
+speed = null
+weaponDamage = null
+selected = null
 
 [node name="Sprite2D" parent="." index="0"]
 z_index = 1

@@ -39,13 +39,12 @@ script = ExtResource("3_cxojd")
 
 [node name="Knight" parent="Player" instance=ExtResource("2_ucmxc")]
 position = Vector2(203, 149)
-isPlayer = true
 
 [node name="Enemy" type="Node2D" parent="."]
 script = ExtResource("4_oick4")
 
 [node name="Skeleton" parent="Enemy" instance=ExtResource("6_3dvwr")]
-position = Vector2(385, 149)
+position = Vector2(145, 150)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

@@ -2,19 +2,9 @@ extends "res://Units/Unit.gd"
 
 class_name Knight
 
-@onready var animatedSprite = $Sprite2D
 @onready var collisionShape = $CollisionShape2D
-@onready var animationPlayer = $AnimationPlayer
-@onready var target = position
 
-var follow_cursor:bool = false
 var unit = Unit.new()
-
-#State Management Variables
-var isDying:bool = false
-var isAttacking:bool = false
-var isUnderAttack:bool = false
-var isChasing:bool = false
 
 func _init():
 	#Initialize base stats
@@ -22,22 +12,25 @@ func _init():
 	unit.currentHP = 20
 	unit.defence = 20
 	unit.speed = 40
-	
+
+"""
 func _input(event):
 	if event.is_action_pressed("right_click"):
-		follow_cursor = true
+		unit.follow_cursor = true
+		var clickTarget = get_global_mouse_position()
+		unit.set_target(clickTarget)
 	if event.is_action_released("right_click"):
-		follow_cursor = false
+		unit.follow_cursor = false
+
 
 func _physics_process(_delta):
-	
 	if follow_cursor == true:
 		if selected:
 			target = get_global_mouse_position()
 	
 	velocity = position.direction_to(target) * unit.speed
 	
-	if((isAttacking == false) and (isDying == false) and (isUnderAttack == false)):
+	if((unit.isAttacking == false) and (unit.isDead == false) and (unit.isUnderAttack == false)):
 		if position.distance_to(target) > 10:
 			if position.x > target.x:
 				animatedSprite.flip_h = true
@@ -47,32 +40,21 @@ func _physics_process(_delta):
 			move_and_slide()
 		else:
 			animationPlayer.play("idle")
-
-func hit(damage):
-	isUnderAttack = true
-	if (damage >= unit.defence):
-		currentHP -= damage
-		animationPlayer.play("hurt")
-	if (damage < unit.defence):
-		animationPlayer.play("block")
-	if (currentHP <= 0):
-		isDying = true
-		if(isDying == true):
-			animationPlayer.play("death")
-
-func _on_attack_collider_body_entered(body):
-	print("sword has connected")
+"""
 	
 func _on_animation_player_animation_finished(anim_name):
 	if ("attack01" in anim_name):
-		isAttacking = false
+		unit.isAttacking = false
 	elif ("block" in anim_name):
-		isUnderAttack = false
+		unit.isUnderAttack = false
 	elif ("hurt" in anim_name):
-		isUnderAttack = false
+		unit.isUnderAttack = false
 	elif ("death" in anim_name):
 		animationPlayer.stop()
-		self.queue_free()
+
+
+
+
 
 #Chase Enemy units
 func _on_enemy_detector_body_entered(body):
@@ -81,7 +63,6 @@ func _on_enemy_detector_body_entered(body):
 		isChasing = true
 		print(body)
 	
-
 #Enemy is within melee range
 func _on_attack_range_body_entered(body):
 	if body.is_in_group("enemyUnits"):

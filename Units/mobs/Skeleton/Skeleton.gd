@@ -2,19 +2,9 @@ extends "res://Units/Unit.gd"
 
 @onready var animatedSprite = $Sprite2D
 @onready var collisionShape = $CollisionShape2D
-@onready var animationPlayer = $AnimationPlayer
-@onready var target = position
-
 @export var player: CharacterBody2D
 
-var follow_cursor:bool = false
 var unit = Unit.new()
-
-#State Management Variables
-var isDying:bool = false
-var isAttacking:bool = false
-var isUnderAttack:bool = false
-var isChasing:bool = false
 
 func _init():
 	#Initialize base stats
@@ -31,8 +21,8 @@ func _physics_process(delta):
 		target = player.get_position()
 		#if isChasing == true:
 			#velocity = position.direction_to(target) * unit.speed
-		
-	if((isAttacking == false) and (isDying == false) and (isUnderAttack == false)):
+	attack(20)
+	if((unit.isAttacking == false) and (unit.isDead == false) and (unit.isUnderAttack == false)):
 		if position.distance_to(target) > 10:
 			if position.x > target.x:
 				animatedSprite.flip_h = true
@@ -44,21 +34,23 @@ func _physics_process(delta):
 			animationPlayer.play("idle")
 
 func attack(damage):
-	isAttacking = true
+	unit.isAttacking = true
 	animationPlayer.play("attack01")
 	
 func hit(damage):
 	isUnderAttack = true
 	if (damage >= unit.defence):
-		currentHP -= damage
+		unit.currentHP -= damage
 		animationPlayer.play("hurt")
 	if (damage < unit.defence):
 		animationPlayer.play("block")
-	if (currentHP <= 0):
-		isDying = true
-		if(isDying == true):
+	if (unit.currentHP <= 0):
+		unit.isDead = true
+		if(unit.isDead == true):
 			animationPlayer.play("death")
 
+
+#Node signals
 func _on_animation_player_animation_finished(anim_name):
 	if ("attack01" in anim_name):
 		isAttacking = false
