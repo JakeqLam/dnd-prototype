@@ -79,5 +79,4 @@ func _on_enemy_detector_body_entered(body):
 	if ("Skeleton" in body.name):
 		print("Skeleton unit in range!")
 		#Chase enemy unit to attack in melee range
-		velocity = position.direction_to(body.position) * unit.speed
-		
+		velocity = position.direction_to(body.position) * unit.speedf

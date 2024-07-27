@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://csvxngscm7rwt"]
+
+[ext_resource type="Script" path="res://GameManager/DungeonMaster.gd" id="1_6kk3v"]
+[ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://Units/Knight/Knight.tscn" id="2_ucmxc"]
+[ext_resource type="PackedScene" uid="uid://bw4md1mc31gwl" path="res://Units/Skeleton/Skeleton.tscn" id="3_sno1e"]
+
+[node name="DungeonMaster" type="Node2D"]
+script = ExtResource("1_6kk3v")
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="units" type="Node2D" parent="Player" groups=["player"]]
+
+[node name="Knight" parent="Player/units" instance=ExtResource("2_ucmxc")]
+position = Vector2(203, 149)
+maxHP = 100
+defence = 0
+speed = 0
+weaponDamage = 0
+selected = false
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="units" type="Node2D" parent="Enemy" groups=["enemy"]]
+
+[node name="Skeleton" parent="Enemy/units" instance=ExtResource("3_sno1e")]
+position = Vector2(351, 139)
+maxHP = 100
+defence = 0
+speed = 0
+weaponDamage = 0
+selected = false

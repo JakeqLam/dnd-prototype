@@ -1,10 +1,27 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=14 format=3 uid="uid://cyfwty2q3rdse"]
 
+[ext_resource type="Script" path="res://scripts/global.gd" id="1_4ss6r"]
+[ext_resource type="Script" path="res://UI/Camera2D.gd" id="2_5e57s"]
 [ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://Environments/tilesets/plains.png" id="3_3vju1"]
 [ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://Environments/tilesets/grass.png" id="4_w7spt"]
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
 [ext_resource type="PackedScene" uid="uid://csvxngscm7rwt" path="res://GameManager/DungeonMaster.tscn" id="8_yy62h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
+bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.717647, 0.298039, 0.560784)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 6
+anti_aliasing = false
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g8by"]
 texture = ExtResource("3_3vju1")
@@ -388,6 +405,26 @@ sources/3 = SubResource("TileSetAtlasSource_1jip8")
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_4ss6r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(200, 100)
+offset = Vector2(20, 20)
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("2_5e57s")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 247.0
+offset_top = 196.0
+offset_right = 247.0
+offset_bottom = 196.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpijq")
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

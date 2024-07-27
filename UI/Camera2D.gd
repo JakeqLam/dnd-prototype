@@ -55,7 +55,7 @@ func _process(delta):
 		endV = mousePos
 		draw_area(true)
 	if Input.is_action_just_released("left_click"):
-		emit_signal("unit_select", self)
+		emit_signal("unit_select")
 		if startV.distance_to(mousePos) > 20:
 			end = mousePosGlobal
 			endV= mousePos

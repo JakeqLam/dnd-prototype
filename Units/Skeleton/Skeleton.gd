@@ -1,4 +1,4 @@
-extends Unit
+extends "res://Units/Unit.gd"
 
 @onready var animatedSprite = $Sprite2D
 @onready var collisionShape = $CollisionShape2D
@@ -31,7 +31,6 @@ func _physics_process(_delta):
 		if selected:
 			target = get_global_mouse_position()
 	velocity = position.direction_to(target) * unit.speed
-	
 	if((isAttacking == false) and (isDying == false) and (isUnderAttack == false)):
 		if position.distance_to(target) > 10:
 			if position.x > target.x:
@@ -74,8 +73,8 @@ func _on_animation_player_animation_finished(anim_name):
 		self.queue_free()
 
 func _on_enemy_detector_body_entered(body):
-	if ("Skeleton" in body.name):
-		print("Skeleton unit in range!")
+	if ("Knight" in body.name):
+		print("Knight unit in range!")
 		#Chase enemy unit to attack in melee range
 		velocity = position.direction_to(body.position) * unit.speed
 		

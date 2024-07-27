@@ -1,10 +1,15 @@
 extends Node2D
 
-var units = []
+#This class is used to manage all aspects of the game
+class_name DungeonMaster
+
+var playerUnits = []
+var enemyUnits = []
 
 func _ready():
-	units = get_tree().get_nodes_in_group("units")
-
+	playerUnits = get_tree().get_nodes_in_group("playerUnits")
+	enemyUnits = get_tree().get_nodes_in_group("enemyUnits")
+	
 func _on_area_selected(object):
 	var start = object.start
 	var end = object.end
@@ -13,32 +18,31 @@ func _on_area_selected(object):
 	area.append(Vector2(max(start.x, end.x), max(start.y, end.y)))
 	var ut = get_units_in_area(area)
 	
-	for u in units:
+	for u in playerUnits:
 		u.set_selected(false)
 	for u in ut:
 		u.set_selected(!u.selected)
 
-func _on_unit_select(object):
+func _on_unit_select():
 	var target = get_global_mouse_position()
-	for u in units:
+	for u in playerUnits:
 		u.set_selected(false)
 	
 	#Select the closest unit within 10px
-	for unit in units:
+	for unit in playerUnits:
 		var unitX = unit.position.x - target.x
 		var unitY = unit.position.y - target.y
 		if (unitX < 10) and (unitX > -10):
 			if(unitY < 10) and (unitY > -10):
+				print("Select unit!")
 				unit.set_selected(!unit.selected)
 
 #Grabbing units in a drag box
 func get_units_in_area(area):
 	var u = []
 	#Check the x and y position of unit and see if they are located in that box
-	for unit in units:
+	for unit in playerUnits:
 		if (unit.position.x > area[0].x) and (unit.position.x < area[1].x):
 			if (unit.position.y > area[0].y) and (unit.position.y < area[1].y):
 				u.append(unit)
 	return u
-
-	

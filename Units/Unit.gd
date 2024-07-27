@@ -16,16 +16,22 @@ class_name Unit
 func _ready():
 	set_selected(selected) #init to false
 
+func set_player(value):
+	isPlayer = value
+	print(isPlayer)
+
 #selecting a unit
 func set_selected(value):
+	print("selecting!")
 	selected = value
 	if isPlayer == true:
 		selection.visible = value
 	elif isPlayer == false:
-		drawEnemyCircle(selection)
+		drawEnemyCircle()
 		selection.visible = value
 
-func drawEnemyCircle(selection):
+func drawEnemyCircle():
+		print("draw!!")
 		var style:StyleBoxFlat = StyleBoxFlat.new()
 		style.border_color =  Color(1,0,0,0.86) #red
 		style.bg_color =  Color(0.86,0,0,0)

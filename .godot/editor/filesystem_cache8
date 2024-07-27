@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722017779
+::res://::1722049971
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1721713547::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 ::res://Assets/::1722016321
@@ -414,8 +414,8 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1722016322::17220
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1722016322::1722016326::1::::<><>::
 ::res://Assets/tilesets/particles/::1722016326
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1722016322::1722016326::1::::<><>::
-::res://Environments/::1722017768
-world.tscn::PackedScene::6469066510429512572::1722017768::0::1::::<><>::res://scripts/global.gd<>res://UI/Camera2D.gd<>uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn
+::res://Environments/::1722049920
+world.tscn::PackedScene::6469066510429512572::1722049920::0::1::::<><>::uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png<>uid://csvxngscm7rwt::::res://GameManager/DungeonMaster.tscn
 ::res://Environments/tilesets/::1722008504
 grass.png::CompressedTexture2D::7305182772639388965::1721713547::1722008504::1::::<><>::
 plains.png::CompressedTexture2D::7819300623326541533::1721713547::1722008504::1::::<><>::
@@ -455,22 +455,24 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1721713547::17220
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1721713547::1722008504::1::::<><>::
 ::res://Environments/tilesets/particles/::1722008504
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1721713547::1722008504::1::::<><>::
-::res://Scripts/::1721883671
-global.gd::GDScript::-1::1721883671::0::1::::<>Node2D<>::
-::res://UI/::1722008455
-Camera2D.gd::GDScript::-1::1721860101::0::1::::<>Camera2D<>::
+::res://GameManager/::1722049960
+DungeonMaster.gd::GDScript::-1::1722049648::0::1::::DungeonMaster<>Node2D<>::
+DungeonMaster.tscn::PackedScene::6081012534915198019::1722049960::0::1::::<><>::res://GameManager/DungeonMaster.gd<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn<>res://UI/Camera2D.gd<>res://GameManager/Player.gd<>uid://bw4md1mc31gwl::::res://Units/Skeleton/Skeleton.tscn<>res://GameManager/Enemy.gd
+Enemy.gd::GDScript::-1::1722049192::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1722049181::0::1::::<>Node2D<>::
+::res://UI/::1722032117
+Camera2D.gd::GDScript::-1::1722032117::0::1::::<>Camera2D<>::
 UI.tscn::PackedScene::8409377180418272875::1721968276::0::1::::<><>::res://UI/Camera2D.gd
 ::res://UI/fonts/::1722008455
 FONTLOG.txt::TextFile::-1::1721713547::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1721713547::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::5375469398433749905::1721713547::1722008455::1::::<><>::
-::res://Units/::1722017779
-Unit.gd::GDScript::-1::1722016322::0::1::::Unit<>CharacterBody2D<>::
-Unit.tscn::PackedScene::6830615025341583550::1722017767::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png
-::res://Units/enemy/::1722017779
-::res://Units/Knight/::1722017767
-Knight.gd::GDScript::-1::1722017000::0::1::::Knight<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1722017767::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://Units/Unit.tscn<>res://Units/Knight/Knight.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png
+::res://Units/::1722049920
+Unit.gd::GDScript::-1::1722049736::0::1::::Unit<>CharacterBody2D<>::
+Unit.tscn::PackedScene::6830615025341583550::1722049920::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png
+::res://Units/Knight/::1722049920
+Knight.gd::GDScript::-1::1722049819::0::1::::Knight<>CharacterBody2D<>::
+Knight.tscn::PackedScene::963521029383266819::1722049920::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://Units/Unit.tscn<>res://Units/Knight/Knight.gd
 ::res://Units/Knight/Knight_art/::1722017768
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1722016322::1722017768::1::::<><>::
 ::res://Units/Knight/Knight_art/Knight with shadows/::1722017768
@@ -495,12 +497,11 @@ Knight-Shadow.png::CompressedTexture2D::4795201708570046046::1722016322::1722017
 Knight-Shadow_death.png::CompressedTexture2D::2013706950776857148::1722016322::1722017768::1::::<><>::
 Knight-Walk.png::CompressedTexture2D::4454839365919842523::1722016322::1722017768::1::::<><>::
 Knight.png::CompressedTexture2D::2832740204748281349::1722016322::1722017768::1::::<><>::
-::res://Units/player/::1722017339
-::res://Units/Skeleton/::1722017779
-Skeleton.gd::GDScript::-1::1722017694::0::1::::<>Unit<>::
-Skeleton.tscn::PackedScene::3991177544166533855::1722017779::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://Units/Unit.tscn<>res://Units/Skeleton/Skeleton.gd
+::res://Units/Skeleton/::1722049920
+Skeleton.gd::GDScript::-1::1722031197::0::1::::<>CharacterBody2D<>::
+Skeleton.tscn::PackedScene::3991177544166533855::1722049920::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://Units/Unit.tscn<>res://Units/Skeleton/Skeleton.gd<>uid://b7vdrbhufxdct::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://b3bfq4skpiq5s::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>uid://c1eqw5jy2ds8j::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png
 ::res://Units/Skeleton/Skeleton_art/::1722016322
-::res://Units/Skeleton/Skeleton_art/Skeleton/::1722017762
+::res://Units/Skeleton/Skeleton_art/Skeleton/::1722017780
 Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1722016322::1722017780::1::::<><>::
 Skeleton-Attack02.png::CompressedTexture2D::2783350852339034933::1722016322::1722017780::1::::<><>::
 Skeleton-Block.png::CompressedTexture2D::4883683375007123437::1722016322::1722017780::1::::<><>::
@@ -511,7 +512,7 @@ Skeleton-Shadow.png::CompressedTexture2D::3482967776917988533::1722016322::17220
 Skeleton-Shadow_death.png::CompressedTexture2D::779901705068685349::1722016322::1722017780::1::::<><>::
 Skeleton-Walk.png::CompressedTexture2D::2817703295886687070::1722016322::1722017780::1::::<><>::
 Skeleton.png::CompressedTexture2D::4097070633895388971::1722016322::1722017780::1::::<><>::
-::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/::1722017762
+::res://Units/Skeleton/Skeleton_art/Skeleton with shadows/::1722017780
 Skeleton-Attack01.png::CompressedTexture2D::8570243184252674692::1722016322::1722017780::1::::<><>::
 Skeleton-Attack02.png::CompressedTexture2D::5052785196599825659::1722016322::1722017780::1::::<><>::
 Skeleton-Block.png::CompressedTexture2D::6607021163071869499::1722016322::1722017780::1::::<><>::
