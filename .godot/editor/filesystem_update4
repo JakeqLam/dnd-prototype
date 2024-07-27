@@ -1,7 +1,8 @@
 res://environments/world.tscn
-res://Units/Unit.tscn
-res://Units/Skeleton/Skeleton.tscn
-res://Units/Knight/Knight.tscn
 res://GameManager/DungeonMaster.tscn
-res://GameManager/Enemy.gd
-res://Environments/world.tscn
+res://Units/mobs/Skeleton/Skeleton.tscn
+res://Units/Knight/Knight.gd
+res://Units/Knight/Knight.tscn
+res://Units/mobs/Skeleton/Skeleton.gd
+res://Units/Unit.tscn
+res://Units/Unit.gd

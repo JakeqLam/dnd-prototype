@@ -5,8 +5,8 @@ class_name Unit
 @export var maxHP:int = 100
 @export var currentHP:int = maxHP
 @export var defence:int = 0
-@export var speed:int = 0
-@export var weaponDamage:int = 0
+@export var speed:int = 2
+@export var weaponDamage:int = 1
 
 @export var selected:bool = false
 @export var isPlayer:bool = true #Check if this unit is owned by the player
@@ -18,11 +18,9 @@ func _ready():
 
 func set_player(value):
 	isPlayer = value
-	print(isPlayer)
 
 #selecting a unit
 func set_selected(value):
-	print("selecting!")
 	selected = value
 	if isPlayer == true:
 		selection.visible = value
@@ -31,7 +29,6 @@ func set_selected(value):
 		selection.visible = value
 
 func drawEnemyCircle():
-		print("draw!!")
 		var style:StyleBoxFlat = StyleBoxFlat.new()
 		style.border_color =  Color(1,0,0,0.86) #red
 		style.bg_color =  Color(0.86,0,0,0)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cyfwty2q3rdse"]
 
-[ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://Environments/tilesets/plains.png" id="3_3vju1"]
-[ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://Environments/tilesets/grass.png" id="4_w7spt"]
-[ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
+[ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://Assets/tilesets/plains.png" id="3_3vju1"]
+[ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://Assets/tilesets/grass.png" id="4_w7spt"]
+[ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Assets/tilesets/objects/objects.png" id="5_qikpr"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
 [ext_resource type="PackedScene" uid="uid://csvxngscm7rwt" path="res://GameManager/DungeonMaster.tscn" id="8_yy62h"]
 
