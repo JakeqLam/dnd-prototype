@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ny0byqchvrkt"]
+[gd_scene load_steps=30 format=3 uid="uid://ny0byqchvrkt"]
 
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="2_gxs7x"]
 [ext_resource type="Script" path="res://Units/Knight/Knight.gd" id="2_jgudi"]
@@ -13,9 +13,12 @@
 [ext_resource type="Script" path="res://scripts/Components/State/walk.gd" id="12_llr5b"]
 [ext_resource type="Script" path="res://scripts/Components/State/idle.gd" id="12_nfvga"]
 [ext_resource type="Script" path="res://scripts/Components/State/attack.gd" id="13_sfjjb"]
+[ext_resource type="Script" path="res://scripts/Components/State/death.gd" id="14_2svdt"]
+[ext_resource type="Script" path="res://scripts/Components/State/block.gd" id="15_txdd0"]
+[ext_resource type="Script" path="res://scripts/Components/State/hurt.gd" id="16_8dlfo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
-radius = 12.0416
+radius = 9.0
 
 [sub_resource type="Animation" id="Animation_fkxt2"]
 length = 0.001
@@ -414,15 +417,16 @@ radius = 88.0057
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4xqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbc84"]
-radius = 9.8995
+radius = 9.89948
 height = 39.598
 
-[node name="Knight" type="CharacterBody2D"]
+[node name="Knight" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
 z_index = 1
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("2_jgudi")
+health_component = NodePath("HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pogrd")
@@ -438,6 +442,7 @@ autoplay = "idle"
 visibility_layer = 2
 y_sort_enabled = true
 offset_left = -9.0
+offset_top = -2.0
 offset_right = 9.0
 offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
@@ -467,12 +472,11 @@ monitorable = false
 modulate = Color(0.117647, 1, 0, 1)
 shape = SubResource("CapsuleShape2D_b4xqv")
 
-[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+[node name="HitboxComponent" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 5
 monitoring = false
 script = ExtResource("10_elqu4")
-health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 modulate = Color(0, 0.545098, 1, 1)
@@ -493,9 +497,27 @@ script = ExtResource("12_llr5b")
 parent = NodePath("../..")
 speed = 40
 
-[node name="attack" type="Node" parent="StateMachine"]
+[node name="attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
 script = ExtResource("13_sfjjb")
+parent = NodePath("../..")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[node name="death" type="Node" parent="StateMachine"]
+script = ExtResource("14_2svdt")
+
+[node name="block" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("15_txdd0")
+parent = NodePath("../..")
+
+[node name="hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("16_8dlfo")
+parent = NodePath("../..")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/block" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/hurt" method="_on_animation_player_animation_finished"]
+[connection signal="damage_blocked" from="HealthComponent" to="StateMachine/idle" method="_on_health_component_damage_blocked"]
+[connection signal="damage_blocked" from="HealthComponent" to="StateMachine/walk" method="_on_health_component_damage_blocked"]
+[connection signal="damage_hurt" from="HealthComponent" to="StateMachine/idle" method="_on_health_component_damage_hurt"]
+[connection signal="damage_hurt" from="HealthComponent" to="StateMachine/walk" method="_on_health_component_damage_hurt"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_enemy_detector_body_entered"]
 [connection signal="area_entered" from="HurtboxComponent" to="HealthComponent" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="HitboxComponent" to="StateMachine/idle" method="_on_hitbox_component_body_entered"]

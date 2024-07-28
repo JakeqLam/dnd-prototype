@@ -24,3 +24,9 @@ res://scripts/Components/PlayerControllerComponent.gd
 res://scripts/Components/State/walk.gd
 res://Units/Knight/attack.gd
 res://scripts/Components/State/idle.gd
+res://scripts/Components/State/death.gd
+res://scripts/Components/HealthComponent.gd
+res://scripts/Components/State/attack.gd
+res://scripts/Components/State/block.gd
+res://scripts/Components/State/hurt.gd
+res://Units/mobs/Skeleton/Skeleton.gd
