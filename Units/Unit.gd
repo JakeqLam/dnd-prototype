@@ -12,7 +12,7 @@ class_name Unit
 @export var isPlayer:bool = true #Check if this unit is owned by the player
 
 @onready var selection = $Selection
-@onready var hurtbox = $Hurtbox
+#@onready var hurtbox = $HurtboxComponent
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var target = position
@@ -43,7 +43,6 @@ func _physics_process(_delta):
 		unitState["IDLING"]:
 			animationPlayer.play("idle")
 		unitState["MOVING"]:
-			print(speed)
 			velocity = position.direction_to(target) * speed
 			
 			if position.distance_to(target) > 10:
@@ -54,7 +53,6 @@ func _physics_process(_delta):
 			animationPlayer.play("walk")
 			move_and_slide()
 		unitState["ATTACKING"]:
-			print("ATTACKING!")
 			animationPlayer.play("attack01")
 		unitState["DEATH"]:
 			animationPlayer.play("death")
@@ -69,9 +67,7 @@ func set_state(state):
 	
 func set_target(clickTarget:Vector2):
 	self.current_state = unitState["MOVING"]
-	print(current_state)
 	target = clickTarget
-	print(target)
 
 func set_player(value):
 	isPlayer = value
@@ -99,7 +95,7 @@ func drawEnemyCircle():
 func death():
 	isDead = true
 	animationPlayer.play("death")
-	print(name + "has died!")
+	#print(name + "has died!")
 
 func receive_damage(base_damage:int):
 	self.isUnderAttack = true
@@ -113,7 +109,7 @@ func receive_damage(base_damage:int):
 		death()
 	
 	self.currentHP -= actual_damage
-	print(name + " received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
+	#print(name + " received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
 	
 func _on_hurtbox_area_entered(hitbox):
 	receive_damage(hitbox.damage)

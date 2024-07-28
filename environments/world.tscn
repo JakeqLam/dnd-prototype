@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=12 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="Texture2D" uid="uid://djny0ed3vcei4" path="res://Environments/tilesets/plains.png" id="3_3vju1"]
 [ext_resource type="Texture2D" uid="uid://dccxj7wxom2tt" path="res://Environments/tilesets/grass.png" id="4_w7spt"]
+[ext_resource type="PackedScene" uid="uid://bw4md1mc31gwl" path="res://Units/mobs/Skeleton/Skeleton.tscn" id="5_oi0kb"]
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
+[ext_resource type="PackedScene" uid="uid://ny0byqchvrkt" path="res://Units/Knight/Knight.tscn" id="6_5wgyb"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
-[ext_resource type="PackedScene" uid="uid://csvxngscm7rwt" path="res://GameManager/DungeonMaster.tscn" id="8_yy62h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g8by"]
 texture = ExtResource("3_3vju1")
@@ -401,4 +402,8 @@ layer_1/y_sort_enabled = true
 layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(851943, 2, 5, 720894, 2, 5, -65538, 2, 5, -65561, 2, 5, -327701, 2, 5, 720869, 2, 5, 1114087, 2, 5, 1048555, 2, 5, 1114111, 2, 5, -327687, 2, 5, -327683, 2, 5, 983013, 524290, 5, 1114109, 524290, 5, 1179630, 655362, 5, 851968, 655362, 5, -27, 655362, 7, -393226, 655362, 7, -131072, 655362, 7, -262168, 131074, 1, -262153, 131074, 1, 917481, 131074, 1, 983036, 131074, 1, 393216, 131074, 1, 589798, 131074, 1, 327674, 655362, 5, -65555, 655362, 5, 786411, 65538, 1, 262141, 2, 5, -196619, 2, 5, 131051, 393218, 7, 65532, 393218, 7, -11, 393218, 7, 655349, 131075, 4, 458733, 131075, 4, 262134, 196611, 4, 524280, 196611, 4)
 
-[node name="DungeonMaster" parent="." instance=ExtResource("8_yy62h")]
+[node name="Skeleton" parent="." instance=ExtResource("5_oi0kb")]
+position = Vector2(127, 169)
+
+[node name="Knight" parent="." instance=ExtResource("6_5wgyb")]
+position = Vector2(288, 173)

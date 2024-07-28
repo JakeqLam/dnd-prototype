@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ndmw5kk3tkmy"]
 
-[ext_resource type="Script" path="res://Units/HitBox.gd" id="1_s7s1h"]
+[ext_resource type="Script" path="res://scripts/Components/HitboxComponent.gd" id="1_s7s1h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbc84"]
 radius = 9.8995

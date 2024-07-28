@@ -6,9 +6,9 @@ var playerUnits = []
 func _ready():
 	playerUnits = self.get_children()
 	
-	for player in playerUnits:
-		player.set_player(true)
-		player.add_to_group("playerUnits")
+	#for player in playerUnits:
+		#player.set_player(true)
+		#player.add_to_group("playerUnits")
 	
 	
 	

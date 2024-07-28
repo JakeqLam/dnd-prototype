@@ -38,20 +38,20 @@ script = ExtResource("2_xby0i")
 script = ExtResource("3_cxojd")
 
 [node name="Knight" parent="Player" instance=ExtResource("2_ucmxc")]
-position = Vector2(203, 149)
+position = Vector2(268, 151)
 
 [node name="Enemy" type="Node2D" parent="."]
 script = ExtResource("4_oick4")
 
 [node name="Skeleton" parent="Enemy" instance=ExtResource("6_3dvwr")]
-position = Vector2(145, 150)
+position = Vector2(160, 157)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
-offset_left = 247.0
-offset_top = 196.0
-offset_right = 247.0
-offset_bottom = 196.0
+offset_left = 253.0
+offset_top = 77.0
+offset_right = 253.0
+offset_bottom = 77.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_i520d")
 metadata/_edit_use_anchors_ = true

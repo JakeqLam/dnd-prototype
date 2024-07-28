@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dlwk5i84ve2an" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png" id="5_6wpsv"]
 [ext_resource type="Texture2D" uid="uid://c8dy8jd4cu2j6" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png" id="6_kavrq"]
 [ext_resource type="Texture2D" uid="uid://b0yt31lb6jm23" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png" id="7_3vs3p"]
-[ext_resource type="PackedScene" uid="uid://bpcehk8uwopwx" path="res://Units/Hurtbox.tscn" id="8_w88n2"]
-[ext_resource type="PackedScene" uid="uid://ndmw5kk3tkmy" path="res://Units/HitBox.tscn" id="9_dqv6c"]
+[ext_resource type="PackedScene" uid="uid://bpcehk8uwopwx" path="res://scripts/Components/HurtboxComponent.tscn" id="8_w88n2"]
+[ext_resource type="PackedScene" uid="uid://ndmw5kk3tkmy" path="res://scripts/Components/HitBoxComponent.tscn" id="9_dqv6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 12.0416
@@ -420,6 +420,8 @@ y_sort_enabled = true
 texture = ExtResource("2_yya2i")
 hframes = 6
 
+[node name="Hitbox" parent="." instance=ExtResource("9_dqv6c")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pogrd")
 debug_color = Color(0.185944, 0.637824, 0.232843, 0.0823529)
@@ -454,9 +456,7 @@ position = Vector2(5, 0)
 rotation = 2.35619
 shape = SubResource("CircleShape2D_47ig5")
 
-[node name="Hitbox" parent="." instance=ExtResource("9_dqv6c")]
-
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 
-[editable path="Hurtbox"]
 [editable path="Hitbox"]
+[editable path="Hurtbox"]
