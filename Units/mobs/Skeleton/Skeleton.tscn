@@ -9,13 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://b3bfq4skpiq5s" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png" id="8_s1onp"]
 [ext_resource type="Script" path="res://scripts/Components/HealthComponent.gd" id="9_kqn6o"]
 [ext_resource type="Script" path="res://scripts/Components/HitboxComponent.gd" id="10_1uu10"]
-[ext_resource type="Script" path="res://scripts/Components/State/StateMachine.gd" id="11_awrvs"]
-[ext_resource type="Script" path="res://scripts/Components/State/idle.gd" id="12_phpwc"]
-[ext_resource type="Script" path="res://scripts/Components/State/walk.gd" id="13_ay68u"]
-[ext_resource type="Script" path="res://scripts/Components/State/attack.gd" id="14_rr784"]
-[ext_resource type="Script" path="res://scripts/Components/State/death.gd" id="15_i3ssl"]
-[ext_resource type="Script" path="res://scripts/Components/State/block.gd" id="16_vas5j"]
-[ext_resource type="Script" path="res://scripts/Components/State/hurt.gd" id="17_4dalt"]
+[ext_resource type="Script" path="res://scripts/Components/StateMachine.gd" id="10_p042s"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_idle.gd" id="11_1r5aw"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_follow.gd" id="12_b0qqc"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_attack.gd" id="13_kbpsr"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_block.gd" id="14_naehk"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_hurt.gd" id="15_jaa50"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_death.gd" id="16_uci31"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -440,10 +440,10 @@ radius = 88.0057
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olif0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfpbq"]
-radius = 9.89948
-height = 39.598
+radius = 14.0
+height = 40.0
 
-[node name="Skeleton" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
+[node name="Skeleton" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["enemy"]]
 z_index = 1
 y_sort_enabled = true
 collision_layer = 4
@@ -452,6 +452,8 @@ script = ExtResource("2_nemj3")
 health_component = NodePath("HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 4
+visibility_layer = 2
 z_index = 1
 position = Vector2(0.875, 1.31)
 shape = SubResource("CircleShape2D_pogrd")
@@ -489,6 +491,8 @@ position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_exbvv")
 
 [node name="HurtboxComponent" type="Area2D" parent="."]
+light_mask = 4
+visibility_layer = 2
 collision_layer = 2
 collision_mask = 4
 monitorable = false
@@ -498,41 +502,46 @@ modulate = Color(0.117647, 1, 0, 1)
 shape = SubResource("CapsuleShape2D_olif0")
 
 [node name="HitboxComponent" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 5
+light_mask = 4
+visibility_layer = 2
+collision_layer = 4
+collision_mask = 2
 monitoring = false
 script = ExtResource("10_1uu10")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 modulate = Color(0, 0.545098, 1, 1)
-position = Vector2(15, 0)
-rotation = 2.35619
+position = Vector2(11, -2)
 shape = SubResource("CapsuleShape2D_kfpbq")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("11_awrvs")
-initial_state = NodePath("idle")
+script = ExtResource("10_p042s")
+initial_state = NodePath("enemy_idle")
 
-[node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("12_phpwc")
+[node name="enemy_idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("11_1r5aw")
 parent = NodePath("../..")
 
-[node name="walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("13_ay68u")
-parent = NodePath("../..")
-speed = 40
-
-[node name="attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("14_rr784")
+[node name="enemy_follow" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("12_b0qqc")
 parent = NodePath("../..")
 
-[node name="death" type="Node" parent="StateMachine"]
-script = ExtResource("15_i3ssl")
-
-[node name="block" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("16_vas5j")
+[node name="enemy_attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("13_kbpsr")
 parent = NodePath("../..")
 
-[node name="hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("17_4dalt")
+[node name="enemy_block" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("14_naehk")
 parent = NodePath("../..")
+
+[node name="enemy_hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+script = ExtResource("15_jaa50")
+parent = NodePath("../..")
+
+[node name="enemy_death" type="Node" parent="StateMachine"]
+script = ExtResource("16_uci31")
+
+[connection signal="damage_blocked" from="HealthComponent" to="StateMachine/enemy_idle" method="_on_health_component_damage_blocked"]
+[connection signal="damage_blocked" from="HealthComponent" to="StateMachine/enemy_follow" method="_on_health_component_damage_blocked"]
+[connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_idle" method="_on_health_component_damage_hurt"]
+[connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_follow" method="_on_health_component_damage_hurt"]

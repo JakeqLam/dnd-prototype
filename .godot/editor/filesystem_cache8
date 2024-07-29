@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722191851
+::res://::1722218707
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1722055227::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 ::res://Assets/::1722016321
@@ -7,7 +7,7 @@ export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 FONTLOG.txt::TextFile::-1::1722016321::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1722016321::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::5375469398433749905::1722016321::1722055226::1::::<><>::
-::res://Assets/Pixel Art/::1721844972
+::res://Assets/Pixel Art/::1722218363
 ::res://Assets/Pixel Art/Ogre/::1722055227
 ogre-Sheet.png::CompressedTexture2D::6312493710767360612::1721713547::1722055227::1::::<><>::
 ::res://Assets/Pixel Art/Ogre/Individual Sprites/::1722055227
@@ -375,6 +375,210 @@ Wizard-Hurt.png::CompressedTexture2D::4421382253455931620::1721713547::172205522
 Wizard-Idle.png::CompressedTexture2D::5697117981469340042::1721713547::1722055226::1::::<><>::
 Wizard-Walk.png::CompressedTexture2D::2096131340751679997::1721713547::1722055226::1::::<><>::
 Wizard.png::CompressedTexture2D::2554421904412174880::1721713547::1722055226::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/::1722218363
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/::1722218412
+full spritesheet.png::CompressedTexture2D::4126441103266538604::1578454975::1722218412::1::::<><>::
+full tilemap.png::CompressedTexture2D::2335835288359644926::1603337818::1722218412::1::::<><>::
+README.txt::TextFile::-1::1661361138::0::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/effects (new)/::1722218413
+enemy_afterdead_explosion_anim_f0.png::CompressedTexture2D::4515361644332455483::1560830163::1722218412::1::::<><>::
+enemy_afterdead_explosion_anim_f1.png::CompressedTexture2D::5959693997088176358::1560830176::1722218412::1::::<><>::
+enemy_afterdead_explosion_anim_f2.png::CompressedTexture2D::7048865155100789392::1560830187::1722218412::1::::<><>::
+enemy_afterdead_explosion_anim_f3.png::CompressedTexture2D::5673395349816186014::1560830200::1722218412::1::::<><>::
+enemy_afterdead_explosion_anim_spritesheet.png::CompressedTexture2D::3172283005572781688::1560830111::1722218412::1::::<><>::
+explosion_anim_f0.png::CompressedTexture2D::3399348455063796123::1560313215::1722218412::1::::<><>::
+explosion_anim_f1.png::CompressedTexture2D::8260191989642601598::1560313228::1722218412::1::::<><>::
+explosion_anim_f2.png::CompressedTexture2D::7032848171996567204::1560313240::1722218412::1::::<><>::
+explosion_anim_f3.png::CompressedTexture2D::118358548283303094::1560313252::1722218412::1::::<><>::
+explosion_anim_f4.png::CompressedTexture2D::6003164983016717478::1560313264::1722218412::1::::<><>::
+explosion_anim_f5.png::CompressedTexture2D::6071274620507773354::1560313277::1722218412::1::::<><>::
+explosion_anim_f6.png::CompressedTexture2D::3822773108753897149::1560313291::1722218412::1::::<><>::
+explosion_anim_spritesheet.png::CompressedTexture2D::8657606281115271188::1560313310::1722218412::1::::<><>::
+hit_effect_anim_f0.png::CompressedTexture2D::3038394962273394411::1560833660::1722218413::1::::<><>::
+hit_effect_anim_f1.png::CompressedTexture2D::8325983813469534857::1560833672::1722218413::1::::<><>::
+hit_effect_anim_f2.png::CompressedTexture2D::7315097982215105778::1560833683::1722218413::1::::<><>::
+hit_effect_anim_spritesheet.png::CompressedTexture2D::3746210154857426512::1560833557::1722218413::1::::<><>::
+slash_effect_anim_f0.png::CompressedTexture2D::4186061762410219763::1560833705::1722218413::1::::<><>::
+slash_effect_anim_f1.png::CompressedTexture2D::4418254642756896835::1560833714::1722218413::1::::<><>::
+slash_effect_anim_f2.png::CompressedTexture2D::3615263049782502292::1560833723::1722218413::1::::<><>::
+slash_effect_anim_spritesheet.png::CompressedTexture2D::5049705956321969542::1560832919::1722218413::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/::1722218363
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/flying creature/::1722218413
+fly_anim_f0.png::CompressedTexture2D::7727641465249124216::1560308464::1722218413::1::::<><>::
+fly_anim_f1.png::CompressedTexture2D::5665399680310932715::1560308479::1722218413::1::::<><>::
+fly_anim_f2.png::CompressedTexture2D::8988859683472308956::1560308492::1722218413::1::::<><>::
+fly_anim_f3.png::CompressedTexture2D::7575409848293104499::1560308504::1722218413::1::::<><>::
+fly_anim_spritesheet.png::CompressedTexture2D::3410122963156224209::1560308439::1722218413::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/::1722218412
+goblin_idle_anim_f0.png::CompressedTexture2D::3972439154473372735::1560412781::1722218412::1::::<><>::
+goblin_idle_anim_f1.png::CompressedTexture2D::6806040695589131058::1560412788::1722218412::1::::<><>::
+goblin_idle_anim_f2.png::CompressedTexture2D::9134450151028931651::1560412794::1722218412::1::::<><>::
+goblin_idle_anim_f3.png::CompressedTexture2D::7020566891789351035::1560412800::1722218412::1::::<><>::
+goblin_idle_anim_f4.png::CompressedTexture2D::5610831053256072459::1560412807::1722218412::1::::<><>::
+goblin_idle_anim_f5.png::CompressedTexture2D::2187229536533590001::1560412813::1722218412::1::::<><>::
+goblin_idle_spritesheet.png::CompressedTexture2D::2128109008852843596::1560410704::1722218412::1::::<><>::
+goblin_knife.png::CompressedTexture2D::2380921462804867458::1560308828::1722218412::1::::<><>::
+goblin_run_anim_f0.png::CompressedTexture2D::1123143827160294197::1560412831::1722218412::1::::<><>::
+goblin_run_anim_f1.png::CompressedTexture2D::5013284606314999412::1560412836::1722218412::1::::<><>::
+goblin_run_anim_f2.png::CompressedTexture2D::7241497846222182258::1560412841::1722218412::1::::<><>::
+goblin_run_anim_f3.png::CompressedTexture2D::8178704623278988773::1560412847::1722218412::1::::<><>::
+goblin_run_anim_f4.png::CompressedTexture2D::4176683356672294992::1560412852::1722218412::1::::<><>::
+goblin_run_anim_f5.png::CompressedTexture2D::9054430322795884154::1560412858::1722218412::1::::<><>::
+goblin_run_spritesheet.png::CompressedTexture2D::2913321960949205743::1560410748::1722218412::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/slime/::1722218413
+slime_idle_anim_f0.png::CompressedTexture2D::1965859067651202066::1560307174::1722218412::1::::<><>::
+slime_idle_anim_f1.png::CompressedTexture2D::7061491707047727735::1560307189::1722218412::1::::<><>::
+slime_idle_anim_f2.png::CompressedTexture2D::754322630724148187::1560307201::1722218412::1::::<><>::
+slime_idle_anim_f3.png::CompressedTexture2D::3849482736747460768::1560307214::1722218412::1::::<><>::
+slime_idle_anim_f4.png::CompressedTexture2D::4347454341523953953::1560307226::1722218412::1::::<><>::
+slime_idle_anim_f5.png::CompressedTexture2D::47867189551444791::1560307238::1722218412::1::::<><>::
+slime_idle_spritesheet.png::CompressedTexture2D::8911496014520924027::1560307003::1722218412::1::::<><>::
+slime_run_anim_f0.png::CompressedTexture2D::4709283163082476839::1560307062::1722218412::1::::<><>::
+slime_run_anim_f1.png::CompressedTexture2D::3220053011024290628::1560307077::1722218412::1::::<><>::
+slime_run_anim_f2.png::CompressedTexture2D::2781276127527159682::1560307089::1722218412::1::::<><>::
+slime_run_anim_f3.png::CompressedTexture2D::3718962113765402062::1560307103::1722218412::1::::<><>::
+slime_run_anim_f4.png::CompressedTexture2D::2577605592066128115::1560307118::1722218413::1::::<><>::
+slime_run_anim_f5.png::CompressedTexture2D::6190626476357650303::1560307130::1722218413::1::::<><>::
+slime_run_spritesheeet.png::CompressedTexture2D::7528801446350011954::1560306618::1722218413::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/heroes/::1722218363
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/::1722218413
+knight_idle_anim_f0.png::CompressedTexture2D::4738755186140049526::1558944227::1722218413::1::::<><>::
+knight_idle_anim_f1.png::CompressedTexture2D::5136482559277950910::1558944238::1722218413::1::::<><>::
+knight_idle_anim_f2.png::CompressedTexture2D::2276990464438466228::1558944246::1722218413::1::::<><>::
+knight_idle_anim_f3.png::CompressedTexture2D::5840146513580384756::1558944254::1722218413::1::::<><>::
+knight_idle_anim_f4.png::CompressedTexture2D::2641409879968982062::1558944265::1722218413::1::::<><>::
+knight_idle_anim_f5.png::CompressedTexture2D::6765061775360842438::1558944274::1722218413::1::::<><>::
+knight_idle_spritesheet.png::CompressedTexture2D::6295084752148501862::1560410872::1722218413::1::::<><>::
+knight_run_anim_f0.png::CompressedTexture2D::4476298065115235552::1560410041::1722218413::1::::<><>::
+knight_run_anim_f1.png::CompressedTexture2D::7793089539769002097::1560410066::1722218413::1::::<><>::
+knight_run_anim_f2.png::CompressedTexture2D::4872473742086718126::1560410073::1722218413::1::::<><>::
+knight_run_anim_f3.png::CompressedTexture2D::1812254410429964383::1560410083::1722218413::1::::<><>::
+knight_run_anim_f4.png::CompressedTexture2D::654747107101147707::1560410092::1722218413::1::::<><>::
+knight_run_anim_f5.png::CompressedTexture2D::546011576144069785::1560410101::1722218413::1::::<><>::
+knight_run_spritesheet.png::CompressedTexture2D::75290694069769731::1560410010::1722218413::1::::<><>::
+weapon_sword_1.png::CompressedTexture2D::2496552671477552341::1558415273::1722218413::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/props_itens/::1722218413
+bag_coins.png::CompressedTexture2D::1350698934903594280::1560310178::1722218413::1::::<><>::
+barrel.png::CompressedTexture2D::2958014385699782403::1559964296::1722218413::1::::<><>::
+bomb_anim_f0.png::CompressedTexture2D::6867131587801351386::1560408991::1722218413::1::::<><>::
+bomb_anim_f1.png::CompressedTexture2D::4932108175992408435::1560408995::1722218413::1::::<><>::
+bomb_anim_f2.png::CompressedTexture2D::1928364178410294762::1560409017::1722218413::1::::<><>::
+bomb_anim_f3.png::CompressedTexture2D::4661959141758455864::1560409023::1722218413::1::::<><>::
+bomb_anim_f4.png::CompressedTexture2D::5161971711731170431::1560409027::1722218413::1::::<><>::
+bomb_anim_f5.png::CompressedTexture2D::6209792148588648605::1560409032::1722218413::1::::<><>::
+bomb_anim_f6.png::CompressedTexture2D::111816173241543925::1560409036::1722218413::1::::<><>::
+bomb_anim_f7.png::CompressedTexture2D::4902538860888832259::1560409039::1722218413::1::::<><>::
+bomb_anim_f8.png::CompressedTexture2D::2783244236015444922::1560409044::1722218413::1::::<><>::
+bomb_anim_f9.png::CompressedTexture2D::2893563518145728813::1560409047::1722218413::1::::<><>::
+bomb_anim_spritesheet.png::CompressedTexture2D::6644845646361425449::1560408721::1722218413::1::::<><>::
+bookshelf.png::CompressedTexture2D::3695848251121599342::1559964876::1722218413::1::::<><>::
+chest_closed_anim_f0.png::CompressedTexture2D::5898427610670340993::1559970828::1722218413::1::::<><>::
+chest_closed_anim_f1.png::CompressedTexture2D::3330660761068823859::1559970842::1722218413::1::::<><>::
+chest_closed_anim_f2.png::CompressedTexture2D::7857208189523996025::1559970855::1722218413::1::::<><>::
+chest_closed_anim_f3.png::CompressedTexture2D::52426615750020991::1559970870::1722218413::1::::<><>::
+chest_closed_anim_f4.png::CompressedTexture2D::6223160071825892441::1559970885::1722218413::1::::<><>::
+chest_closed_anim_f5.png::CompressedTexture2D::7203588504342117617::1559970898::1722218413::1::::<><>::
+chest_closed_anim_f6.png::CompressedTexture2D::6149541453115372956::1559970912::1722218413::1::::<><>::
+chest_closed_anim_f7.png::CompressedTexture2D::4334703832885496737::1559970928::1722218413::1::::<><>::
+chest_open.png::CompressedTexture2D::2078418933253717338::1559971167::1722218413::1::::<><>::
+chest_spritesheet.png::CompressedTexture2D::4061413750135072608::1559970793::1722218413::1::::<><>::
+flag_green.png::CompressedTexture2D::5602911409772777246::1559011363::1722218413::1::::<><>::
+flag_red.png::CompressedTexture2D::3793255171438688786::1559011212::1722218413::1::::<><>::
+key_silver.png::CompressedTexture2D::7459268164686226531::1559108524::1722218413::1::::<><>::
+potion_green.png::CompressedTexture2D::8704734454820859504::1560309278::1722218413::1::::<><>::
+potion_red.png::CompressedTexture2D::5460086459146247881::1560309259::1722218413::1::::<><>::
+potion_yellow.png::CompressedTexture2D::4351043678244792682::1560309284::1722218413::1::::<><>::
+prisoner.png::CompressedTexture2D::414812801851238039::1559104411::1722218413::1::::<><>::
+table.png::CompressedTexture2D::7305316039653012790::1559969132::1722218413::1::::<><>::
+table_2.png::CompressedTexture2D::2282502492949774986::1559969140::1722218413::1::::<><>::
+torch_anim_f0.png::CompressedTexture2D::4616177893919303144::1559011677::1722218413::1::::<><>::
+torch_anim_f1.png::CompressedTexture2D::4481710784623262437::1559011685::1722218413::1::::<><>::
+torch_anim_f2.png::CompressedTexture2D::3517148261000418243::1559011693::1722218412::1::::<><>::
+torch_anim_f3.png::CompressedTexture2D::7646310833095659650::1559011700::1722218412::1::::<><>::
+torch_anim_f4.png::CompressedTexture2D::4168356906421013837::1559011709::1722218412::1::::<><>::
+torch_anim_f5.png::CompressedTexture2D::2539341855747468095::1559011716::1722218412::1::::<><>::
+torch_spritesheet.png::CompressedTexture2D::6034097302740825722::1559969171::1722218412::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/tiles/::1722218363
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/tiles/floor/::1722218412
+door_floor.png::CompressedTexture2D::8317553990738367642::1559967954::1722218412::1::::<><>::
+floor_1.png::CompressedTexture2D::4427058792587492301::1559013089::1722218412::1::::<><>::
+floor_2.png::CompressedTexture2D::1469943871125541421::1559013105::1722218412::1::::<><>::
+floor_3.png::CompressedTexture2D::1943491338676925070::1559013123::1722218412::1::::<><>::
+floor_4.png::CompressedTexture2D::460085704987665421::1559013140::1722218412::1::::<><>::
+floor_5.png::CompressedTexture2D::3828580918327221596::1559015387::1722218412::1::::<><>::
+floor_6.png::CompressedTexture2D::8914378450650315241::1559014894::1722218412::1::::<><>::
+floor_7.png::CompressedTexture2D::4283759036034656628::1559015024::1722218412::1::::<><>::
+floor_8.png::CompressedTexture2D::3734401917476542493::1559015067::1722218412::1::::<><>::
+floor_9.png::CompressedTexture2D::3447584202150463458::1559015112::1722218412::1::::<><>::
+floor_10.png::CompressedTexture2D::6158117578769192201::1559015378::1722218412::1::::<><>::
+floor_side2.png::CompressedTexture2D::5234057655994323790::1559013240::1722218412::1::::<><>::
+floor_side3.png::CompressedTexture2D::340015720072595589::1559013254::1722218412::1::::<><>::
+floor_side4.png::CompressedTexture2D::6473921048371754277::1559013340::1722218412::1::::<><>::
+floor_side5.png::CompressedTexture2D::3605876821606123909::1559013346::1722218412::1::::<><>::
+floor_side.png::CompressedTexture2D::9009705921233556341::1559013201::1722218412::1::::<><>::
+floor_side_left.png::CompressedTexture2D::4436291554515846942::1559013213::1722218412::1::::<><>::
+floor_side_right.png::CompressedTexture2D::7201493997801220424::1559013224::1722218412::1::::<><>::
+floor_stair.png::CompressedTexture2D::2344613710949430596::1559013411::1722218412::1::::<><>::
+spikes_anim_f0.png::CompressedTexture2D::7600200036164670215::1559103837::1722218412::1::::<><>::
+spikes_anim_f1.png::CompressedTexture2D::7444341609245926869::1559103843::1722218412::1::::<><>::
+spikes_anim_f2.png::CompressedTexture2D::2392884645995801326::1559103410::1722218412::1::::<><>::
+spikes_anim_f3.png::CompressedTexture2D::2940929519266511825::1559103425::1722218412::1::::<><>::
+spikes_anim_f4.png::CompressedTexture2D::3549804404615023102::1559103438::1722218412::1::::<><>::
+spikes_anim_f5.png::CompressedTexture2D::6330944934443231879::1559103453::1722218412::1::::<><>::
+spikes_anim_f6.png::CompressedTexture2D::8819689593731549128::1559103466::1722218412::1::::<><>::
+spikes_anim_f7.png::CompressedTexture2D::4212090038598380756::1559962486::1722218412::1::::<><>::
+spikes_anim_f8.png::CompressedTexture2D::8791458632095056293::1559962484::1722218412::1::::<><>::
+spikes_anim_f9.png::CompressedTexture2D::9145568414752986049::1559962483::1722218412::1::::<><>::
+spikes_spritesheet.png::CompressedTexture2D::8859870362663903424::1559962434::1722218412::1::::<><>::
+stair_nextlevel.png::CompressedTexture2D::665179917663812893::1559605898::1722218412::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/tiles/wall/::1722218412
+door_anim_opening_f0.png::CompressedTexture2D::5803053151264599194::1559963650::1722218412::1::::<><>::
+door_anim_opening_f1.png::CompressedTexture2D::7523541355109360029::1559963715::1722218412::1::::<><>::
+door_anim_opening_f2.png::CompressedTexture2D::3739954124889698617::1559963686::1722218412::1::::<><>::
+door_anim_opening_f3.png::CompressedTexture2D::5435923177571552254::1559963728::1722218412::1::::<><>::
+door_anim_opening_f4.png::CompressedTexture2D::5945722776259874728::1559963741::1722218412::1::::<><>::
+door_anim_opening_f5.png::CompressedTexture2D::3657957157176927095::1559963755::1722218412::1::::<><>::
+door_anim_opening_f6.png::CompressedTexture2D::7419482747215856526::1559963768::1722218412::1::::<><>::
+door_anim_opening_f7.png::CompressedTexture2D::233564911527477313::1559963784::1722218412::1::::<><>::
+door_anim_opening_f8.png::CompressedTexture2D::1441829940367768289::1559963797::1722218412::1::::<><>::
+door_anim_opening_f9.png::CompressedTexture2D::6910963093331774058::1559963810::1722218412::1::::<><>::
+door_anim_opening_f10.png::CompressedTexture2D::5770722136840191955::1559966859::1722218412::1::::<><>::
+door_anim_opening_f11.png::CompressedTexture2D::501396071533156954::1559966864::1722218412::1::::<><>::
+door_anim_opening_f12.png::CompressedTexture2D::2908647006605828605::1559966868::1722218412::1::::<><>::
+door_anim_opening_f13.png::CompressedTexture2D::1452069850611176623::1559966871::1722218412::1::::<><>::
+door_closed.png::CompressedTexture2D::289179614765762724::1558842593::1722218412::1::::<><>::
+door_fullyopen.png::CompressedTexture2D::2981912544241524120::1559966464::1722218412::1::::<><>::
+door_spritesheet.png::CompressedTexture2D::1569966420168793256::1559963607::1722218412::1::::<><>::
+obs.txt::TextFile::-1::1560834433::0::1::::<><>::
+wall_1.png::CompressedTexture2D::1831345702605214762::1558415403::1722218412::1::::<><>::
+wall_2.png::CompressedTexture2D::5277799550072158030::1558415411::1722218412::1::::<><>::
+wall_3.png::CompressedTexture2D::77503351975889177::1559012893::1722218412::1::::<><>::
+wall_arch_left.png::CompressedTexture2D::2868377299971605810::1559013482::1722218412::1::::<><>::
+wall_arch_right.png::CompressedTexture2D::922573013957138675::1559013488::1722218412::1::::<><>::
+wall_bottom.png::CompressedTexture2D::3558040132265424376::1559104683::1722218412::1::::<><>::
+wall_bottom_inner_left.png::CompressedTexture2D::6212437300708908796::1559104852::1722218412::1::::<><>::
+wall_bottom_inner_right.png::CompressedTexture2D::375743537588502630::1559104860::1722218412::1::::<><>::
+wall_bottom_left.png::CompressedTexture2D::7248212747815628116::1559105113::1722218412::1::::<><>::
+wall_bottom_right.png::CompressedTexture2D::3204989526555510883::1559105123::1722218412::1::::<><>::
+wall_crack.png::CompressedTexture2D::3136590133715352635::1559968620::1722218412::1::::<><>::
+wall_side_left .png::CompressedTexture2D::6162136533992291979::1559013530::1722218412::1::::<><>::
+wall_side_right.png::CompressedTexture2D::2144384172961402936::1559013518::1722218412::1::::<><>::
+wall_top_1.png::CompressedTexture2D::8539511821270767814::1558942931::1722218412::1::::<><>::
+wall_top_inner_left.png::CompressedTexture2D::755708211244959853::1558942863::1722218412::1::::<><>::
+wall_top_inner_left_2.png::CompressedTexture2D::5673704599893074092::1558941021::1722218412::1::::<><>::
+wall_top_inner_right.png::CompressedTexture2D::8828066232196982376::1558415417::1722218412::1::::<><>::
+wall_top_inner_right_2.png::CompressedTexture2D::9119389375306915068::1558829748::1722218412::1::::<><>::
+wall_top_left.png::CompressedTexture2D::4544526717052127924::1558842504::1722218412::1::::<><>::
+wall_top_right.png::CompressedTexture2D::8541559413246231428::1558942460::1722218412::1::::<><>::
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/::1722218412
+crosshair_1.png::CompressedTexture2D::5725037844270009838::1560828041::1722218412::1::::<><>::
+crosshair_2.png::CompressedTexture2D::5815656795012986701::1560828169::1722218412::1::::<><>::
+crosshair_3.png::CompressedTexture2D::3413351126100774776::1560828240::1722218412::1::::<><>::
+health_ui.png::CompressedTexture2D::2354712869519920545::1560832338::1722218412::1::::<><>::
+menu_button.png::CompressedTexture2D::570366375505116815::1560831735::1722218412::1::::<><>::
+menu_button_press.png::CompressedTexture2D::7963044643670683980::1560831752::1722218412::1::::<><>::
+pause_button.png::CompressedTexture2D::7503287101355284370::1560832030::1722218412::1::::<><>::
+pause_button_press.png::CompressedTexture2D::2951460323652838673::1560832058::1722218412::1::::<><>::
 ::res://Assets/tilesets/::1722055227
 grass.png::CompressedTexture2D::7305182772639388965::1722016321::1722055227::1::::<><>::
 plains.png::CompressedTexture2D::7819300623326541533::1722016322::1722055227::1::::<><>::
@@ -414,8 +618,33 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1722016322::17220
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1722016322::1722055227::1::::<><>::
 ::res://Assets/tilesets/particles/::1722055227
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1722016322::1722055227::1::::<><>::
-::res://Environments/::1722191826
-world.tscn::PackedScene::6469066510429512572::1722191826::0::1::::<><>::uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png
+::res://Effects/::1722219030
+DeathEffect.tscn::PackedScene::1629001407246867821::1722219030::0::1::::<><>::
+HitEffect.tscn::PackedScene::7260586581344717384::1722218742::0::1::::<><>::
+::res://Effects/VFX_Sprites/::1722218438
+enemy_afterdead_explosion_anim_f0.png::CompressedTexture2D::216897161663538407::1560830163::1722218438::1::::<><>::
+enemy_afterdead_explosion_anim_f1.png::CompressedTexture2D::4898602923866604203::1560830176::1722218438::1::::<><>::
+enemy_afterdead_explosion_anim_f2.png::CompressedTexture2D::5484681755878937671::1560830187::1722218438::1::::<><>::
+enemy_afterdead_explosion_anim_f3.png::CompressedTexture2D::56060249893046864::1560830200::1722218438::1::::<><>::
+enemy_afterdead_explosion_anim_spritesheet.png::CompressedTexture2D::4687207238841777022::1560830111::1722218438::1::::<><>::
+explosion_anim_f0.png::CompressedTexture2D::5457452778441451681::1560313215::1722218438::1::::<><>::
+explosion_anim_f1.png::CompressedTexture2D::6140522727205042894::1560313228::1722218438::1::::<><>::
+explosion_anim_f2.png::CompressedTexture2D::3988335106709421665::1560313240::1722218438::1::::<><>::
+explosion_anim_f3.png::CompressedTexture2D::2639424978179591146::1560313252::1722218438::1::::<><>::
+explosion_anim_f4.png::CompressedTexture2D::7592235624581936878::1560313264::1722218438::1::::<><>::
+explosion_anim_f5.png::CompressedTexture2D::6778416987159018624::1560313277::1722218438::1::::<><>::
+explosion_anim_f6.png::CompressedTexture2D::1225175484093677990::1560313291::1722218438::1::::<><>::
+explosion_anim_spritesheet.png::CompressedTexture2D::3509664301348817496::1560313310::1722218438::1::::<><>::
+hit_effect_anim_f0.png::CompressedTexture2D::4489426835929740340::1560833660::1722218438::1::::<><>::
+hit_effect_anim_f1.png::CompressedTexture2D::6162142233384715138::1560833672::1722218438::1::::<><>::
+hit_effect_anim_f2.png::CompressedTexture2D::1166134366267278563::1560833683::1722218438::1::::<><>::
+hit_effect_anim_spritesheet.png::CompressedTexture2D::5888558202822591036::1560833557::1722218438::1::::<><>::
+slash_effect_anim_f0.png::CompressedTexture2D::401035806399906210::1560833705::1722218438::1::::<><>::
+slash_effect_anim_f1.png::CompressedTexture2D::4031256320518639958::1560833714::1722218438::1::::<><>::
+slash_effect_anim_f2.png::CompressedTexture2D::6606703336785959032::1560833723::1722218438::1::::<><>::
+slash_effect_anim_spritesheet.png::CompressedTexture2D::2119624786118476643::1560832919::1722218438::1::::<><>::
+::res://Environments/::1722218440
+world.tscn::PackedScene::6469066510429512572::1722218440::0::1::::<><>::uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png
 ::res://Environments/tilesets/::1722055227
 grass.png::CompressedTexture2D::7305182772639388965::1721713547::1722055227::1::::<><>::
 plains.png::CompressedTexture2D::7819300623326541533::1721713547::1722055227::1::::<><>::
@@ -461,18 +690,33 @@ DungeonMaster.tscn::PackedScene::6081012534915198019::1722149486::0::1::::<><>::
 Enemy.gd::GDScript::-1::1722050163::0::1::::<>Node2D<>::
 Player.gd::GDScript::-1::1722149277::0::1::::<>Node2D<>::
 ::res://scripts/::1722155656
-::res://scripts/Components/::1722190749
-HealthComponent.gd::GDScript::-1::1722152154::0::1::::HealthComponent<>Node2D<>::
-HitboxComponent.gd::GDScript::-1::1722148757::0::1::::<>Area2D<>::
+::res://scripts/Components/::1722219808
+CameraComponent.gd::GDScript::-1::1722218108::0::1::::<>Node<>::
+CameraComponent.tscn::PackedScene::1739961382771227548::1722218108::0::1::::<><>::res://scripts/Components/CameraComponent.gd
+HealthComponent.gd::GDScript::-1::1722203236::0::1::::HealthComponent<>Node2D<>::
+HitboxComponent.gd::GDScript::-1::1722203225::0::1::::<>Area2D<>::
 HitBoxComponent.tscn::PackedScene::919417583576784496::1722148386::0::1::::<><>::res://scripts/Components/HitboxComponent.gd
 HurtboxComponent.gd::GDScript::-1::1722108595::0::1::::<>Area2D<>::
 HurtboxComponent.tscn::PackedScene::3443638039450829903::1722118493::0::1::::<><>::
-::res://scripts/Components/State/::1722191952
-attack.gd::GDScript::-1::1722189260::0::1::::<>State<>::
-idle.gd::GDScript::-1::1722191625::0::1::::idle<>State<>::
+VFXSpawner.gd::GDScript::-1::1722219804::0::1::::<>Node<>::
+VFXSpawner.tscn::PackedScene::8490517870776186858::1722219851::0::1::::<><>::res://scripts/Components/VFXSpawner.gd
 State.gd::GDScript::-1::1722191448::0::1::::State<>Node<>::
-StateMachine.gd::GDScript::-1::1722191823::0::1::::<>Node<>::
-StateMachine.tscn::PackedScene::3301168252081596698::1722191826::0::1::::<><>::res://scripts/Components/State/StateMachine.gd
+StateMachine.gd::GDScript::-1::1722197824::0::1::::<>Node<>::
+StateMachine.tscn::PackedScene::3301168252081596698::1722205875::0::1::::<><>::res://scripts/Components/StateMachine.gd
+::res://scripts/Components/EnemyStates/::1722208118
+enemy_attack.gd::GDScript::-1::1722207134::0::1::::EnemyAttack<>State<>::
+enemy_block.gd::GDScript::-1::1722207010::0::1::::EnemyBlock<>State<>::
+enemy_death.gd::GDScript::-1::1722207030::0::1::::EnemyDeath<>State<>::
+enemy_follow.gd::GDScript::-1::1722206507::0::1::::EnemyFollow<>State<>::
+enemy_hurt.gd::GDScript::-1::1722207048::0::1::::EnemyHurt<>State<>::
+enemy_idle.gd::GDScript::-1::1722208118::0::1::::EnemyIdle<>State<>::
+::res://scripts/Components/PlayerStates/::1722210134
+attack.gd::GDScript::-1::1722209308::0::1::::attack<>State<>::
+block.gd::GDScript::-1::1722209257::0::1::::block<>State<>::
+death.gd::GDScript::-1::1722204815::0::1::::death<>State<>::
+hurt.gd::GDScript::-1::1722209244::0::1::::hurt<>State<>::
+idle.gd::GDScript::-1::1722209336::0::1::::idle<>State<>::
+walk.gd::GDScript::-1::1722210134::0::1::::walk<>State<>::
 ::res://UI/::1722108051
 Camera2D.gd::GDScript::-1::1722032117::0::1::::<>Camera2D<>::
 DamageIndicator.gd::GDScript::-1::1722108049::0::1::::<>Node2D<>::
@@ -485,10 +729,9 @@ Xolonium-Regular.ttf::FontFile::5375469398433749905::1721713547::1722055226::1::
 ::res://Units/::1722150204
 Unit.gd::GDScript::-1::1722150204::0::1::::Unit<>CharacterBody2D<>::
 Unit.tscn::PackedScene::6830615025341583550::1722149122::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>uid://bpcehk8uwopwx::::res://scripts/Components/HurtboxComponent.tscn<>uid://ndmw5kk3tkmy::::res://scripts/Components/HitBoxComponent.tscn
-::res://Units/Knight/::1722191949
-Knight.gd::GDScript::-1::1722155171::0::1::::Knight<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1722191953::0::1::::<><>::uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Knight/Knight.gd<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://scripts/Components/HealthComponent.gd<>res://scripts/Components/HitboxComponent.gd<>res://scripts/Components/State/StateMachine.gd<>res://scripts/Components/State/idle.gd<>res://scripts/Components/State/attack.gd
-walk.gd::GDScript::-1::1722191971::0::1::::<>Node<>::
+::res://Units/Knight/::1722219829
+Knight.gd::GDScript::-1::1722209379::0::1::::Knight<>CharacterBody2D<>::
+Knight.tscn::PackedScene::963521029383266819::1722219851::0::1::::<><>::uid://ds74uayhpq5ba::::res://scripts/Components/VFXSpawner.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Knight/Knight.gd<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://scripts/Components/HealthComponent.gd<>res://scripts/Components/HitboxComponent.gd<>res://scripts/Components/StateMachine.gd<>res://scripts/Components/PlayerStates/idle.gd<>res://scripts/Components/PlayerStates/walk.gd<>res://scripts/Components/PlayerStates/attack.gd<>res://scripts/Components/PlayerStates/death.gd<>res://scripts/Components/PlayerStates/block.gd<>res://scripts/Components/PlayerStates/hurt.gd
 ::res://Units/Knight/Knight_art/::1722055227
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1722016322::1722055227::1::::<><>::
 ::res://Units/Knight/Knight_art/Knight with shadows/::1722055227
@@ -514,9 +757,9 @@ Knight-Shadow_death.png::CompressedTexture2D::2013706950776857148::1722016322::1
 Knight-Walk.png::CompressedTexture2D::4454839365919842523::1722016322::1722055227::1::::<><>::
 Knight.png::CompressedTexture2D::2832740204748281349::1722016322::1722055227::1::::<><>::
 ::res://Units/mobs/::1722052845
-::res://Units/mobs/Skeleton/::1722151907
-Skeleton.gd::GDScript::-1::1722120077::0::1::::<>CharacterBody2D<>::
-Skeleton.tscn::PackedScene::3991177544166533855::1722151907::0::1::::<><>::uid://c4k2h4u7q7aq5::::res://Units/Unit.tscn<>res://Units/mobs/Skeleton/Skeleton.gd<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png
+::res://Units/mobs/Skeleton/::1722218161
+Skeleton.gd::GDScript::-1::1722207570::0::1::::Skeleton<>CharacterBody2D<>::
+Skeleton.tscn::PackedScene::3991177544166533855::1722218161::0::1::::<><>::res://Units/mobs/Skeleton/Skeleton.gd<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>res://scripts/Components/HealthComponent.gd<>res://scripts/Components/HitboxComponent.gd<>res://scripts/Components/StateMachine.gd<>res://scripts/Components/EnemyStates/enemy_idle.gd<>res://scripts/Components/EnemyStates/enemy_follow.gd<>res://scripts/Components/EnemyStates/enemy_attack.gd<>res://scripts/Components/EnemyStates/enemy_block.gd<>res://scripts/Components/EnemyStates/enemy_hurt.gd<>res://scripts/Components/EnemyStates/enemy_death.gd
 ::res://Units/mobs/Skeleton/Skeleton_art/::1722016322
 ::res://Units/mobs/Skeleton/Skeleton_art/Skeleton/::1722055227
 Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1722016322::1722055227::1::::<><>::

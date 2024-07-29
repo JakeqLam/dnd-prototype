@@ -6,7 +6,8 @@ class_name Knight
 var follow_cursor:bool = false
 var currentHP:int = 100
 var defence:int = 5
-
+@export var rng:int = 50
+@export var wpnDmg:int = 5
 
 func _ready():
 	defence = health_component.getDef()
