@@ -514,6 +514,8 @@ modulate = Color(0, 0.545098, 1, 1)
 position = Vector2(11, -2)
 shape = SubResource("CapsuleShape2D_kfpbq")
 
+[node name="AttackSpeedTimer" type="Timer" parent="."]
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("10_p042s")
 initial_state = NodePath("enemy_idle")
@@ -545,3 +547,4 @@ script = ExtResource("16_uci31")
 [connection signal="damage_blocked" from="HealthComponent" to="StateMachine/enemy_follow" method="_on_health_component_damage_blocked"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_idle" method="_on_health_component_damage_hurt"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_follow" method="_on_health_component_damage_hurt"]
+[connection signal="timeout" from="AttackSpeedTimer" to="StateMachine/enemy_attack" method="_on_attack_speed_timer_timeout"]

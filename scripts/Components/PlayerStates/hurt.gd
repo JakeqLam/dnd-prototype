@@ -1,7 +1,6 @@
 extends State
 class_name hurt
 @onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
 
 @export var parent: CharacterBody2D
 @export var VFX: VFXSpawner

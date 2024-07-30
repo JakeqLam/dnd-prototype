@@ -1,7 +1,6 @@
 extends State
 class_name block
 @onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
 
 @export var parent: CharacterBody2D
 

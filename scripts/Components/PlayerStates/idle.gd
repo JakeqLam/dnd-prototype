@@ -1,7 +1,6 @@
 extends State
 class_name idle
 @onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
 
 @export var parent: CharacterBody2D
 @onready var target = parent.position
@@ -23,8 +22,8 @@ func _input(event: InputEvent):
 func Physics_Update(_delta):
 	if enemies.size() > 0:
 		if parent.position.distance_to(enemies[0].get_position()) < parent.rng: 
-			#Transitioned.emit(self,"attack")
-			pass
+			Transitioned.emit(self,"attack")
+			
 	
 func Update(_delta):
 	if parent.currentHP <= 0:
@@ -38,4 +37,3 @@ func _on_enemy_detector_body_entered(body):
 	if body.is_in_group("enemy"):
 		print("You are my enemy! ", body)
 		enemies.append(body)
-

@@ -49,3 +49,4 @@ res://Effects/DeathEffect.tscn
 res://scripts/Components/VFXSpawner.gd
 res://Effects/VFXSpawner.tscn
 res://Effects/VFXSpawner.gd
+res://scripts/Components/PlayerStates/death.gd
