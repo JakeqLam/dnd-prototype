@@ -2,7 +2,6 @@ extends State
 class_name EnemyHurt
 
 @onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
 
 @export var parent: CharacterBody2D
 
@@ -12,7 +11,7 @@ func Enter():
 
 func Update(_delta):
 	if parent.currentHP <= 0:
-		Transitioned.emit(self,"death")
-		
-func _on_animation_player_animation_finished():
-		Transitioned.emit(self, "idle")
+		Transitioned.emit(self,"enemy_death")
+	
+func _on_animation_player_animation_finished(_anim_name):
+		Transitioned.emit(self, "enemy_idle")

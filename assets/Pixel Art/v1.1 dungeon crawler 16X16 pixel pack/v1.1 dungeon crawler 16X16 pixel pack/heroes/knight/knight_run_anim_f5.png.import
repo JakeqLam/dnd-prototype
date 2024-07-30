@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h1qy350ammkv"
-path="res://.godot/imported/knight_run_anim_f5.png-efe63d18c4b2dd26a0809e71aa7499c0.ctex"
+path="res://.godot/imported/knight_run_anim_f5.png-255976d2dbe3a002cdf94bbf1fa60a18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_anim_f5.png"
-dest_files=["res://.godot/imported/knight_run_anim_f5.png-efe63d18c4b2dd26a0809e71aa7499c0.ctex"]
+source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_anim_f5.png"
+dest_files=["res://.godot/imported/knight_run_anim_f5.png-255976d2dbe3a002cdf94bbf1fa60a18.ctex"]
 
 [params]
 

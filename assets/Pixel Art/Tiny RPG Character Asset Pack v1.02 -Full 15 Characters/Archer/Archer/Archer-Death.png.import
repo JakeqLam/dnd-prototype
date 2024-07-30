@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6grx6o6mkvd6"
-path="res://.godot/imported/Archer-Death.png-c4fefe6b1d4e47ae20cc2ce89ec2b849.ctex"
+path="res://.godot/imported/Archer-Death.png-7fd612efc8a008f2abe957f0a068f4ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/Archer/Archer-Death.png"
-dest_files=["res://.godot/imported/Archer-Death.png-c4fefe6b1d4e47ae20cc2ce89ec2b849.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/Archer/Archer-Death.png"
+dest_files=["res://.godot/imported/Archer-Death.png-7fd612efc8a008f2abe957f0a068f4ce.ctex"]
 
 [params]
 

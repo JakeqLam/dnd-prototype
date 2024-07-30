@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp0ntt68ytrq3"
-path="res://.godot/imported/Bullet Muzzle 14.png-3cf558cbb9e52efaa63f2fa495bfa97c.ctex"
+path="res://.godot/imported/Bullet Muzzle 14.png-c117a0b28f1eb9e0e3782d1a07a9c915.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 14/Spritesheets/Bullet Muzzle 14.png"
-dest_files=["res://.godot/imported/Bullet Muzzle 14.png-3cf558cbb9e52efaa63f2fa495bfa97c.ctex"]
+source_file="res://Assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 14/Spritesheets/Bullet Muzzle 14.png"
+dest_files=["res://.godot/imported/Bullet Muzzle 14.png-c117a0b28f1eb9e0e3782d1a07a9c915.ctex"]
 
 [params]
 

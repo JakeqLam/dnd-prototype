@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5k4v58ww03jc"
-path="res://.godot/imported/goblin_idle_spritesheet.png-a572cb9c8f73c990f6b931d5a95634eb.ctex"
+path="res://.godot/imported/goblin_idle_spritesheet.png-64673c5d57fe09d8b40b95440756bc68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_idle_spritesheet.png"
-dest_files=["res://.godot/imported/goblin_idle_spritesheet.png-a572cb9c8f73c990f6b931d5a95634eb.ctex"]
+source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_idle_spritesheet.png"
+dest_files=["res://.godot/imported/goblin_idle_spritesheet.png-64673c5d57fe09d8b40b95440756bc68.ctex"]
 
 [params]
 

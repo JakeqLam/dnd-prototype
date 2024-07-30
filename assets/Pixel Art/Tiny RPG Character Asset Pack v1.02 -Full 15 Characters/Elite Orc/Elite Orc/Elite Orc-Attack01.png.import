@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnvlgvplt36eq"
-path="res://.godot/imported/Elite Orc-Attack01.png-2059008e7edada62d3e39e5612fe625e.ctex"
+path="res://.godot/imported/Elite Orc-Attack01.png-fe61cde84c40ed4e584f0759f6736c44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Elite Orc/Elite Orc/Elite Orc-Attack01.png"
-dest_files=["res://.godot/imported/Elite Orc-Attack01.png-2059008e7edada62d3e39e5612fe625e.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Elite Orc/Elite Orc/Elite Orc-Attack01.png"
+dest_files=["res://.godot/imported/Elite Orc-Attack01.png-fe61cde84c40ed4e584f0759f6736c44.ctex"]
 
 [params]
 

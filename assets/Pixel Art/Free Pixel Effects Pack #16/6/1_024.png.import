@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nsil1f1nxxsb"
-path="res://.godot/imported/1_024.png-39eb19884f09dc39e712e6d2799a98b1.ctex"
+path="res://.godot/imported/1_024.png-ceb91c11efd0f5ac491fd9e33f643f2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Free Pixel Effects Pack #16/6/1_024.png"
-dest_files=["res://.godot/imported/1_024.png-39eb19884f09dc39e712e6d2799a98b1.ctex"]
+source_file="res://Assets/Pixel Art/Free Pixel Effects Pack #16/6/1_024.png"
+dest_files=["res://.godot/imported/1_024.png-ceb91c11efd0f5ac491fd9e33f643f2e.ctex"]
 
 [params]
 

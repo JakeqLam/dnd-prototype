@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhaobfuwxxrru"
-path="res://.godot/imported/Soldier-Hurt.png-5d1c00e1decf4aa2c55d695328334b7b.ctex"
+path="res://.godot/imported/Soldier-Hurt.png-8b57f3885b0dc4b190a398bd1e7ebca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Soldier/Soldier with shadows/Soldier-Hurt.png"
-dest_files=["res://.godot/imported/Soldier-Hurt.png-5d1c00e1decf4aa2c55d695328334b7b.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Soldier/Soldier with shadows/Soldier-Hurt.png"
+dest_files=["res://.godot/imported/Soldier-Hurt.png-8b57f3885b0dc4b190a398bd1e7ebca0.ctex"]
 
 [params]
 

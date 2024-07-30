@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2klpi5wejh0r"
-path="res://.godot/imported/Knight Templar-Death.png-4345ba3591092914812de1fde4516571.ctex"
+path="res://.godot/imported/Knight Templar-Death.png-7885fafdcba33e6130c9465b5eee50c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight Templar/Knight Templar/Knight Templar-Death.png"
-dest_files=["res://.godot/imported/Knight Templar-Death.png-4345ba3591092914812de1fde4516571.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight Templar/Knight Templar/Knight Templar-Death.png"
+dest_files=["res://.godot/imported/Knight Templar-Death.png-7885fafdcba33e6130c9465b5eee50c5.ctex"]
 
 [params]
 

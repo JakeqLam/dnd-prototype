@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpybxwtmu4qi5"
-path="res://.godot/imported/ogre-idle-03.png-10038f83d186e20f0dc2cc8cf1b36e90.ctex"
+path="res://.godot/imported/ogre-idle-03.png-7f29a30c5b4a5f52c699cf64cc1d3855.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Ogre/Individual Sprites/ogre-idle-03.png"
-dest_files=["res://.godot/imported/ogre-idle-03.png-10038f83d186e20f0dc2cc8cf1b36e90.ctex"]
+source_file="res://Assets/Pixel Art/Ogre/Individual Sprites/ogre-idle-03.png"
+dest_files=["res://.godot/imported/ogre-idle-03.png-7f29a30c5b4a5f52c699cf64cc1d3855.ctex"]
 
 [params]
 

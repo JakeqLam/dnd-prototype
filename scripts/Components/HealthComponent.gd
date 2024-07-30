@@ -32,7 +32,7 @@ func receive_damage(base_damage:int):
 		emit_signal("damage_blocked")
 		currentHP = currentHP
 
-	print("Skeleton received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
+	print(name + " received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
 	
 func _on_hurtbox_area_entered(hitbox):
 	hitbox.damage = randi_range(5,10)

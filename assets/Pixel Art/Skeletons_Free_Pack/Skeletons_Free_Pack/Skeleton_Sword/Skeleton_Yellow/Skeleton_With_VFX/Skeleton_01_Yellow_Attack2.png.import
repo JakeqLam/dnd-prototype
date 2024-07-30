@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wefs3pu3pulh"
-path="res://.godot/imported/Skeleton_01_Yellow_Attack2.png-54aebf84896c1417031f9fa5fe3d9329.ctex"
+path="res://.godot/imported/Skeleton_01_Yellow_Attack2.png-b707518c2846b7a1ade1b93fe44a77e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Skeletons_Free_Pack/Skeletons_Free_Pack/Skeleton_Sword/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Attack2.png"
-dest_files=["res://.godot/imported/Skeleton_01_Yellow_Attack2.png-54aebf84896c1417031f9fa5fe3d9329.ctex"]
+source_file="res://Assets/Pixel Art/Skeletons_Free_Pack/Skeletons_Free_Pack/Skeleton_Sword/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Attack2.png"
+dest_files=["res://.godot/imported/Skeleton_01_Yellow_Attack2.png-b707518c2846b7a1ade1b93fe44a77e9.ctex"]
 
 [params]
 

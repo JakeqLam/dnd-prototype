@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo1mf1cln06et"
-path="res://.godot/imported/ogre-die-08.png-072697accdda6b973b8f3e51c096f561.ctex"
+path="res://.godot/imported/ogre-die-08.png-0db34328926d792f840d0e0d574d9b50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Ogre/Individual Sprites/ogre-die-08.png"
-dest_files=["res://.godot/imported/ogre-die-08.png-072697accdda6b973b8f3e51c096f561.ctex"]
+source_file="res://Assets/Pixel Art/Ogre/Individual Sprites/ogre-die-08.png"
+dest_files=["res://.godot/imported/ogre-die-08.png-0db34328926d792f840d0e0d574d9b50.ctex"]
 
 [params]
 

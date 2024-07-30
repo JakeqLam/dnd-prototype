@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfwhvjts6ulws"
-path="res://.godot/imported/bomb_anim_f8.png-ffd32dab95562ce3b73fde4e50ce4351.ctex"
+path="res://.godot/imported/bomb_anim_f8.png-7ae69eb58a204a95aa1cd96fc10f3206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/props_itens/bomb_anim_f8.png"
-dest_files=["res://.godot/imported/bomb_anim_f8.png-ffd32dab95562ce3b73fde4e50ce4351.ctex"]
+source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/props_itens/bomb_anim_f8.png"
+dest_files=["res://.godot/imported/bomb_anim_f8.png-7ae69eb58a204a95aa1cd96fc10f3206.ctex"]
 
 [params]
 

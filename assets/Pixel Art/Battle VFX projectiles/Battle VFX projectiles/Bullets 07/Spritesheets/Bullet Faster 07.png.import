@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo13soxg4gm5h"
-path="res://.godot/imported/Bullet Faster 07.png-0cab49a9d90f74fed59a6674c4f55834.ctex"
+path="res://.godot/imported/Bullet Faster 07.png-e11e0345410d0fd26860e2731c8a974a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 07/Spritesheets/Bullet Faster 07.png"
-dest_files=["res://.godot/imported/Bullet Faster 07.png-0cab49a9d90f74fed59a6674c4f55834.ctex"]
+source_file="res://Assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 07/Spritesheets/Bullet Faster 07.png"
+dest_files=["res://.godot/imported/Bullet Faster 07.png-e11e0345410d0fd26860e2731c8a974a.ctex"]
 
 [params]
 

@@ -14,17 +14,18 @@ func Enter():
 func Update(_delta):
 	if playerTargets.size() > 0:
 		if parent.position.distance_to(playerTargets[0].get_position()) < parent.rng: 
-			Transitioned.emit(self,"attack")
+			print("is this working?")
+			Transitioned.emit(self,"enemy_attack")
 	if parent.currentHP <= 0:
 		Transitioned.emit(self,"death")
 
 func _on_health_component_damage_hurt():
-	Transitioned.emit(self,"hurt")
+	Transitioned.emit(self,"enemy_hurt")
 func _on_health_component_damage_blocked():
-	Transitioned.emit(self,"block")
+	Transitioned.emit(self,"enemy_block")
 func _on_enemy_detector_body_entered(body):
 	print(body.name + " has entered range")
-	if body.is_in_group("player"):
+	if body.is_in_group("enemy_player"):
 		print("Player spotted! ", body)
 		playerTargets.append(body)
 

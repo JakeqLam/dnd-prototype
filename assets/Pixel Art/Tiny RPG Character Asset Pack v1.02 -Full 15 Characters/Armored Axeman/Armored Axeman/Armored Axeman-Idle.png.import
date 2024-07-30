@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6t4m3a2md73t"
-path="res://.godot/imported/Armored Axeman-Idle.png-3170acfa04d47e4f9b10a6cd0a473363.ctex"
+path="res://.godot/imported/Armored Axeman-Idle.png-538b2c38694f5cd4b9949c921cd78427.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Axeman/Armored Axeman/Armored Axeman-Idle.png"
-dest_files=["res://.godot/imported/Armored Axeman-Idle.png-3170acfa04d47e4f9b10a6cd0a473363.ctex"]
+source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Axeman/Armored Axeman/Armored Axeman-Idle.png"
+dest_files=["res://.godot/imported/Armored Axeman-Idle.png-538b2c38694f5cd4b9949c921cd78427.ctex"]
 
 [params]
 
