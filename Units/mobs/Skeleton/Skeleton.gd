@@ -7,6 +7,7 @@ class_name Skeleton
 var follow_cursor:bool = false
 var currentHP:int = 100
 var defence:int = 5
+var rng:int = 5
 
 
 func _ready():
@@ -16,7 +17,7 @@ func _ready():
 func toggle_cursor_state(cursorState: bool):
 	follow_cursor = cursorState
 
-func _process(_delta) -> void:
+func _process(_deltZDza) -> void:
 	currentHP = health_component.getHP()
 
 func drawEnemyCircle():

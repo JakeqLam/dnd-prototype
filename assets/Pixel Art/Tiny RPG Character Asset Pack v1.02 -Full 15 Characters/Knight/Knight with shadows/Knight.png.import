@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfgkghifs8q11"
-path="res://.godot/imported/Knight.png-1e01482b44280ae2874426dc62b3bff1.ctex"
+path="res://.godot/imported/Knight.png-57220f3fa8d913c36d791a6de4322059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight.png"
-dest_files=["res://.godot/imported/Knight.png-1e01482b44280ae2874426dc62b3bff1.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Knight/Knight with shadows/Knight.png"
+dest_files=["res://.godot/imported/Knight.png-57220f3fa8d913c36d791a6de4322059.ctex"]
 
 [params]
 

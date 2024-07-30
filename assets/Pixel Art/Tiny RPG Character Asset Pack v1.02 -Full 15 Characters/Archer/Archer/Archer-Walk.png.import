@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://babkqetjmi0or"
-path="res://.godot/imported/Archer-Walk.png-f80753b8f3f6064c3fc19bc053826915.ctex"
+path="res://.godot/imported/Archer-Walk.png-912b4b0c3a4ff639664831b8f6e8d191.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/Archer/Archer-Walk.png"
-dest_files=["res://.godot/imported/Archer-Walk.png-f80753b8f3f6064c3fc19bc053826915.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Archer/Archer/Archer-Walk.png"
+dest_files=["res://.godot/imported/Archer-Walk.png-912b4b0c3a4ff639664831b8f6e8d191.ctex"]
 
 [params]
 

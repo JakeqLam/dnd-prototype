@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crs7cgap5xyx5"
-path="res://.godot/imported/ogre-attack-03.png-4c6bff43eb65a53e1535aecf403417bb.ctex"
+path="res://.godot/imported/ogre-attack-03.png-ff72a470198225ea0c6de1f525411fb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Ogre/Individual Sprites/ogre-attack-03.png"
-dest_files=["res://.godot/imported/ogre-attack-03.png-4c6bff43eb65a53e1535aecf403417bb.ctex"]
+source_file="res://assets/Pixel Art/Ogre/Individual Sprites/ogre-attack-03.png"
+dest_files=["res://.godot/imported/ogre-attack-03.png-ff72a470198225ea0c6de1f525411fb2.ctex"]
 
 [params]
 

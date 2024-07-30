@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iwcx04nwhrbo"
-path="res://.godot/imported/Bullet Hit 05.png-d9ea21665ed67ea12f949e144d3e48a7.ctex"
+path="res://.godot/imported/Bullet Hit 05.png-6686fdabb5686cdb78dc98419565564c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 05/Spritesheets/Bullet Hit 05.png"
-dest_files=["res://.godot/imported/Bullet Hit 05.png-d9ea21665ed67ea12f949e144d3e48a7.ctex"]
+source_file="res://assets/Pixel Art/Battle VFX projectiles/Battle VFX projectiles/Bullets 05/Spritesheets/Bullet Hit 05.png"
+dest_files=["res://.godot/imported/Bullet Hit 05.png-6686fdabb5686cdb78dc98419565564c.ctex"]
 
 [params]
 

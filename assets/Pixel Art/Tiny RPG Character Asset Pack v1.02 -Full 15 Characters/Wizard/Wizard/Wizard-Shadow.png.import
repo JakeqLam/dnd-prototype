@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx7mgk0sehvyr"
-path="res://.godot/imported/Wizard-Shadow.png-5c918b93a4a4f4fca61d036970a7230d.ctex"
+path="res://.godot/imported/Wizard-Shadow.png-62dfec24e76fa7e646a9999dfd4f7917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Wizard/Wizard/Wizard-Shadow.png"
-dest_files=["res://.godot/imported/Wizard-Shadow.png-5c918b93a4a4f4fca61d036970a7230d.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Wizard/Wizard/Wizard-Shadow.png"
+dest_files=["res://.godot/imported/Wizard-Shadow.png-62dfec24e76fa7e646a9999dfd4f7917.ctex"]
 
 [params]
 

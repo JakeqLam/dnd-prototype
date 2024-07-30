@@ -12,7 +12,6 @@ class_name walk
 @onready var target = parent.position
 
 func Enter():
-	print("walk state")
 	animationPlayer.play("walk")
 
 func Update(_delta):

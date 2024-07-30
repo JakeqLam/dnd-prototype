@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bihv77tm0k0ew"
-path="res://.godot/imported/Armored Orc-Idle.png-578206b13ece6b86694f64d21597356c.ctex"
+path="res://.godot/imported/Armored Orc-Idle.png-b457485ed127f071e6698a89635f2742.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png"
-dest_files=["res://.godot/imported/Armored Orc-Idle.png-578206b13ece6b86694f64d21597356c.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png"
+dest_files=["res://.godot/imported/Armored Orc-Idle.png-b457485ed127f071e6698a89635f2742.ctex"]
 
 [params]
 

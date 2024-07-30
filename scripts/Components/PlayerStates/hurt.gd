@@ -6,7 +6,6 @@ class_name hurt
 @export var VFX: VFXSpawner
 
 func Enter():
-	print("hurt state")
 	animationPlayer.play("hurt")
 	VFX.spawn_effect(VFX.EFFECT_HIT, parent.global_position)
 

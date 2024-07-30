@@ -8,7 +8,7 @@ class_name EnemyAttack
 var atkCooldown:bool = false
 
 func Enter():
-	print("Attack state")
+	print("Enemy Attack state")
 	atkTimer.wait_time = atkSpd
 	
 	if atkCooldown == false:

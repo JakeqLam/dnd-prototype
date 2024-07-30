@@ -5,10 +5,9 @@ class_name idle
 @export var parent: CharacterBody2D
 @onready var target = parent.position
 
-var enemies= []
+var enemyTargets= []
 
 func Enter():
-	print("Idle state")
 	animationPlayer.play("idle")
 	parent.velocity.x = 0
 
@@ -20,8 +19,8 @@ func _input(event: InputEvent):
 			parent.toggle_cursor_state(false)
 	return null
 func Physics_Update(_delta):
-	if enemies.size() > 0:
-		if parent.position.distance_to(enemies[0].get_position()) < parent.rng: 
+	if enemyTargets.size() > 0:
+		if parent.position.distance_to(enemyTargets[0].get_position()) < parent.rng: 
 			Transitioned.emit(self,"attack")
 			
 	
@@ -35,5 +34,4 @@ func _on_health_component_damage_blocked():
 func _on_enemy_detector_body_entered(body):
 	print(body.name + " has entered range")
 	if body.is_in_group("enemy"):
-		print("You are my enemy! ", body)
-		enemies.append(body)
+		enemyTargets.append(body)

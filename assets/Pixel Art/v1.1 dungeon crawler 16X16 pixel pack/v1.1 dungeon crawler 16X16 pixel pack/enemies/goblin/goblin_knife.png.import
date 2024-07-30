@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://86lotrc66cic"
-path="res://.godot/imported/goblin_knife.png-865eee09728a238584dbb2757ef466b3.ctex"
+path="res://.godot/imported/goblin_knife.png-62c7bcf10fe2e70d833f44ca69d7de6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_knife.png"
-dest_files=["res://.godot/imported/goblin_knife.png-865eee09728a238584dbb2757ef466b3.ctex"]
+source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_knife.png"
+dest_files=["res://.godot/imported/goblin_knife.png-62c7bcf10fe2e70d833f44ca69d7de6c.ctex"]
 
 [params]
 

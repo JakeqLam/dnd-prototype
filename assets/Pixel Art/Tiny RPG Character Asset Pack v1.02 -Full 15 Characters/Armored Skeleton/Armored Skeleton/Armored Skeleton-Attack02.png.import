@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck677u027dyst"
-path="res://.godot/imported/Armored Skeleton-Attack02.png-ca224b16ae63d09d869fe640651fe958.ctex"
+path="res://.godot/imported/Armored Skeleton-Attack02.png-6fd165199a11d8be81eb9a531e948c3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack02.png"
-dest_files=["res://.godot/imported/Armored Skeleton-Attack02.png-ca224b16ae63d09d869fe640651fe958.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack02.png"
+dest_files=["res://.godot/imported/Armored Skeleton-Attack02.png-6fd165199a11d8be81eb9a531e948c3d.ctex"]
 
 [params]
 

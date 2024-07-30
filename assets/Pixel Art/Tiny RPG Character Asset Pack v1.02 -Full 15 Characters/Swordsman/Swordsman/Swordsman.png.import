@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8x05igxvjuw2"
-path="res://.godot/imported/Swordsman.png-d3b2521f50717d7a2ab3d523d73a8b83.ctex"
+path="res://.godot/imported/Swordsman.png-28d23a83aaee635baf5f558eea93003e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Swordsman/Swordsman/Swordsman.png"
-dest_files=["res://.godot/imported/Swordsman.png-d3b2521f50717d7a2ab3d523d73a8b83.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Swordsman/Swordsman/Swordsman.png"
+dest_files=["res://.godot/imported/Swordsman.png-28d23a83aaee635baf5f558eea93003e.ctex"]
 
 [params]
 

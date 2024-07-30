@@ -5,7 +5,6 @@ class_name block
 @export var parent: CharacterBody2D
 
 func Enter():
-	print("block state")
 	animationPlayer.play("block")
 
 func Update(_delta):

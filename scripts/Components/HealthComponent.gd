@@ -9,7 +9,7 @@ signal damage_hurt
 @onready var sprite = get_node("../Sprite2D")
 
 @export var maxHP:int = 100
-@export var defence:int = 8
+@export var defence:int = 2
 
 var currentHP:int = maxHP
 
@@ -32,7 +32,7 @@ func receive_damage(base_damage:int):
 		emit_signal("damage_blocked")
 		currentHP = currentHP
 
-	print(name + " received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
+	print("Skeleton received "+ str(actual_damage) + " damage " + "current health: " + str(currentHP))
 	
 func _on_hurtbox_area_entered(hitbox):
 	hitbox.damage = randi_range(5,10)

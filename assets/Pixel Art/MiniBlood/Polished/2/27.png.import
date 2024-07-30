@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkf753ohv6xin"
-path="res://.godot/imported/27.png-429af506056f860e17d9bd4b3894fc60.ctex"
+path="res://.godot/imported/27.png-f8afdc13cf8fdd7f6331dd588b5e1243.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/MiniBlood/Polished/2/27.png"
-dest_files=["res://.godot/imported/27.png-429af506056f860e17d9bd4b3894fc60.ctex"]
+source_file="res://assets/Pixel Art/MiniBlood/Polished/2/27.png"
+dest_files=["res://.godot/imported/27.png-f8afdc13cf8fdd7f6331dd588b5e1243.ctex"]
 
 [params]
 

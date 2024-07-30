@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpcoqm2dp20kf"
-path="res://.godot/imported/ogre-run-02.png-2c4db4cc4779815cb068fabfbeae8e87.ctex"
+path="res://.godot/imported/ogre-run-02.png-226e061d2cb2a7bf7e81245fde5fd57b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Ogre/Individual Sprites/ogre-run-02.png"
-dest_files=["res://.godot/imported/ogre-run-02.png-2c4db4cc4779815cb068fabfbeae8e87.ctex"]
+source_file="res://assets/Pixel Art/Ogre/Individual Sprites/ogre-run-02.png"
+dest_files=["res://.godot/imported/ogre-run-02.png-226e061d2cb2a7bf7e81245fde5fd57b.ctex"]
 
 [params]
 

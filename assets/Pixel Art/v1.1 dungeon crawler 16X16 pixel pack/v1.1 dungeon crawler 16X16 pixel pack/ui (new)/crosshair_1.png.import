@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cntisiuu3u0x3"
-path="res://.godot/imported/crosshair_1.png-415fe138ecca2f034bd851d754e304ab.ctex"
+path="res://.godot/imported/crosshair_1.png-857a6ccf20b36f997c09b3494bb9cd98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/crosshair_1.png"
-dest_files=["res://.godot/imported/crosshair_1.png-415fe138ecca2f034bd851d754e304ab.ctex"]
+source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/crosshair_1.png"
+dest_files=["res://.godot/imported/crosshair_1.png-857a6ccf20b36f997c09b3494bb9cd98.ctex"]
 
 [params]
 

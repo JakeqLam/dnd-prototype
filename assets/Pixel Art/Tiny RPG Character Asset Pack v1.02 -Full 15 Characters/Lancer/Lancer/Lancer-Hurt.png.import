@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diskmjmqjerob"
-path="res://.godot/imported/Lancer-Hurt.png-0cb5305fe27b3b0188aca0eabe74ecc3.ctex"
+path="res://.godot/imported/Lancer-Hurt.png-6eb014e8db3e0643285971041a372894.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Lancer/Lancer/Lancer-Hurt.png"
-dest_files=["res://.godot/imported/Lancer-Hurt.png-0cb5305fe27b3b0188aca0eabe74ecc3.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Lancer/Lancer/Lancer-Hurt.png"
+dest_files=["res://.godot/imported/Lancer-Hurt.png-6eb014e8db3e0643285971041a372894.ctex"]
 
 [params]
 

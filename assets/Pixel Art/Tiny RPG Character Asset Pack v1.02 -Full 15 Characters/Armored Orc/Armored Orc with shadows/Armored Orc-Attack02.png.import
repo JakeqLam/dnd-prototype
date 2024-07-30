@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpyilw4htp6yt"
-path="res://.godot/imported/Armored Orc-Attack02.png-abc7ebf988ffed5aebdd96df31df6ec7.ctex"
+path="res://.godot/imported/Armored Orc-Attack02.png-cb6f90034725a61faa0ddadcc216e361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Attack02.png"
-dest_files=["res://.godot/imported/Armored Orc-Attack02.png-abc7ebf988ffed5aebdd96df31df6ec7.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Attack02.png"
+dest_files=["res://.godot/imported/Armored Orc-Attack02.png-cb6f90034725a61faa0ddadcc216e361.ctex"]
 
 [params]
 

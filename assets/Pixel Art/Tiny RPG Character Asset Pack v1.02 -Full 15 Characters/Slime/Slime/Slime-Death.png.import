@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs7fupw84jl2b"
-path="res://.godot/imported/Slime-Death.png-85d2c185b61f046534128fdd1a0d76bd.ctex"
+path="res://.godot/imported/Slime-Death.png-e97c088f91bf0a679e3216c6e5147d73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Slime/Slime/Slime-Death.png"
-dest_files=["res://.godot/imported/Slime-Death.png-85d2c185b61f046534128fdd1a0d76bd.ctex"]
+source_file="res://assets/Pixel Art/Tiny RPG Character Asset Pack v1.02 -Full 15 Characters/Slime/Slime/Slime-Death.png"
+dest_files=["res://.godot/imported/Slime-Death.png-e97c088f91bf0a679e3216c6e5147d73.ctex"]
 
 [params]
 

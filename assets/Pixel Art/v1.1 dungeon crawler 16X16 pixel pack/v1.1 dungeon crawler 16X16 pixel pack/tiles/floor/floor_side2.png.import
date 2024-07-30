@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgtofuu15a4yk"
-path="res://.godot/imported/floor_side2.png-9344ac08c27685b6245a1e94a7e1883e.ctex"
+path="res://.godot/imported/floor_side2.png-049e301e4d41d96b316d61e4f9a506fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/tiles/floor/floor_side2.png"
-dest_files=["res://.godot/imported/floor_side2.png-9344ac08c27685b6245a1e94a7e1883e.ctex"]
+source_file="res://assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/tiles/floor/floor_side2.png"
+dest_files=["res://.godot/imported/floor_side2.png-049e301e4d41d96b316d61e4f9a506fc.ctex"]
 
 [params]
 
