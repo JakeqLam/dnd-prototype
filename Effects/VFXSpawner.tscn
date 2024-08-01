@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds74uayhpq5ba"]
 
-[ext_resource type="Script" path="res://Effects/VFXSpawner.gd" id="1_yo3qs"]
-[ext_resource type="PackedScene" uid="uid://dbpc2hbpej4ue" path="res://Effects/HitEffect.tscn" id="2_e0lhe"]
-[ext_resource type="PackedScene" uid="uid://xhdod7elm2sn" path="res://Effects/DeathEffect.tscn" id="3_g5ot1"]
+[ext_resource type="Script" path="res://Effects/VFXSpawner.gd" id="1_geegw"]
+[ext_resource type="PackedScene" uid="uid://dbpc2hbpej4ue" path="res://Effects/HitEffect.tscn" id="2_oijmw"]
+[ext_resource type="PackedScene" uid="uid://xhdod7elm2sn" path="res://Effects/DeathEffect.tscn" id="3_mig12"]
 
 [node name="VFXSpawner" type="Node"]
-script = ExtResource("1_yo3qs")
-EFFECT_HIT = ExtResource("2_e0lhe")
-DEATH_HIT = ExtResource("3_g5ot1")
+script = ExtResource("1_geegw")
+EFFECT_HIT = ExtResource("2_oijmw")
+DEATH_HIT = ExtResource("3_mig12")

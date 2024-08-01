@@ -2,21 +2,25 @@ extends State
 class_name attack
 @onready var animationPlayer = get_node("../../AnimationPlayer")
 @onready var atkTimer = get_node("../../AttackSpeedTimer")
-@export var atkSpd: float = 3.0
+@export var atkSpd: float = 5.0
 @export var parent: CharacterBody2D
 
 var atkCooldown:bool = false
 
+var enemyTargets = []
+
 func Enter():
+	enemyTargets = get_tree().get_nodes_in_group("EnemyTargets")
 	atkTimer.wait_time = atkSpd
 	
-	if atkCooldown == false:
-		parent.velocity = Vector2(0,0)
-		
-		animationPlayer.play("attack01")
-		atkTimer.start()
-	elif atkCooldown == true:
-		Transitioned.emit(self,"idle")
+	if enemyTargets.size() != 0:
+		#Attack logic
+		if atkCooldown == false:
+			animationPlayer.play("attack01")
+			atkTimer.start()
+			atkCooldown = true
+		elif atkCooldown == true:
+			Transitioned.emit(self,"idle")
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("right_click"):
@@ -27,8 +31,22 @@ func _input(event: InputEvent):
 	return null
 
 func Update(_delta):
-	if parent.currentHP <= 0:
+	if parent.isDead == true:
 		Transitioned.emit(self,"death")
+	if enemyTargets.size() != 0:
+		if enemyTargets[0].isDead == true:
+			enemyTargets[0].remove_from_group("EnemyTargets") #remove the enemy target if dead
+			enemyTargets.remove_at(0)
+			atkTimer.stop()
+			Transitioned.emit(self,"idle")
 
 func _on_attack_speed_timeout():
-	animationPlayer.play("attack01")
+	if parent.isDead == false:
+		if enemyTargets.size() > 0:
+			animationPlayer.play("attack01")
+func _on_health_component_damage_blocked():
+	if parent.isDead == false:
+		Transitioned.emit(self,"block")
+func _on_health_component_damage_hurt():
+	if parent.isDead == false:
+		Transitioned.emit(self,"hurt")

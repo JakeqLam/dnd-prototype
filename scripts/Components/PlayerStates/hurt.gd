@@ -10,8 +10,9 @@ func Enter():
 	VFX.spawn_effect(VFX.EFFECT_HIT, parent.global_position)
 
 func Update(_delta):
-	if parent.currentHP <= 0:
+	if parent.isDead == true:
 		Transitioned.emit(self,"death")
 		
 func _on_animation_player_animation_finished(_anim_name):
+	if parent.isDead == false:
 		Transitioned.emit(self, "idle")

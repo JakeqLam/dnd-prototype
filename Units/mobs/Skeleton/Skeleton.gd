@@ -5,20 +5,24 @@ class_name Skeleton
 @onready var selection = $Selection
 
 var follow_cursor:bool = false
-var currentHP:int = 100
-var defence:int = 5
-var rng:int = 5
+var currentHP:int = 5
 
+@export var rng:int = 50
+@export var wpnDmg:int = 5
+@export var maxHP:int = 100
+@export var defence:int = 5
+
+var isDead:bool = false
 
 func _ready():
-	defence = health_component.getDef()
-	drawEnemyCircle()
+	pass
+	#drawEnemyCircle()
 
 func toggle_cursor_state(cursorState: bool):
 	follow_cursor = cursorState
 
-func _process(_deltZDza) -> void:
-	currentHP = health_component.getHP()
+func _process(_delta) -> void:
+	isDead = health_component.getIsDead()
 
 func drawEnemyCircle():
 		var style:StyleBoxFlat = StyleBoxFlat.new()

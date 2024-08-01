@@ -54,5 +54,3 @@ func _on_health_component_damage_hurt():
 	Transitioned.emit(self,"hurt")
 func _on_health_component_damage_blocked():
 	Transitioned.emit(self,"block")
-func _on_enemy_detector_body_entered(body):
-	print(body.name + "has entered range")

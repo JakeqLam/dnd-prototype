@@ -3,34 +3,53 @@ class_name EnemyFollow
 
 @onready var animationPlayer = get_node("../../AnimationPlayer")
 @onready var sprite = get_node("../../Sprite2D")
+@onready var hitbox = get_node("../../HitboxComponent")
 
-@export var parent: CharacterBody2D
-@export var speed:int = 20
+@export var enemy: CharacterBody2D
+@export var move_speed:int = 20
 
-@onready var target = parent.position
+var player : CharacterBody2D
+
 
 func Enter():
-	print("walk state")
 	animationPlayer.play("walk")
+	player = get_tree().get_first_node_in_group("player")
 
 func Update(_delta):
-	if parent.currentHP <= 0:
+	if enemy.isDead == false:
 		Transitioned.emit(self,"death")
 
 func Physics_Update(_delta):
-
-	if parent.follow_cursor == true:
-		target = parent.get_global_mouse_position()
 	
-	var direction =  parent.global_position - target
-	parent.velocity = parent.position.direction_to(target) * speed
+	var direction = player.global_position - enemy.global_position
 	
-	if parent.position.distance_to(target) > 1:
-		if parent.position.x > target.x:
+	if direction.length() > 25:
+		enemy.velocity = direction.normalized() * move_speed
+	else: 
+		enemy.velocity = Vector2()
+		Transitioned.emit(self, "enemy_idle")
+		
+	if direction.length() > 50:
+		Transitioned.emit(self, "enemy_idle")
+	
+	if enemy.position.distance_to(player.get_position()) > 1:
+		if enemy.position.x > player.position.x:
 			sprite.flip_h = true
-		elif parent.position.x <= target.x:
+			#Flip the collision shape of hitbox to match sprite
+			hitbox.scale.x = -1
+			hitbox.scale.y = -1
+			#hitbox.rotation = 45
+			hitbox.position.x = -10
+			hitbox.position.y = 1
+		elif enemy.position.x <= player.position.x:
 			sprite.flip_h = false
-		parent.move_and_slide()
+			#Flip the collision shape of hitbox to match sprite
+			hitbox.scale.x = 1
+			hitbox.scale.y = 1
+			#hitbox.rotation = 135
+			hitbox.position.x = 10
+			hitbox.position.y = -1
+		enemy.move_and_slide()
 	
 	if direction.length() < 1:
 		Transitioned.emit(self, "idle")
