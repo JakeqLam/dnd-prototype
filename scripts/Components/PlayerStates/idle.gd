@@ -22,13 +22,13 @@ func _input(event: InputEvent):
 	return null
 func Physics_Update(_delta):
 	if enemyTargets.size() > 0:
-		if parent.isDead == false and parent.position.distance_to(enemyTargets[0].get_position()) < parent.rng:
+		if parent.isDead == false and parent.position.distance_to(enemyTargets[0].get_position()) < parent.wpnRange:
 			Transitioned.emit(self,"attack")
 	
 func Update(_delta):
 	if parent.isDead == true:
 		Transitioned.emit(self,"death")
-func _on_health_component_damage_hurt():
+func _on_health_component_damage_hurt(_dmg):
 	if parent.isDead == false:
 		Transitioned.emit(self,"hurt")
 func _on_health_component_damage_blocked():

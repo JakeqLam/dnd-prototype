@@ -22,7 +22,6 @@ func getIsDead():
 
 func _ready():
 	currentHP = maxHP
-	
 	#initializing parent attributes
 	defence =  parent.defence
 	maxHP = parent.maxHP
@@ -32,8 +31,8 @@ func receive_damage(base_damage:int):
 	#character is alive
 	if isDead == false:
 		if (actual_damage >= defence):
-			currentHP -= actual_damage	
-			emit_signal("damage_hurt")
+			currentHP -= actual_damage
+			emit_signal("damage_hurt", actual_damage)
 		if (actual_damage < defence):
 			emit_signal("damage_blocked")
 			currentHP = currentHP
@@ -44,5 +43,4 @@ func receive_damage(base_damage:int):
 	
 func _on_hurtbox_area_entered(hitbox):
 	if isDead == false:
-		hitbox.damage = randi_range(5,40)
-		receive_damage(hitbox.damage)
+		receive_damage(hitbox.dmg)

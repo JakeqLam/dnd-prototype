@@ -440,7 +440,8 @@ collision_mask = 2
 script = ExtResource("2_nemj3")
 health_component = NodePath("HealthComponent")
 
-[node name="VFXSpawner" parent="." instance=ExtResource("2_p8ki8")]
+[node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_p8ki8")]
+parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 4
@@ -498,13 +499,14 @@ light_mask = 4
 visibility_layer = 2
 shape = SubResource("CapsuleShape2D_olif0")
 
-[node name="HitboxComponent" type="Area2D" parent="."]
+[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("parent")]
 light_mask = 4
 visibility_layer = 2
 collision_layer = 4
 collision_mask = 2
 monitoring = false
 script = ExtResource("10_1uu10")
+parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 modulate = Color(0, 0.545098, 1, 1)
@@ -553,6 +555,7 @@ enemy = NodePath("../..")
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_idle" method="_on_health_component_damage_hurt"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_follow" method="_on_health_component_damage_hurt"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_attack" method="_on_health_component_damage_hurt"]
+[connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_hurt" method="_on_health_component_damage_hurt"]
 [connection signal="body_entered" from="EnemyDetector" to="StateMachine/enemy_idle" method="_on_enemy_detector_body_entered"]
 [connection signal="area_entered" from="HurtboxComponent" to="HealthComponent" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="AttackSpeedTimer" to="StateMachine/enemy_attack" method="_on_attack_speed_timer_timeout"]

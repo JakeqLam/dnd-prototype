@@ -13,3 +13,11 @@ res://scripts/Components/EnemyStates/enemy_attack.gd
 res://scripts/Components/PlayerStates/attack.gd
 res://scripts/Components/HealthComponent.gd
 res://scripts/Components/PlayerStates/walk.gd
+res://UI/DamageIndicator.tscn
+res://UI/DamageIndicatorComponent.tscn
+res://UI/DamageIndicator.gd
+res://scripts/Components/PlayerStates/hurt.gd
+res://Effects/VFXSpawner.gd
+res://scripts/Components/HitboxComponent.gd
+res://scripts/Components/EnemyStates/enemy_follow.gd
+res://scripts/Components/StateMachine.gd

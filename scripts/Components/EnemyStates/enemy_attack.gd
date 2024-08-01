@@ -2,15 +2,17 @@ extends State
 class_name EnemyAttack
 @onready var animationPlayer = get_node("../../AnimationPlayer")
 @onready var atkTimer = get_node("../../AttackSpeedTimer")
-@export var atkSpd: float = 3.0
+@onready var wpnDamage = get_node("../../HitboxComponent")
 @export var enemy: CharacterBody2D
 
+var atkSpd: float = 2.5
 var atkCooldown:bool = false
 var playerTargets = []
 func Enter():
 	playerTargets = get_tree().get_nodes_in_group("PlayerTargets")
-	atkTimer.wait_time = atkSpd
-	
+	atkSpd = enemy.wpnSpd
+	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
+	wpnDamage.generateDMG(enemy.wpnDmgMin, enemy.wpnDmgMax) #Generate damage between a range
 	if playerTargets.size() != 0:
 		if enemy.isDead == false:
 			if atkCooldown == false:
@@ -18,15 +20,7 @@ func Enter():
 				atkCooldown = true
 				atkTimer.start()
 			elif atkCooldown == true:
-				Transitioned.emit(self,"idle")
-
-func _input(event: InputEvent):
-	if event.is_action_pressed("right_click"):
-			enemy.toggle_cursor_state(true)
-			Transitioned.emit(self,"walk")
-	if event.is_action_released("right_click"):
-			enemy.toggle_cursor_state(false)
-	return null
+				Transitioned.emit(self,"enemy_idle")
 
 func Update(_delta):
 	if enemy.isDead == true:
@@ -41,7 +35,7 @@ func Update(_delta):
 func _on_attack_speed_timer_timeout():
 	if enemy.isDead == false:
 		animationPlayer.play("attack01")
-func _on_health_component_damage_hurt():
+func _on_health_component_damage_hurt(_dmg):
 	if enemy.isDead == false:
 		Transitioned.emit(self,"enemy_hurt")
 func _on_health_component_damage_blocked():

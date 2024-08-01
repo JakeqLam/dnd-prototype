@@ -1,27 +1,24 @@
 extends CharacterBody2D
 
 class_name Skeleton
-@export var health_component : HealthComponent
+
 @onready var selection = $Selection
-
-var follow_cursor:bool = false
-var currentHP:int = 5
-
-@export var rng:int = 50
-@export var wpnDmg:int = 5
+@export var health_component : HealthComponent
+@export var wpnRange:int = 50
+@export var wpnDmgMin:int = 4
+@export var wpnDmgMax:int = 12
+@export var wpnSpd:float = 2.5
 @export var maxHP:int = 100
 @export var defence:int = 5
 
+var currentHP:int = 5
 var isDead:bool = false
 
 func _ready():
 	pass
 	#drawEnemyCircle()
 
-func toggle_cursor_state(cursorState: bool):
-	follow_cursor = cursorState
-
-func _process(_delta) -> void:
+func _process(_delta):
 	isDead = health_component.getIsDead()
 
 func drawEnemyCircle():

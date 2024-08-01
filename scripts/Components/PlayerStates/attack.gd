@@ -2,7 +2,8 @@ extends State
 class_name attack
 @onready var animationPlayer = get_node("../../AnimationPlayer")
 @onready var atkTimer = get_node("../../AttackSpeedTimer")
-@export var atkSpd: float = 5.0
+@onready var wpnDamage = get_node("../../HitboxComponent")
+@export var atkSpd: float = 3.0
 @export var parent: CharacterBody2D
 
 var atkCooldown:bool = false
@@ -11,8 +12,9 @@ var enemyTargets = []
 
 func Enter():
 	enemyTargets = get_tree().get_nodes_in_group("EnemyTargets")
-	atkTimer.wait_time = atkSpd
-	
+	atkSpd = parent.wpnSpd 
+	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
+	wpnDamage.generateDMG(parent.wpnDmgMin, parent.wpnDmgMax) #Generate damage between a range
 	if enemyTargets.size() != 0:
 		#Attack logic
 		if atkCooldown == false:
@@ -47,6 +49,6 @@ func _on_attack_speed_timeout():
 func _on_health_component_damage_blocked():
 	if parent.isDead == false:
 		Transitioned.emit(self,"block")
-func _on_health_component_damage_hurt():
+func _on_health_component_damage_hurt(_dmg):
 	if parent.isDead == false:
 		Transitioned.emit(self,"hurt")

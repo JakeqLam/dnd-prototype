@@ -17,3 +17,6 @@ func Update(_delta):
 func _on_animation_player_animation_finished(_anim_name):
 	if enemy.isDead == false:
 		Transitioned.emit(self, "enemy_idle")
+		
+func _on_health_component_damage_hurt(dmg):
+	VFX.spawn_dmgIndicator(dmg)

@@ -50,7 +50,7 @@ func Physics_Update(_delta):
 		Transitioned.emit(self, "idle")
 	return null
 
-func _on_health_component_damage_hurt():
+func _on_health_component_damage_hurt(_dmg):
 	Transitioned.emit(self,"hurt")
 func _on_health_component_damage_blocked():
 	Transitioned.emit(self,"block")

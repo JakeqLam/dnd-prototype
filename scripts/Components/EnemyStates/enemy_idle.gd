@@ -6,19 +6,20 @@ class_name EnemyIdle
 @onready var target = enemy.position
 var playerTargets = []
 func Enter():
+	print("entering enemy idle")
 	playerTargets = get_tree().get_nodes_in_group("PlayerTargets")
-	print(playerTargets)
 	animationPlayer.play("idle")
 	enemy.velocity.x = 0
 
 func Update(_delta):
 	if playerTargets.size() > 0:
-		if enemy.isDead == false and enemy.position.distance_to(playerTargets[0].get_position()) < enemy.rng:
+		if enemy.isDead == false and enemy.position.distance_to(playerTargets[0].get_position()) < enemy.wpnRange:
 			Transitioned.emit(self,"enemy_attack")
 	if enemy.isDead == true:
 		Transitioned.emit(self,"death")
 
-func _on_health_component_damage_hurt():
+func _on_health_component_damage_hurt(dmg):
+	print(dmg)
 	if enemy.isDead == false:
 		Transitioned.emit(self,"enemy_hurt")
 func _on_health_component_damage_blocked():

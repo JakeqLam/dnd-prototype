@@ -12,24 +12,24 @@ var player : CharacterBody2D
 
 
 func Enter():
+	print("Enemy walking state")
 	animationPlayer.play("walk")
 	player = get_tree().get_first_node_in_group("player")
 
 func Update(_delta):
 	if enemy.isDead == false:
-		Transitioned.emit(self,"death")
+		Transitioned.emit(self,"enemy_death")
 
 func Physics_Update(_delta):
 	
 	var direction = player.global_position - enemy.global_position
-	
 	if direction.length() > 25:
 		enemy.velocity = direction.normalized() * move_speed
-	else: 
+	else:
 		enemy.velocity = Vector2()
 		Transitioned.emit(self, "enemy_idle")
-		
-	if direction.length() > 50:
+
+	if direction.length() > 20:
 		Transitioned.emit(self, "enemy_idle")
 	
 	if enemy.position.distance_to(player.get_position()) > 1:
@@ -52,10 +52,10 @@ func Physics_Update(_delta):
 		enemy.move_and_slide()
 	
 	if direction.length() < 1:
-		Transitioned.emit(self, "idle")
+		Transitioned.emit(self, "enemy_idle")
 	return null
 
-func _on_health_component_damage_hurt():
-	Transitioned.emit(self,"hurt")
+func _on_health_component_damage_hurt(_dmg):
+	Transitioned.emit(self,"enemy_hurt")
 func _on_health_component_damage_blocked():
-	Transitioned.emit(self,"block")
+	Transitioned.emit(self,"enemy_block")
