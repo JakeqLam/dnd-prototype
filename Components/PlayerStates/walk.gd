@@ -15,7 +15,7 @@ func Enter():
 	animationPlayer.play("walk")
 
 func Update(_delta):
-	if parent.currentHP <= 0:
+	if parent.isDead == true:
 		Transitioned.emit(self,"death")
 
 func Physics_Update(_delta):

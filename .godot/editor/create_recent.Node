@@ -1,7 +1,8 @@
+Camera2D
+Node
 Timer
 AnimationPlayer
 Sprite2D
-Node
 Node2D
 CollisionShape2D
 Area2D

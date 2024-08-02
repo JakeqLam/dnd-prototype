@@ -25,6 +25,7 @@ signal start_move_selection
 @onready var box = get_node("../UI/Panel")
 
 func _ready():
+	box.visible = false
 	connect("area_selected", Callable(get_parent(), "_on_area_selected"))
 	connect("unit_select", Callable(get_parent(), "_on_unit_select"))
 	
@@ -91,6 +92,7 @@ func _input(event):
 		mousePosGlobal = get_global_mouse_position()
  
 func draw_area(s=true):
+	box.visible = true
 	box.size = Vector2(abs(startV.x - endV.x), abs(startV.y - endV.y))
 	var pos = Vector2()
 	pos.x = min(startV.x, endV.x)

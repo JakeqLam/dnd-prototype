@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ny0byqchvrkt"]
+[gd_scene load_steps=32 format=3 uid="uid://ny0byqchvrkt"]
 
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="2_gxs7x"]
 [ext_resource type="Script" path="res://Units/Knight/Knight.gd" id="2_jgudi"]
@@ -8,15 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://dlwk5i84ve2an" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png" id="5_usixv"]
 [ext_resource type="Texture2D" uid="uid://c8dy8jd4cu2j6" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png" id="6_emkqw"]
 [ext_resource type="Texture2D" uid="uid://b0yt31lb6jm23" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png" id="7_1cpbc"]
-[ext_resource type="Script" path="res://scripts/Components/HealthComponent.gd" id="9_aksrj"]
-[ext_resource type="Script" path="res://scripts/Components/HitboxComponent.gd" id="10_elqu4"]
-[ext_resource type="Script" path="res://scripts/Components/StateMachine.gd" id="10_pckud"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/idle.gd" id="11_f8k2j"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/walk.gd" id="12_hpqpr"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/attack.gd" id="13_8di8k"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/death.gd" id="14_032ne"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/block.gd" id="15_lfk6i"]
-[ext_resource type="Script" path="res://scripts/Components/PlayerStates/hurt.gd" id="16_0nr1i"]
+[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_ir8dp"]
+[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_btlfu"]
+[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="11_d1a84"]
+[ext_resource type="Script" path="res://Components/PlayerStates/idle.gd" id="12_i5rdk"]
+[ext_resource type="Script" path="res://Components/PlayerStates/walk.gd" id="13_mcmkm"]
+[ext_resource type="Script" path="res://Components/PlayerStates/attack.gd" id="14_sdlih"]
+[ext_resource type="Script" path="res://Components/PlayerStates/death.gd" id="15_y1883"]
+[ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_l8m1v"]
+[ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_6t14m"]
+[ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/player_controller.tscn" id="18_d8j0d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -440,10 +441,12 @@ anti_aliasing_size = 0.5
 radius = 88.0057
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4xqv"]
+radius = 7.0
+height = 24.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbc84"]
-radius = 17.0
-height = 39.598
+radius = 14.0
+height = 28.0
 
 [node name="Knight" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
 z_index = 1
@@ -453,10 +456,8 @@ collision_mask = 5
 script = ExtResource("2_jgudi")
 health_component = NodePath("HealthComponent")
 
-[node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_oyybm")]
-parent = NodePath("..")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.01, 6.625)
 shape = SubResource("CircleShape2D_pogrd")
 debug_color = Color(0.185944, 0.637824, 0.232843, 0.0823529)
 
@@ -482,7 +483,7 @@ texture = ExtResource("2_gxs7x")
 hframes = 6
 
 [node name="HealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("parent")]
-script = ExtResource("9_aksrj")
+script = ExtResource("9_ir8dp")
 parent = NodePath("..")
 
 [node name="EnemyDetector" type="Area2D" parent="."]
@@ -511,48 +512,57 @@ position = Vector2(16, -1)
 collision_layer = 2
 collision_mask = 4
 monitoring = false
-script = ExtResource("10_elqu4")
+script = ExtResource("10_btlfu")
 parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 modulate = Color(0, 0.545098, 1, 1)
 light_mask = 2
 visibility_layer = 4
-position = Vector2(-5, 0)
+position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_kbc84")
 disabled = true
 
+[node name="AttackSpeedTimer" type="Timer" parent="."]
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("10_pckud")
+script = ExtResource("11_d1a84")
 initial_state = NodePath("idle")
 
-[node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("11_f8k2j")
-parent = NodePath("../..")
+[node name="idle" type="Node" parent="StateMachine"]
+script = ExtResource("12_i5rdk")
 
 [node name="walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("12_hpqpr")
+script = ExtResource("13_mcmkm")
 parent = NodePath("../..")
 speed = 40
 
 [node name="attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("13_8di8k")
+script = ExtResource("14_sdlih")
 parent = NodePath("../..")
 
 [node name="death" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("14_032ne")
+script = ExtResource("15_y1883")
 parent = NodePath("../..")
 
 [node name="block" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
-script = ExtResource("15_lfk6i")
+script = ExtResource("16_l8m1v")
 parent = NodePath("../..")
 
 [node name="hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent", "VFX")]
-script = ExtResource("16_0nr1i")
+script = ExtResource("17_6t14m")
 parent = NodePath("../..")
 VFX = NodePath("../../VFXSpawner")
 
-[node name="AttackSpeedTimer" type="Timer" parent="."]
+[node name="PlayerController" parent="." node_paths=PackedStringArray("player", "animPlayer", "hitbox", "hurtbox", "VFX") instance=ExtResource("18_d8j0d")]
+player = NodePath("..")
+animPlayer = NodePath("../AnimationPlayer")
+hitbox = NodePath("../HitboxComponent")
+hurtbox = NodePath("../HurtboxComponent")
+VFX = NodePath("../VFXSpawner")
+
+[node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_oyybm")]
+parent = NodePath("..")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/death" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/block" method="_on_animation_player_animation_finished"]

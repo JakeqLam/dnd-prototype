@@ -8,15 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://eapxcn30ymuu" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png" id="6_g1kcs"]
 [ext_resource type="Texture2D" uid="uid://cxcvboiwrb31a" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png" id="7_tqrlu"]
 [ext_resource type="Texture2D" uid="uid://b3bfq4skpiq5s" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png" id="8_s1onp"]
-[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_kqn6o"]
-[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_1uu10"]
-[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="10_p042s"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_idle.gd" id="11_1r5aw"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_follow.gd" id="12_b0qqc"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_attack.gd" id="13_kbpsr"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_block.gd" id="14_naehk"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_hurt.gd" id="15_jaa50"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_death.gd" id="16_uci31"]
+[ext_resource type="Script" path="res://scripts/Components/HealthComponent.gd" id="9_kqn6o"]
+[ext_resource type="Script" path="res://scripts/Components/HitboxComponent.gd" id="10_1uu10"]
+[ext_resource type="Script" path="res://scripts/Components/StateMachine.gd" id="10_p042s"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_idle.gd" id="11_1r5aw"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_follow.gd" id="12_b0qqc"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_attack.gd" id="13_kbpsr"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_block.gd" id="14_naehk"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_hurt.gd" id="15_jaa50"]
+[ext_resource type="Script" path="res://scripts/Components/EnemyStates/enemy_death.gd" id="16_uci31"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -427,12 +427,10 @@ anti_aliasing_size = 0.5
 radius = 88.0057
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olif0"]
-radius = 8.0
-height = 22.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfpbq"]
-radius = 12.0
-height = 24.0
+radius = 14.0
+height = 40.0
 
 [node name="Skeleton" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["enemy"]]
 z_index = 1
@@ -499,7 +497,6 @@ monitorable = false
 modulate = Color(0.117647, 1, 0, 1)
 light_mask = 4
 visibility_layer = 2
-position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_olif0")
 
 [node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("parent")]
@@ -520,6 +517,7 @@ disabled = true
 [node name="AttackSpeedTimer" type="Timer" parent="."]
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
 script = ExtResource("10_p042s")
 initial_state = NodePath("enemy_idle")
 

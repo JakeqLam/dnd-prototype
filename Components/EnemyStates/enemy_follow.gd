@@ -16,12 +16,7 @@ func Enter():
 	animationPlayer.play("walk")
 	player = get_tree().get_first_node_in_group("player")
 
-func Update(_delta):
-	if enemy.isDead == false:
-		Transitioned.emit(self,"enemy_death")
-
 func Physics_Update(_delta):
-	
 	var direction = player.global_position - enemy.global_position
 	if direction.length() > 25:
 		enemy.velocity = direction.normalized() * move_speed
@@ -29,8 +24,9 @@ func Physics_Update(_delta):
 		enemy.velocity = Vector2()
 		Transitioned.emit(self, "enemy_idle")
 
-	if direction.length() > 20:
+	if direction.length() > 60:
 		Transitioned.emit(self, "enemy_idle")
+	
 	
 	if enemy.position.distance_to(player.get_position()) > 1:
 		if enemy.position.x > player.position.x:
@@ -39,7 +35,7 @@ func Physics_Update(_delta):
 			hitbox.scale.x = -1
 			hitbox.scale.y = -1
 			#hitbox.rotation = 45
-			hitbox.position.x = -10
+			hitbox.position.x = -5
 			hitbox.position.y = 1
 		elif enemy.position.x <= player.position.x:
 			sprite.flip_h = false
@@ -47,9 +43,12 @@ func Physics_Update(_delta):
 			hitbox.scale.x = 1
 			hitbox.scale.y = 1
 			#hitbox.rotation = 135
-			hitbox.position.x = 10
+			hitbox.position.x = 5
 			hitbox.position.y = -1
 		enemy.move_and_slide()
+		
+	if enemy.isDead == true:
+		Transitioned.emit(self,"enemy_death")
 	
 	if direction.length() < 1:
 		Transitioned.emit(self, "enemy_idle")

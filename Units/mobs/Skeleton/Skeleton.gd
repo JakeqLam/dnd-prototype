@@ -11,7 +11,7 @@ class_name Skeleton
 @export var maxHP:int = 100
 @export var defence:int = 5
 
-var currentHP:int = 5
+var currentHP:int = 100
 var isDead:bool = false
 
 func _ready():

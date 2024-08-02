@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr2thi328srt8"]
-
-[ext_resource type="Script" path="res://UI/Camera2D.gd" id="1_13ep8"]
+[gd_scene load_steps=2 format=3 uid="uid://dr2thi328srt8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
 bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
@@ -19,12 +17,8 @@ anti_aliasing = false
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-script = ExtResource("1_13ep8")
-
 [node name="Panel" type="Panel" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jpijq")
+metadata/_edit_use_anchors_ = true
