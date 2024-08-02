@@ -7,10 +7,11 @@ signal damage_hurt
 
 @onready var animationPlayer = get_node("../AnimationPlayer")
 @export var parent:CharacterBody2D
+@export var healthBar:TextureProgressBar
 
 var maxHP:int = 100
 var defence:int = 10
-var currentHP:int = maxHP
+var currentHP:float = maxHP
 var isDead:bool = false
 
 func getMaxHP():
@@ -32,6 +33,7 @@ func receive_damage(base_damage:int):
 	if isDead == false:
 		if (actual_damage >= defence):
 			currentHP -= actual_damage
+			healthBar.value = currentHP
 			emit_signal("damage_hurt", actual_damage)
 		if (actual_damage < defence):
 			emit_signal("damage_blocked")

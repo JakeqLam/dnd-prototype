@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://batgrhnya1m5b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gw4t"]
+bg_color = Color(0, 0.435294, 0.266667, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.756863, 0.203922, 0.690196)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.5
+
+[node name="PlayerUnitUI" type="CanvasLayer"]
+
+[node name="Selection" type="Panel" parent="."]
+visibility_layer = 2
+y_sort_enabled = true
+offset_left = -9.0
+offset_top = -2.0
+offset_right = 9.0
+offset_bottom = 16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4gw4t")
