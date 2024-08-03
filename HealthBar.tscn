@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpld85rb0smp5"]
+
+[ext_resource type="Texture2D" uid="uid://dc7k78obhxcit" path="res://UI/healthbar_empty.png" id="1_7evdv"]
+[ext_resource type="Texture2D" uid="uid://pg0hqxgq3lan" path="res://UI/healthbar_border.png" id="2_71a8j"]
+[ext_resource type="Texture2D" uid="uid://dyfkmtmq7ygls" path="res://UI/healthbar_full.png" id="3_g70qm"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="4_ctkpb"]
+
+[node name="HealthBar" type="TextureProgressBar"]
+visible = false
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 16.0
+offset_bottom = -2.0
+scale = Vector2(1, 0.5)
+value = 100.0
+texture_under = ExtResource("1_7evdv")
+texture_over = ExtResource("2_71a8j")
+texture_progress = ExtResource("3_g70qm")
+script = ExtResource("4_ctkpb")

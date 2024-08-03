@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://bw4md1mc31gwl"]
+[gd_scene load_steps=32 format=3 uid="uid://bw4md1mc31gwl"]
 
+[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_bkm6v"]
 [ext_resource type="Script" path="res://Units/mobs/Skeleton/Skeleton.gd" id="2_nemj3"]
 [ext_resource type="PackedScene" uid="uid://ds74uayhpq5ba" path="res://Effects/VFXSpawner.tscn" id="2_p8ki8"]
 [ext_resource type="Texture2D" uid="uid://b7vdrbhufxdct" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png" id="3_c3ukp"]
@@ -8,15 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://eapxcn30ymuu" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png" id="6_g1kcs"]
 [ext_resource type="Texture2D" uid="uid://cxcvboiwrb31a" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png" id="7_tqrlu"]
 [ext_resource type="Texture2D" uid="uid://b3bfq4skpiq5s" path="res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png" id="8_s1onp"]
-[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_kqn6o"]
-[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_1uu10"]
-[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="10_p042s"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_idle.gd" id="11_1r5aw"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_follow.gd" id="12_b0qqc"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_attack.gd" id="13_kbpsr"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_block.gd" id="14_naehk"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_hurt.gd" id="15_jaa50"]
-[ext_resource type="Script" path="res://Components/EnemyStates/enemy_death.gd" id="16_uci31"]
+[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_ohvx4"]
+[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_w70dk"]
+[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="11_n3va2"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_idle.gd" id="12_h8udq"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_follow.gd" id="13_745a6"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_attack.gd" id="14_jao0s"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_block.gd" id="15_1t5yd"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_hurt.gd" id="16_to4aj"]
+[ext_resource type="Script" path="res://Components/EnemyStates/enemy_death.gd" id="17_4wcgo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -442,6 +443,12 @@ collision_mask = 2
 script = ExtResource("2_nemj3")
 health_component = NodePath("HealthComponent")
 
+[node name="HealthBar" parent="." instance=ExtResource("2_bkm6v")]
+offset_left = -15.866
+offset_top = -21.195
+offset_right = 16.134
+offset_bottom = -9.195
+
 [node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_p8ki8")]
 parent = NodePath("..")
 
@@ -474,7 +481,7 @@ offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
 
 [node name="HealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("parent")]
-script = ExtResource("9_kqn6o")
+script = ExtResource("9_ohvx4")
 parent = NodePath("..")
 
 [node name="EnemyDetector" type="Area2D" parent="."]
@@ -508,7 +515,7 @@ visibility_layer = 2
 collision_layer = 4
 collision_mask = 2
 monitoring = false
-script = ExtResource("10_1uu10")
+script = ExtResource("10_w70dk")
 parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
@@ -520,32 +527,32 @@ disabled = true
 [node name="AttackSpeedTimer" type="Timer" parent="."]
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("10_p042s")
+script = ExtResource("11_n3va2")
 initial_state = NodePath("enemy_idle")
 
 [node name="enemy_idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("11_1r5aw")
+script = ExtResource("12_h8udq")
 enemy = NodePath("../..")
 
 [node name="enemy_follow" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("12_b0qqc")
+script = ExtResource("13_745a6")
 enemy = NodePath("../..")
 
 [node name="enemy_attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("13_kbpsr")
+script = ExtResource("14_jao0s")
 enemy = NodePath("../..")
 
 [node name="enemy_block" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("14_naehk")
+script = ExtResource("15_1t5yd")
 enemy = NodePath("../..")
 
 [node name="enemy_hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("VFX", "enemy")]
-script = ExtResource("15_jaa50")
+script = ExtResource("16_to4aj")
 VFX = NodePath("../../VFXSpawner")
 enemy = NodePath("../..")
 
 [node name="enemy_death" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("16_uci31")
+script = ExtResource("17_4wcgo")
 enemy = NodePath("../..")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/enemy_block" method="_on_animation_player_animation_finished"]

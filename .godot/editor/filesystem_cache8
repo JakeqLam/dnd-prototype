@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722576506
+::res://::1722664646
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1722055227::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
-Player_HealthBar.tscn::PackedScene::8235045545163352524::1722576478::0::1::::<><>::
+Player_HealthBar.tscn::PackedScene::8235045545163352524::1722664646::0::1::::<><>::uid://dc7k78obhxcit::::res://UI/healthbar_empty.png<>uid://pg0hqxgq3lan::::res://UI/healthbar_border.png<>uid://dyfkmtmq7ygls::::res://UI/healthbar_full.png
 ::res://Assets/::1722259574
 ::res://Assets/fonts/::1722359688
 FONTLOG.txt::TextFile::-1::1722016321::0::1::::<><>::
@@ -1276,10 +1276,10 @@ Wizard-Idle.png::CompressedTexture2D::5697117981469340042::1721713547::172235969
 Wizard-Walk.png::CompressedTexture2D::2096131340751679997::1721713547::1722359690::1::::<><>::
 Wizard.png::CompressedTexture2D::2554421904412174880::1721713547::1722359690::1::::<><>::
 ::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/::1722218363
-::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/::1722359690
+::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/::1722576842
 full spritesheet.png::CompressedTexture2D::4126441103266538604::1578454975::1722359690::1::::<><>::
 full tilemap.png::CompressedTexture2D::2335835288359644926::1603337818::1722359690::1::::<><>::
-README.txt::TextFile::-1::1661361138::0::1::::<><>::
+README.txt::TextFile::-1::1722576842::0::1::::<><>::
 ::res://Assets/Pixel Art/v1.1 dungeon crawler 16X16 pixel pack/v1.1 dungeon crawler 16X16 pixel pack/effects (new)/::1722359690
 enemy_afterdead_explosion_anim_f0.png::CompressedTexture2D::4515361644332455483::1560830163::1722359690::1::::<><>::
 enemy_afterdead_explosion_anim_f1.png::CompressedTexture2D::5959693997088176358::1560830176::1722359690::1::::<><>::
@@ -1518,10 +1518,10 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1722016322::17223
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1722016322::1722359689::1::::<><>::
 ::res://Assets/tilesets/particles/::1722359689
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1722016322::1722359689::1::::<><>::
-::res://Components/::1722576347
+::res://Components/::1722664646
 CameraComponent.gd::GDScript::-1::1722575380::0::1::::<>Camera2D<>::
-CameraComponent.tscn::PackedScene::1739961382771227548::1722576347::0::1::::<><>::
-HealthComponent.gd::GDScript::-1::1722486626::0::1::::HealthComponent<>Node2D<>::
+CameraComponent.tscn::PackedScene::1739961382771227548::1722664646::0::1::::<><>::
+HealthComponent.gd::GDScript::-1::1722664623::0::1::::HealthComponent<>Node2D<>::
 HitboxComponent.gd::GDScript::-1::1722485512::0::1::::<>Area2D<>::
 HitBoxComponent.tscn::PackedScene::919417583576784496::1722569068::0::1::::<><>::res://Components/HitboxComponent.gd
 HurtboxComponent.gd::GDScript::-1::1722108595::0::1::::<>Area2D<>::
@@ -1574,8 +1574,8 @@ slash_effect_anim_f0.png::CompressedTexture2D::401035806399906210::1560833705::1
 slash_effect_anim_f1.png::CompressedTexture2D::4031256320518639958::1560833714::1722218438::1::::<><>::
 slash_effect_anim_f2.png::CompressedTexture2D::6606703336785959032::1560833723::1722218438::1::::<><>::
 slash_effect_anim_spritesheet.png::CompressedTexture2D::2119624786118476643::1560832919::1722218438::1::::<><>::
-::res://Environments/::1722576371
-world.tscn::PackedScene::6469066510429512572::1722576371::0::1::::<><>::uid://y1356xkwesrs::::res://Components/CameraComponent.tscn<>res://Components/CameraComponent.gd<>uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png
+::res://Environments/::1722664646
+world.tscn::PackedScene::6469066510429512572::1722664646::0::1::::<><>::uid://y1356xkwesrs::::res://Components/CameraComponent.tscn<>res://Components/CameraComponent.gd<>uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://ny0byqchvrkt::::res://Units/Knight/Knight.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png
 ::res://Environments/tilesets/::1722359689
 grass.png::CompressedTexture2D::7305182772639388965::1721713547::1722359689::1::::<><>::
 plains.png::CompressedTexture2D::7819300623326541533::1721713547::1722359689::1::::<><>::
@@ -1616,7 +1616,7 @@ rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1721713547::1722
 ::res://Environments/tilesets/particles/::1722359689
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1721713547::1722359689::1::::<><>::
 ::res://GameManager/::1722567846
-::res://UI/::1722576837
+::res://UI/::1722576841
 DamageIndicator.gd::GDScript::-1::1722473057::0::1::::<>Node2D<>::
 DamageIndicator.tscn::PackedScene::2321965048131902194::1722568794::0::1::::<><>::res://UI/DamageIndicator.gd
 healthbar_border.png::CompressedTexture2D::1066750222670551321::1722576723::1722576841::1::::<><>::
@@ -1631,9 +1631,9 @@ Xolonium-Regular.ttf::FontFile::5375469398433749905::1721713547::1722055226::1::
 ::res://Units/::1722569068
 Unit.gd::GDScript::-1::1722150204::0::1::::Unit<>CharacterBody2D<>::
 Unit.tscn::PackedScene::6830615025341583550::1722569068::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>uid://bpcehk8uwopwx::::res://Components/HurtboxComponent.tscn<>uid://ndmw5kk3tkmy::::res://Components/HitBoxComponent.tscn
-::res://Units/Knight/::1722576516
-Knight.gd::GDScript::-1::1722575619::0::1::::Knight<>CharacterBody2D<>::
-Knight.tscn::PackedScene::963521029383266819::1722576516::0::1::::<><>::uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Knight/Knight.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/player_controller.tscn<>uid://dpld85rb0smp5::::res://Player_HealthBar.tscn
+::res://Units/Knight/::1722664646
+Knight.gd::GDScript::-1::1722663876::0::1::::Knight<>CharacterBody2D<>::
+Knight.tscn::PackedScene::963521029383266819::1722664728::0::1::::<><>::uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Knight/Knight.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/player_controller.tscn<>uid://dpld85rb0smp5::::res://Player_HealthBar.tscn
 ::res://Units/Knight/Knight_art/::1722055227
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1722016322::1722055227::1::::<><>::
 ::res://Units/Knight/Knight_art/Knight with shadows/::1722055227
@@ -1693,9 +1693,9 @@ ogre-run-02.png::CompressedTexture2D::7893688472641331715::1722366849::172236685
 ogre-run-03.png::CompressedTexture2D::7505962298745402505::1722366849::1722366857::1::::<><>::
 ogre-run-04.png::CompressedTexture2D::1501129614036570892::1722366849::1722366857::1::::<><>::
 ogre-run-05.png::CompressedTexture2D::8888379618324188716::1722366849::1722366857::1::::<><>::
-::res://Units/mobs/Skeleton/::1722569068
-Skeleton.gd::GDScript::-1::1722557718::0::1::::Skeleton<>CharacterBody2D<>::
-Skeleton.tscn::PackedScene::3991177544166533855::1722569068::0::1::::<><>::res://Units/mobs/Skeleton/Skeleton.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/EnemyStates/enemy_idle.gd<>res://Components/EnemyStates/enemy_follow.gd<>res://Components/EnemyStates/enemy_attack.gd<>res://Components/EnemyStates/enemy_block.gd<>res://Components/EnemyStates/enemy_hurt.gd<>res://Components/EnemyStates/enemy_death.gd
+::res://Units/mobs/Skeleton/::1722664646
+Skeleton.gd::GDScript::-1::1722664520::0::1::::Skeleton<>CharacterBody2D<>::
+Skeleton.tscn::PackedScene::3991177544166533855::1722664728::0::1::::<><>::uid://dpld85rb0smp5::::res://Player_HealthBar.tscn<>res://Units/mobs/Skeleton/Skeleton.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/EnemyStates/enemy_idle.gd<>res://Components/EnemyStates/enemy_follow.gd<>res://Components/EnemyStates/enemy_attack.gd<>res://Components/EnemyStates/enemy_block.gd<>res://Components/EnemyStates/enemy_hurt.gd<>res://Components/EnemyStates/enemy_death.gd
 ::res://Units/mobs/Skeleton/Skeleton_art/::1722016322
 ::res://Units/mobs/Skeleton/Skeleton_art/Skeleton/::1722055227
 Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1722016322::1722055227::1::::<><>::

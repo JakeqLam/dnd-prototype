@@ -4,14 +4,14 @@ class_name Skeleton
 
 @onready var selection = $Selection
 @export var health_component : HealthComponent
-@export var wpnRange:int = 50
+@export var wpnRange:int = 40
 @export var wpnDmgMin:int = 4
 @export var wpnDmgMax:int = 12
 @export var wpnSpd:float = 2.5
-@export var maxHP:int = 100
+@export var maxHP:float = 100
 @export var defence:int = 5
 
-var currentHP:int = 100
+var currentHP:float = 100
 var isDead:bool = false
 
 func _ready():

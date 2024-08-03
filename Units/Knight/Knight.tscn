@@ -1,5 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://ny0byqchvrkt"]
 
+[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_8hsxv"]
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="2_gxs7x"]
 [ext_resource type="Script" path="res://Units/Knight/Knight.gd" id="2_jgudi"]
 [ext_resource type="PackedScene" uid="uid://ds74uayhpq5ba" path="res://Effects/VFXSpawner.tscn" id="2_oyybm"]
@@ -18,7 +19,6 @@
 [ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_l8m1v"]
 [ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_6t14m"]
 [ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/player_controller.tscn" id="18_d8j0d"]
-[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://Player_HealthBar.tscn" id="19_yj7bc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -457,7 +457,7 @@ collision_mask = 5
 script = ExtResource("2_jgudi")
 health_component = NodePath("HealthComponent")
 
-[node name="PlayerHealthBar" parent="." instance=ExtResource("19_yj7bc")]
+[node name="HealthBar" parent="." instance=ExtResource("2_8hsxv")]
 offset_left = -15.866
 offset_top = -21.195
 offset_right = 16.134
@@ -489,10 +489,9 @@ y_sort_enabled = true
 texture = ExtResource("2_gxs7x")
 hframes = 6
 
-[node name="HealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("parent", "healthBar")]
+[node name="HealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("parent")]
 script = ExtResource("9_ir8dp")
 parent = NodePath("..")
-healthBar = NodePath("../PlayerHealthBar")
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 collision_layer = 2
