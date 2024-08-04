@@ -11,3 +11,11 @@ res://Units/Knight/Knight.gd
 res://Components/PlayerStates/attack.gd
 res://Components/EnemyStates/EnemyController.gd
 res://Components/PlayerStates/PlayerController.tscn
+res://Components/EnemyStates/EnemyController.tscn
+res://Components/EnemyStates/enemy_death.gd
+res://Components/EnemyStates/enemy_idle.gd
+res://Components/EnemyStates/enemy_follow.gd
+res://Components/EnemyStates/enemy_block.gd
+res://Components/EnemyStates/enemy_attack.gd
+res://Components/EnemyStates/enemy_hurt.gd
+res://Units/mobs/Skeleton/Skeleton.gd

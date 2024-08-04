@@ -5,7 +5,8 @@ extends Node
 class_name PlayerController
 
 @onready var colShape = get_node("../CollisionShape2D")
-@onready var enemDet = get_node("../EnemyDetector/CollisionShape2D")
+@onready var enemDetCol = get_node("../EnemyDetector/CollisionShape2D")
+@onready var hurtboxCol = get_node("../HurtboxComponent/CollisionShape2D")
 @onready var sprite = get_node("../Sprite2D")
 
 #Wired up components
@@ -76,9 +77,11 @@ func enemy_within_attack_range():
 		return true
 	else:
 		return false
+#if enemy unit enters range
 func _on_enemy_detector_body_entered(body):
 	if body.is_in_group("enemy"):
 		body.add_to_group("EnemyTargets")
+
 func target_destroyed():
 	if enemy_within_range() == true:
 		if enemyTargets[0].isDead == true:
@@ -103,7 +106,10 @@ func getVFXSpawner():
 
 #Utility functions
 func disableAllCol():
-	hurtbox.disabled = true
+	hurtboxCol.disabled = true
 	colShape.disabled = true
-	enemDet.disabled = true
+	enemDetCol.disabled = true
 	weapon.disabled = true
+
+
+

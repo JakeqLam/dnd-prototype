@@ -1,13 +1,17 @@
 extends State
 class_name EnemyHurt
 
-@onready var animationPlayer = get_node("../../AnimationPlayer")
+@onready var enemyController = get_node("../../EnemyController")
+var animPlayer = AnimationPlayer
+var enemy: CharacterBody2D
+var VFX: VFXSpawner
 
-@export var VFX: VFXSpawner
-@export var enemy: CharacterBody2D
-
+func _ready():
+	animPlayer = enemyController.getAnimPlayer()
+	enemy = enemyController.getCharacterBody()
+	VFX = enemyController.getVFXSpawner()
 func Enter():
-	animationPlayer.play("hurt")
+	animPlayer.play("hurt")
 	VFX.spawn_effect(VFX.EFFECT_HIT, enemy.global_position)
 
 func Update(_delta):

@@ -11,7 +11,7 @@ func _ready():
 	player = playerController.getCharacterBody()
 	animPlayer = playerController.getAnimPlayer()
 func Enter():
-	enemyTargets = playerController.getEnemyTargets() #if enemyTargets array is 0, idle. 
+	enemyTargets = playerController.getEnemyTargets() #if enemyTargets array is 0, idle.
 	animPlayer.play("idle")
 	
 func _input(event: InputEvent):
@@ -24,8 +24,8 @@ func _input(event: InputEvent):
 	return null
 func Physics_Update(_delta):
 	
-	if playerController.enemy_within_range() == true:
-		if playerController.enemy_within_attack_range() == true:
+	if playerController.enemy_within_range():
+		if playerController.enemy_within_attack_range():
 			Transitioned.emit(self,"attack")
 			
 	if player.isDead == true:

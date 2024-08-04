@@ -1,11 +1,16 @@
 extends State
 class_name EnemyBlock
-@onready var animationPlayer = get_node("../../AnimationPlayer")
 
-@export var enemy: CharacterBody2D
 
+@onready var enemyController = get_node("../../EnemyController")
+var animPlayer = AnimationPlayer
+var enemy: CharacterBody2D
+
+func _ready():
+	animPlayer = enemyController.getAnimPlayer()
+	enemy = enemyController.getCharacterBody()
 func Enter():
-	animationPlayer.play("block")
+	animPlayer.play("block")
 
 func Update(_delta):
 	if enemy.isDead == true:

@@ -1,55 +1,39 @@
 extends State
 class_name EnemyFollow
+@onready var enemyController = get_node("../../EnemyController")
 
-@onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
-@onready var hitbox = get_node("../../HitboxComponent")
+var animPlayer: AnimationPlayer
+var player :CharacterBody2D
+var enemy : CharacterBody2D
 
-@export var enemy: CharacterBody2D
-@export var move_speed:int = 20
-
-var player : CharacterBody2D
-
-
+var MOVE_SPEED: int = 20
+var target = Vector2()
+func _ready():
+	enemy = enemyController.getCharacterBody()
+	animPlayer = enemyController.getAnimPlayer()
+	target = enemy.position
+	MOVE_SPEED = enemy.moveSpeed
+	
 func Enter():
 	print("Enemy walking state")
-	animationPlayer.play("walk")
 	player = get_tree().get_first_node_in_group("player")
+	animPlayer.play("walk")
+
 
 func Physics_Update(_delta):
+	target = player.get_position()
 	var direction = player.global_position - enemy.global_position
-	if direction.length() > 25:
-		enemy.velocity = direction.normalized() * move_speed
-	else:
-		enemy.velocity = Vector2()
-		Transitioned.emit(self, "enemy_idle")
 
+	if direction.length() > 25:
+		enemy.velocity = direction.normalized() * MOVE_SPEED
+	else:
+		Transitioned.emit(self, "enemy_idle")
 	if direction.length() > 60:
 		Transitioned.emit(self, "enemy_idle")
 	
+	enemyController.move_unit_to_positon(target)
 	
-	if enemy.position.distance_to(player.get_position()) > 1:
-		if enemy.position.x > player.position.x:
-			sprite.flip_h = true
-			#Flip the collision shape of hitbox to match sprite
-			hitbox.scale.x = -1
-			hitbox.scale.y = -1
-			#hitbox.rotation = 45
-			hitbox.position.x = -5
-			hitbox.position.y = 1
-		elif enemy.position.x <= player.position.x:
-			sprite.flip_h = false
-			#Flip the collision shape of hitbox to match sprite
-			hitbox.scale.x = 1
-			hitbox.scale.y = 1
-			#hitbox.rotation = 135
-			hitbox.position.x = 5
-			hitbox.position.y = -1
-		enemy.move_and_slide()
-		
-	if enemy.isDead == true:
-		Transitioned.emit(self,"enemy_death")
-	
+	#if unit has stopped, go to idle
 	if direction.length() < 1:
 		Transitioned.emit(self, "enemy_idle")
 	return null

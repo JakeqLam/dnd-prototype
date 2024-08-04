@@ -1,5 +1,5 @@
 extends Node
-#This is an intermediate controller for the Player Characters.
+#This is an intermediate controller for the enemy Characters.
 #This is a middle communication point between the states and the logic
 #Wire all components to this class
 class_name EnemyController
@@ -9,14 +9,14 @@ class_name EnemyController
 @onready var sprite = get_node("../Sprite2D")
 
 #Wired up components
-@export var player: CharacterBody2D
+@export var enemy: CharacterBody2D
 @export var animPlayer = AnimationPlayer
 @export var weapon = Area2D
 @export var hurtbox = Area2D
 @export var VFX: VFXSpawner
 @export var atkTimer: Timer
 
-var enemyTargets = []
+var playerTargets = []
 var atkCooldown = false
 var atkSpd: float = 3.0
 
@@ -24,32 +24,36 @@ var atkSpd: float = 3.0
 
 #Moving functions
 func move_unit_to_positon(target):
-	player.velocity = player.position.direction_to(target) * player.moveSpeed
-	if player.position.distance_to(target) > 1:
+	#target = Vector2(1000,1000)
+	print("moving! ", enemy.position.direction_to(target))
+	
+	enemy.velocity = enemy.position.direction_to(target) * enemy.moveSpeed
+	
+	if enemy.position.distance_to(target) > 1:
 		#flip sprite left
-		if player.position.x > target.x:
+		if enemy.position.x > target.x:
 			sprite.flip_h = true
 			#Flip the collision shape of hitbox to match sprite
 			weapon.scale.x = -1
 			weapon.scale.y = -1
 			#hitbox.rotation = 45
-			weapon.position.x = -16
+			weapon.position.x = -8
 			weapon.position.y = 1
 		#Flip sprite right
-		elif player.position.x <= target.x:
+		elif enemy.position.x <= target.x:
 			sprite.flip_h = false
 			#Flip the collision shape of hitbox to match sprite
 			weapon.scale.x = 1
 			weapon.scale.y = 1
 			#hitbox.rotation = 135
-			weapon.position.x = 16
+			weapon.position.x = 8
 			weapon.position.y = -1
-		player.move_and_slide()
+		enemy.move_and_slide()
 #Unit Combat Systems
 func attack_target():
-	atkSpd = player.wpnSpd 
+	atkSpd = enemy.wpnSpd 
 	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
-	weapon.generateDMG(player.wpnDmgMin, player.wpnDmgMax) #Generate damage between a range
+	weapon.generateDMG(enemy.wpnDmgMin, enemy.wpnDmgMax) #Generate damage between a range
 	#Attack logic
 	if atkCooldown == false:
 		atkTimer.start()
@@ -58,32 +62,30 @@ func attack_target():
 		return false
 		
 func _on_attack_speed_timer_timeout():
-	if player.isDead == false:
-		if enemyTargets.size() > 0:
+	if enemy.isDead == false:
+		if playerTargets.size() > 0:
 			atkCooldown = true
 
 #Unit targeting Systems
-func getEnemyTargets():
-	enemyTargets = get_tree().get_nodes_in_group("EnemyTargets")
-	return enemyTargets
-func enemy_within_range():
-	if enemyTargets.size() > 0:
+func getPlayerTargets():
+	playerTargets = get_tree().get_nodes_in_group("PlayerTargets")
+	return playerTargets
+func player_within_range():
+	if playerTargets.size() > 0:
 		return true
 	else:
 		return false
-func enemy_within_attack_range():
-	if player.isDead == false and player.position.distance_to(enemyTargets[0].get_position()) <= player.wpnRange:
+func player_within_attack_range():
+	if enemy.isDead == false and enemy.position.distance_to(playerTargets[0].get_position()) <= enemy.wpnRange:
 		return true
 	else:
 		return false
-func _on_enemy_detector_body_entered(body):
-	if body.is_in_group("enemy"):
-		body.add_to_group("EnemyTargets")
+
 func target_destroyed():
-	if enemy_within_range() == true:
-		if enemyTargets[0].isDead == true:
-			enemyTargets[0].remove_from_group("EnemyTargets") #remove the enemy target if dead
-			enemyTargets.remove_at(0)
+	if player_within_range() == true:
+		if playerTargets[0].isDead == true:
+			playerTargets[0].remove_from_group("PlayerTargets") #remove the enemy target if dead
+			playerTargets.remove_at(0)
 			atkTimer.stop()
 			return true
 		else: 
@@ -91,7 +93,7 @@ func target_destroyed():
 
 #References for all node references to the character
 func getCharacterBody():
-	return player
+	return enemy
 func getAnimPlayer():
 	return animPlayer
 func getWeapon():

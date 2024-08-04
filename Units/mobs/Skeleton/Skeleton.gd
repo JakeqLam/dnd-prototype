@@ -4,12 +4,13 @@ class_name Skeleton
 
 @onready var selection = $Selection
 @export var health_component : HealthComponent
-@export var wpnRange:int = 40
+@export var wpnRange:int = 20
 @export var wpnDmgMin:int = 4
 @export var wpnDmgMax:int = 12
 @export var wpnSpd:float = 2.5
 @export var maxHP:float = 100
-@export var defence:int = 5
+@export var defence:int = 10
+@export var moveSpeed:int = 40
 
 var currentHP:float = 100
 var isDead:bool = false
