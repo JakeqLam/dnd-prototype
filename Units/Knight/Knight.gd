@@ -10,6 +10,7 @@ class_name Knight
 @export var maxHP:float = 100
 @export var defence:int = 5
 @export var isPlayer:bool = true
+@export var moveSpeed:int = 20
 
 var follow_cursor:bool = false
 var currentHP:float = 100

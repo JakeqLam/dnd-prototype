@@ -2,7 +2,7 @@ extends Node
 #This is an intermediate controller for the Player Characters.
 #This is a middle communication point between the states and the logic
 #Wire all components to this class
-class_name PlayerController
+class_name EnemyController
 
 @onready var colShape = get_node("../CollisionShape2D")
 @onready var enemDet = get_node("../EnemyDetector/CollisionShape2D")

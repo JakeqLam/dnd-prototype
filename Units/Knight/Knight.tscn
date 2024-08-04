@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ny0byqchvrkt"]
+[gd_scene load_steps=33 format=3 uid="uid://718fnirmhlum"]
 
 [ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_8hsxv"]
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="2_gxs7x"]
@@ -18,7 +18,7 @@
 [ext_resource type="Script" path="res://Components/PlayerStates/death.gd" id="15_y1883"]
 [ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_l8m1v"]
 [ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_6t14m"]
-[ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/player_controller.tscn" id="18_d8j0d"]
+[ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/PlayerController.tscn" id="18_13evc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -456,6 +456,8 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("2_jgudi")
 health_component = NodePath("HealthComponent")
+wpnSpd = 3.15
+moveSpeed = 40
 
 [node name="HealthBar" parent="." instance=ExtResource("2_8hsxv")]
 offset_left = -15.866
@@ -539,34 +541,28 @@ initial_state = NodePath("idle")
 [node name="idle" type="Node" parent="StateMachine"]
 script = ExtResource("12_i5rdk")
 
-[node name="walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+[node name="walk" type="Node" parent="StateMachine"]
 script = ExtResource("13_mcmkm")
-parent = NodePath("../..")
-speed = 40
 
-[node name="attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+[node name="attack" type="Node" parent="StateMachine"]
 script = ExtResource("14_sdlih")
-parent = NodePath("../..")
 
-[node name="death" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+[node name="death" type="Node" parent="StateMachine"]
 script = ExtResource("15_y1883")
-parent = NodePath("../..")
 
-[node name="block" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent")]
+[node name="block" type="Node" parent="StateMachine"]
 script = ExtResource("16_l8m1v")
-parent = NodePath("../..")
 
-[node name="hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("parent", "VFX")]
+[node name="hurt" type="Node" parent="StateMachine"]
 script = ExtResource("17_6t14m")
-parent = NodePath("../..")
-VFX = NodePath("../../VFXSpawner")
 
-[node name="PlayerController" parent="." node_paths=PackedStringArray("player", "animPlayer", "hitbox", "hurtbox", "VFX") instance=ExtResource("18_d8j0d")]
+[node name="PlayerController" parent="." node_paths=PackedStringArray("player", "animPlayer", "weapon", "hurtbox", "VFX", "atkTimer") instance=ExtResource("18_13evc")]
 player = NodePath("..")
 animPlayer = NodePath("../AnimationPlayer")
-hitbox = NodePath("../HitboxComponent")
+weapon = NodePath("../HitboxComponent")
 hurtbox = NodePath("../HurtboxComponent")
 VFX = NodePath("../VFXSpawner")
+atkTimer = NodePath("../AttackSpeedTimer")
 
 [node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_oyybm")]
 parent = NodePath("..")
@@ -581,6 +577,6 @@ parent = NodePath("..")
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/walk" method="_on_health_component_damage_hurt"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/attack" method="_on_health_component_damage_hurt"]
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/hurt" method="_on_health_component_damage_hurt"]
-[connection signal="body_entered" from="EnemyDetector" to="StateMachine/idle" method="_on_enemy_detector_body_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="PlayerController" method="_on_enemy_detector_body_entered"]
 [connection signal="area_entered" from="HurtboxComponent" to="HealthComponent" method="_on_hurtbox_area_entered"]
-[connection signal="timeout" from="AttackSpeedTimer" to="StateMachine/attack" method="_on_attack_speed_timeout"]
+[connection signal="timeout" from="AttackSpeedTimer" to="PlayerController" method="_on_attack_speed_timer_timeout"]

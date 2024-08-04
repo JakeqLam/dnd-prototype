@@ -1,66 +1,39 @@
 extends State
 class_name attack
-@onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var atkTimer = get_node("../../AttackSpeedTimer")
-@onready var wpnDamage = get_node("../../HitboxComponent")
-@export var atkSpd: float = 3.0
-@export var parent: CharacterBody2D
 
-var atkCooldown:bool = false
-var isAttack:bool = false
+@onready var playerController = get_node("../../PlayerController")
+var player: CharacterBody2D
+var animPlayer: AnimationPlayer
 
 var enemyTargets = []
 
+func _ready():
+	player = playerController.getCharacterBody()
+	animPlayer = playerController.getAnimPlayer()
 func Enter():
-	print("Entering player attack")
-	isAttack = true
-	enemyTargets = get_tree().get_nodes_in_group("EnemyTargets")
-	atkSpd = parent.wpnSpd 
-	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
-	wpnDamage.generateDMG(parent.wpnDmgMin, parent.wpnDmgMax) #Generate damage between a range
-	if enemyTargets.size() != 0:
-		print("enemy in range: ", enemyTargets)
-		#Attack logic
-		if atkCooldown == false and isAttack == true:
-			print("Starting attack!")
-			animationPlayer.play("attack01")
-			atkTimer.start()
-			atkCooldown = true
-		elif atkCooldown == true:
-			Transitioned.emit(self,"idle")
-
-func Exit():
-	isAttack = false
-	print("leaving attack state")
+	if playerController.attack_target() == true:
+		animPlayer.play("attack01")
+	else:
+		Transitioned.emit(self,"idle")
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("right_click"):
-			parent.toggle_cursor_state(true)
+			player.toggle_cursor_state(true)
 			Transitioned.emit(self,"walk")
 	if event.is_action_released("right_click"):
-			parent.toggle_cursor_state(false)
+			player.toggle_cursor_state(false)
 	return null
-
 func Update(_delta):
-	if parent.isDead == true:
+	if player.isDead == true:
 		Transitioned.emit(self,"death")
-	if enemyTargets.size() != 0:
-		if enemyTargets[0].isDead == true:
-			enemyTargets[0].remove_from_group("EnemyTargets") #remove the enemy target if dead
-			enemyTargets.remove_at(0)
-			atkTimer.stop()
-			Transitioned.emit(self,"idle")
-
-func _on_attack_speed_timeout():
-	if parent.isDead == false and isAttack == true:
-		#enemy is in range
-		if enemyTargets.size() > 0:
-			animationPlayer.play("attack01")
-			isAttack = true
-			
+	#Monitor target health
+	if playerController.target_destroyed():
+		Transitioned.emit(self,"idle")
+		
+#Interrupt state
 func _on_health_component_damage_blocked():
-	if parent.isDead == false:
+	if player.isDead == false:
 		Transitioned.emit(self,"block")
 func _on_health_component_damage_hurt(_dmg):
-	if parent.isDead == false:
+	if player.isDead == false:
 		Transitioned.emit(self,"hurt")

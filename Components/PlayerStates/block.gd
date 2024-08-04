@@ -1,16 +1,18 @@
 extends State
 class_name block
-@onready var animationPlayer = get_node("../../AnimationPlayer")
+@onready var playerController = get_node("../../PlayerController")
 
-@export var parent: CharacterBody2D
+var player: CharacterBody2D
+var animPlayer: AnimationPlayer
 
+func _ready():
+	player = playerController.getCharacterBody()
+	animPlayer = playerController.getAnimPlayer()
 func Enter():
-	animationPlayer.play("block")
-
+	animPlayer.play("block")
 func Update(_delta):
-	if parent.isDead == true:
+	if player.isDead == true:
 		Transitioned.emit(self,"death")
-
 func _on_animation_player_animation_finished(_anim_name):
-	if parent.isDead == false:
+	if player.isDead == false:
 		Transitioned.emit(self, "idle")

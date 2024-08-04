@@ -1,55 +1,37 @@
 extends State
 class_name walk
 
+@onready var playerController = get_node("../../PlayerController")
 
-@onready var animationPlayer = get_node("../../AnimationPlayer")
-@onready var sprite = get_node("../../Sprite2D")
-@onready var hitbox = get_node("../../HitboxComponent")
-
-@export var parent: CharacterBody2D
-@export var speed:int = 20
-
-@onready var target = parent.position
-
+var animPlayer: AnimationPlayer
+var player: CharacterBody2D
+var hitbox: Area2D
+var MOVE_SPEED: int = 20
+var target = Vector2()
+func _ready():
+	player = playerController.getCharacterBody()
+	animPlayer = playerController.getAnimPlayer()
+	hitbox = playerController.getWeapon()
+	target = player.position
 func Enter():
-	animationPlayer.play("walk")
-
+	animPlayer.play("walk")
+	MOVE_SPEED = player.moveSpeed
 func Update(_delta):
-	if parent.isDead == true:
+	if player.isDead == true:
 		Transitioned.emit(self,"death")
-
 func Physics_Update(_delta):
-
-	if parent.follow_cursor == true:
-		target = parent.get_global_mouse_position()
+	if player.follow_cursor == true:
+		target = player.get_global_mouse_position()
 	
-	var direction =  parent.global_position - target
-	parent.velocity = parent.position.direction_to(target) * speed
+	var direction =  player.global_position - target
+	playerController.move_unit_to_positon(target)
 	
-	if parent.position.distance_to(target) > 1:
-		if parent.position.x > target.x:
-			sprite.flip_h = true
-			#Flip the collision shape of hitbox to match sprite
-			hitbox.scale.x = -1
-			hitbox.scale.y = -1
-			#hitbox.rotation = 45
-			hitbox.position.x = -16
-			hitbox.position.y = 1
-		elif parent.position.x <= target.x:
-			sprite.flip_h = false
-			#Flip the collision shape of hitbox to match sprite
-			hitbox.scale.x = 1
-			hitbox.scale.y = 1
-			#hitbox.rotation = 135
-			hitbox.position.x = 16
-			hitbox.position.y = -1
-			
-		parent.move_and_slide()
-	
+	#if unit has stopped, go to idle
 	if direction.length() < 1:
 		Transitioned.emit(self, "idle")
 	return null
 
+#Movement interruptions
 func _on_health_component_damage_hurt(_dmg):
 	Transitioned.emit(self,"hurt")
 func _on_health_component_damage_blocked():
