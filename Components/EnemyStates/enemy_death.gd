@@ -6,7 +6,7 @@ var animPlayer = AnimationPlayer
 var enemy: CharacterBody2D
 
 func _ready():
-	animPlayer = enemyController.getAnimPlayer
+	animPlayer = enemyController.getAnimPlayer()
 	enemy = enemyController.getCharacterBody()
 func Enter():
 	animPlayer.play("death")

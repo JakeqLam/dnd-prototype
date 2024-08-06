@@ -5,7 +5,9 @@ extends Node
 class_name EnemyController
 
 @onready var colShape = get_node("../CollisionShape2D")
-@onready var enemDet = get_node("../EnemyDetector/CollisionShape2D")
+@onready var enemDetCol = get_node("../EnemyDetector/CollisionShape2D")
+@onready var hurtboxCol = get_node("../HurtboxComponent/CollisionShape2D")
+@onready var hitboxCol = get_node("../HitboxComponent/CollisionShape2D")
 @onready var sprite = get_node("../Sprite2D")
 
 #Wired up components
@@ -24,11 +26,7 @@ var atkSpd: float = 3.0
 
 #Moving functions
 func move_unit_to_positon(target):
-	#target = Vector2(1000,1000)
-	print("moving! ", enemy.position.direction_to(target))
-	
 	enemy.velocity = enemy.position.direction_to(target) * enemy.moveSpeed
-	
 	if enemy.position.distance_to(target) > 1:
 		#flip sprite left
 		if enemy.position.x > target.x:
@@ -73,16 +71,14 @@ func getPlayerTargets():
 func player_within_range():
 	if playerTargets.size() > 0:
 		return true
-	else:
-		return false
+	return false
 func player_within_attack_range():
 	if enemy.isDead == false and enemy.position.distance_to(playerTargets[0].get_position()) <= enemy.wpnRange:
 		return true
-	else:
-		return false
+	return false
 
 func target_destroyed():
-	if player_within_range() == true:
+	if player_within_range():
 		if playerTargets[0].isDead == true:
 			playerTargets[0].remove_from_group("PlayerTargets") #remove the enemy target if dead
 			playerTargets.remove_at(0)
@@ -105,7 +101,7 @@ func getVFXSpawner():
 
 #Utility functions
 func disableAllCol():
-	hurtbox.disabled = true
+	hurtboxCol.disabled = true
 	colShape.disabled = true
-	enemDet.disabled = true
-	weapon.disabled = true
+	enemDetCol.disabled = true
+	hitboxCol.disabled = true

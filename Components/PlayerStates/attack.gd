@@ -12,10 +12,14 @@ func _ready():
 	animPlayer = playerController.getAnimPlayer()
 func Enter():
 	if playerController.attack_target() == true:
+		#turn on collision for weapon
+		playerController.toggle_hitbox_col(true)
 		animPlayer.play("attack01")
 	else:
 		Transitioned.emit(self,"idle")
-
+func Exit():
+	#turn off collision for weapon
+	playerController.toggle_hitbox_col(false)
 func _input(event: InputEvent):
 	if event.is_action_pressed("right_click"):
 			player.toggle_cursor_state(true)

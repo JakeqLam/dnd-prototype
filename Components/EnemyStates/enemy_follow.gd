@@ -11,7 +11,6 @@ var target = Vector2()
 func _ready():
 	enemy = enemyController.getCharacterBody()
 	animPlayer = enemyController.getAnimPlayer()
-	target = enemy.position
 	MOVE_SPEED = enemy.moveSpeed
 	
 func Enter():
@@ -21,17 +20,17 @@ func Enter():
 
 
 func Physics_Update(_delta):
-	target = player.get_position()
+	target = player.position
 	var direction = player.global_position - enemy.global_position
-
+	
 	if direction.length() > 25:
-		enemy.velocity = direction.normalized() * MOVE_SPEED
+		enemyController.move_unit_to_positon(target)
 	else:
 		Transitioned.emit(self, "enemy_idle")
-	if direction.length() > 60:
+
+	#Target is out of range
+	if direction.length() > 100:
 		Transitioned.emit(self, "enemy_idle")
-	
-	enemyController.move_unit_to_positon(target)
 	
 	#if unit has stopped, go to idle
 	if direction.length() < 1:

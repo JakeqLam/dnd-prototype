@@ -7,6 +7,7 @@ class_name PlayerController
 @onready var colShape = get_node("../CollisionShape2D")
 @onready var enemDetCol = get_node("../EnemyDetector/CollisionShape2D")
 @onready var hurtboxCol = get_node("../HurtboxComponent/CollisionShape2D")
+@onready var hitboxCol = get_node("../HitboxComponent/CollisionShape2D")
 @onready var sprite = get_node("../Sprite2D")
 
 #Wired up components
@@ -53,11 +54,13 @@ func attack_target():
 	weapon.generateDMG(player.wpnDmgMin, player.wpnDmgMax) #Generate damage between a range
 	#Attack logic
 	if atkCooldown == false:
+		toggle_hitbox_col(true)
 		atkTimer.start()
 		return true
 	else:
 		return false
-		
+func toggle_hitbox_col(isAttacking: bool):
+	hitboxCol.disabled = isAttacking
 func _on_attack_speed_timer_timeout():
 	if player.isDead == false:
 		if enemyTargets.size() > 0:
@@ -70,8 +73,7 @@ func getEnemyTargets():
 func enemy_within_range():
 	if enemyTargets.size() > 0:
 		return true
-	else:
-		return false
+	return false
 func enemy_within_attack_range():
 	if player.isDead == false and player.position.distance_to(enemyTargets[0].get_position()) <= player.wpnRange:
 		return true

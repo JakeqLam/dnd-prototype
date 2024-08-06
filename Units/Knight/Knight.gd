@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Knight
 
 @export var health_component : HealthComponent
-@export var wpnRange:int = 40
+@export var wpnRange:int = 30
 @export var wpnDmgMin:int = 16
 @export var wpnDmgMax:int = 25
 @export var wpnSpd:float = 3.0

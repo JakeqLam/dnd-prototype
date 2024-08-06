@@ -569,4 +569,4 @@ atkTimer = NodePath("../AttackSpeedTimer")
 [connection signal="damage_hurt" from="HealthComponent" to="StateMachine/enemy_hurt" method="_on_health_component_damage_hurt"]
 [connection signal="body_entered" from="EnemyDetector" to="StateMachine/enemy_idle" method="_on_enemy_detector_body_entered"]
 [connection signal="area_entered" from="HurtboxComponent" to="HealthComponent" method="_on_hurtbox_area_entered"]
-[connection signal="timeout" from="AttackSpeedTimer" to="StateMachine/enemy_attack" method="_on_attack_speed_timer_timeout"]
+[connection signal="timeout" from="AttackSpeedTimer" to="EnemyController" method="_on_attack_speed_timer_timeout"]
