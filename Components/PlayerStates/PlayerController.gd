@@ -51,20 +51,18 @@ func move_unit_to_positon(target):
 func attack_target():
 	atkSpd = player.wpnSpd 
 	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
-	weapon.generateDMG(player.wpnDmgMin, player.wpnDmgMax) #Generate damage between a range
 	#Attack logic
 	if atkCooldown == false:
-		toggle_hitbox_col(true)
+		weapon.generateDMG(player.wpnDmgMin, player.wpnDmgMax) #Generate damage between a range
 		atkTimer.start()
+		atkCooldown = true
 		return true
 	else:
 		return false
-func toggle_hitbox_col(isAttacking: bool):
-	hitboxCol.disabled = isAttacking
 func _on_attack_speed_timer_timeout():
 	if player.isDead == false:
-		if enemyTargets.size() > 0:
-			atkCooldown = true
+		if enemy_within_range():
+			atkCooldown = false
 
 #Unit targeting Systems
 func getEnemyTargets():
@@ -111,7 +109,7 @@ func disableAllCol():
 	hurtboxCol.disabled = true
 	colShape.disabled = true
 	enemDetCol.disabled = true
-	weapon.disabled = true
+	hitboxCol.disabled = true
 
 
 

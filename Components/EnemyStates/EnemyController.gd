@@ -51,18 +51,18 @@ func move_unit_to_positon(target):
 func attack_target():
 	atkSpd = enemy.wpnSpd 
 	atkTimer.wait_time = atkSpd #Set the attack speed of a weapon
-	weapon.generateDMG(enemy.wpnDmgMin, enemy.wpnDmgMax) #Generate damage between a range
 	#Attack logic
 	if atkCooldown == false:
+		weapon.generateDMG(enemy.wpnDmgMin, enemy.wpnDmgMax) #Generate damage between a range
 		atkTimer.start()
+		atkCooldown = true
 		return true
 	else:
 		return false
-		
 func _on_attack_speed_timer_timeout():
 	if enemy.isDead == false:
-		if playerTargets.size() > 0:
-			atkCooldown = true
+		if player_within_range():
+			atkCooldown = false
 
 #Unit targeting Systems
 func getPlayerTargets():

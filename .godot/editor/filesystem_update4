@@ -8,3 +8,5 @@ res://Components/EnemyStates/EnemyController.gd
 res://Units/Knight/Knight.gd
 res://Components/PlayerStates/PlayerController.gd
 res://Components/PlayerStates/attack.gd
+res://Components/EnemyStates/enemy_idle.gd
+res://Components/EnemyStates/enemy_follow.gd

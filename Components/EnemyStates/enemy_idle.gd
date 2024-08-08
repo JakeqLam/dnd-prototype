@@ -14,9 +14,7 @@ func _ready():
 func Enter():
 	playerTargets = enemyController.getPlayerTargets()
 	animPlayer.play("idle")
-
 func Update(_delta):
-
 	if enemyController.player_within_range():
 		if enemyController.player_within_attack_range():
 			Transitioned.emit(self,"enemy_attack")

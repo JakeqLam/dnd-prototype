@@ -14,10 +14,8 @@ func _ready():
 	MOVE_SPEED = enemy.moveSpeed
 	
 func Enter():
-	print("Enemy walking state")
 	player = get_tree().get_first_node_in_group("player")
 	animPlayer.play("walk")
-
 
 func Physics_Update(_delta):
 	target = player.position
