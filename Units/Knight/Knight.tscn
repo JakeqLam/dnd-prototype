@@ -1,25 +1,24 @@
-[gd_scene load_steps=34 format=3 uid="uid://718fnirmhlum"]
+[gd_scene load_steps=33 format=3 uid="uid://c4j154hw1rhe8"]
 
-[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_8hsxv"]
-[ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="2_gxs7x"]
-[ext_resource type="Script" path="res://Units/Crossbowman/Crossbowman.gd" id="2_jgudi"]
-[ext_resource type="PackedScene" uid="uid://ds74uayhpq5ba" path="res://Effects/VFXSpawner.tscn" id="2_oyybm"]
-[ext_resource type="Texture2D" uid="uid://b3mk747e50x3a" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png" id="3_3xknj"]
-[ext_resource type="Texture2D" uid="uid://dp8tax823r2xo" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png" id="4_nv0ir"]
-[ext_resource type="Texture2D" uid="uid://dlwk5i84ve2an" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png" id="5_usixv"]
-[ext_resource type="Texture2D" uid="uid://c8dy8jd4cu2j6" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png" id="6_emkqw"]
-[ext_resource type="Texture2D" uid="uid://b0yt31lb6jm23" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png" id="7_1cpbc"]
-[ext_resource type="Texture2D" uid="uid://b7onaqb4ln62y" path="res://Units/Crossbowman/Soldier/Soldier/Soldier-Idle.png" id="8_rc2as"]
-[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_ir8dp"]
-[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_btlfu"]
-[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="11_d1a84"]
-[ext_resource type="Script" path="res://Components/PlayerStates/idle.gd" id="12_i5rdk"]
-[ext_resource type="Script" path="res://Components/PlayerStates/walk.gd" id="13_mcmkm"]
-[ext_resource type="Script" path="res://Components/PlayerStates/attack.gd" id="14_sdlih"]
-[ext_resource type="Script" path="res://Components/PlayerStates/death.gd" id="15_y1883"]
-[ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_l8m1v"]
-[ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_6t14m"]
-[ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/PlayerController.tscn" id="18_13evc"]
+[ext_resource type="Script" path="res://Units/Crossbowman/Crossbowman.gd" id="1_ys3h1"]
+[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_unfvj"]
+[ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="3_k0bnc"]
+[ext_resource type="Texture2D" uid="uid://b3mk747e50x3a" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png" id="4_i5fud"]
+[ext_resource type="Texture2D" uid="uid://dp8tax823r2xo" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png" id="5_8ypo6"]
+[ext_resource type="Texture2D" uid="uid://dlwk5i84ve2an" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png" id="6_1uhw8"]
+[ext_resource type="Texture2D" uid="uid://c8dy8jd4cu2j6" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png" id="7_fnwre"]
+[ext_resource type="Texture2D" uid="uid://b0yt31lb6jm23" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png" id="8_q7fbl"]
+[ext_resource type="Script" path="res://Components/HealthComponent.gd" id="9_uc21b"]
+[ext_resource type="Script" path="res://Components/HitboxComponent.gd" id="10_aplth"]
+[ext_resource type="Script" path="res://Components/StateMachines/StateMachine.gd" id="11_j5e2y"]
+[ext_resource type="Script" path="res://Components/PlayerStates/idle.gd" id="12_7u160"]
+[ext_resource type="Script" path="res://Components/PlayerStates/walk.gd" id="13_yqo6b"]
+[ext_resource type="Script" path="res://Components/PlayerStates/attack.gd" id="14_wl581"]
+[ext_resource type="Script" path="res://Components/PlayerStates/death.gd" id="15_pgm5t"]
+[ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_vq4r3"]
+[ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_rhuxx"]
+[ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/PlayerController.tscn" id="18_i2mul"]
+[ext_resource type="PackedScene" uid="uid://ds74uayhpq5ba" path="res://Effects/VFXSpawner.tscn" id="19_p8xdm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -37,7 +36,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_gxs7x")]
+"values": [ExtResource("3_k0bnc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -75,6 +74,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_amw7o"]
 resource_name = "attack_1"
@@ -88,7 +99,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_3xknj")]
+"values": [ExtResource("4_i5fud")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -125,6 +136,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_bei6m"]
@@ -163,7 +186,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_nv0ir")]
+"values": [ExtResource("5_8ypo6")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -191,7 +214,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_usixv")]
+"values": [ExtResource("6_1uhw8")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -243,7 +266,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("6_emkqw")]
+"values": [ExtResource("7_fnwre")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -320,7 +343,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("8_rc2as")]
+"values": [ExtResource("3_k0bnc")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -349,7 +372,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_1cpbc")]
+"values": [ExtResource("8_q7fbl")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -426,17 +449,17 @@ height = 24.0
 radius = 14.0
 height = 28.0
 
-[node name="Crossbowman" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
+[node name="Knight" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
 z_index = 1
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("2_jgudi")
+script = ExtResource("1_ys3h1")
 health_component = NodePath("HealthComponent")
 wpnSpd = 3.15
 moveSpeed = 40
 
-[node name="HealthBar" parent="." instance=ExtResource("2_8hsxv")]
+[node name="HealthBar" parent="." instance=ExtResource("2_unfvj")]
 offset_left = -15.866
 offset_top = -21.195
 offset_right = 16.134
@@ -464,17 +487,16 @@ offset_top = -2.0
 offset_right = 9.0
 offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
-metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 z_index = 1
 y_sort_enabled = true
-texture = ExtResource("2_gxs7x")
+texture = ExtResource("3_k0bnc")
 hframes = 6
 
 [node name="HealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("parent")]
-script = ExtResource("9_ir8dp")
+script = ExtResource("9_uc21b")
 parent = NodePath("..")
 
 [node name="EnemyDetector" type="Area2D" parent="."]
@@ -503,7 +525,7 @@ position = Vector2(16, -1)
 collision_layer = 2
 collision_mask = 4
 monitoring = false
-script = ExtResource("10_btlfu")
+script = ExtResource("10_aplth")
 parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
@@ -512,32 +534,33 @@ light_mask = 2
 visibility_layer = 4
 position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_kbc84")
+disabled = true
 
 [node name="AttackSpeedTimer" type="Timer" parent="."]
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("11_d1a84")
+script = ExtResource("11_j5e2y")
 initial_state = NodePath("idle")
 
 [node name="idle" type="Node" parent="StateMachine"]
-script = ExtResource("12_i5rdk")
+script = ExtResource("12_7u160")
 
 [node name="walk" type="Node" parent="StateMachine"]
-script = ExtResource("13_mcmkm")
+script = ExtResource("13_yqo6b")
 
 [node name="attack" type="Node" parent="StateMachine"]
-script = ExtResource("14_sdlih")
+script = ExtResource("14_wl581")
 
 [node name="death" type="Node" parent="StateMachine"]
-script = ExtResource("15_y1883")
+script = ExtResource("15_pgm5t")
 
 [node name="block" type="Node" parent="StateMachine"]
-script = ExtResource("16_l8m1v")
+script = ExtResource("16_vq4r3")
 
 [node name="hurt" type="Node" parent="StateMachine"]
-script = ExtResource("17_6t14m")
+script = ExtResource("17_rhuxx")
 
-[node name="PlayerController" parent="." node_paths=PackedStringArray("player", "animPlayer", "weapon", "hurtbox", "VFX", "atkTimer") instance=ExtResource("18_13evc")]
+[node name="PlayerController" parent="." node_paths=PackedStringArray("player", "animPlayer", "weapon", "hurtbox", "VFX", "atkTimer") instance=ExtResource("18_i2mul")]
 player = NodePath("..")
 animPlayer = NodePath("../AnimationPlayer")
 weapon = NodePath("../HitboxComponent")
@@ -545,7 +568,7 @@ hurtbox = NodePath("../HurtboxComponent")
 VFX = NodePath("../VFXSpawner")
 atkTimer = NodePath("../AttackSpeedTimer")
 
-[node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_oyybm")]
+[node name="VFXSpawner" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("19_p8xdm")]
 unique_name_in_owner = true
 parent = NodePath("..")
 

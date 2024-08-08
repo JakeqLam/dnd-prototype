@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723075477
+::res://::1723094949
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1722055227::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 HealthBar.gd::GDScript::-1::1722666583::0::1::::<>TextureProgressBar<>::
@@ -1634,11 +1634,11 @@ Xolonium-Regular.ttf::FontFile::5375469398433749905::1721713547::1722055226::1::
 ::res://Units/::1723075448
 Unit.gd::GDScript::-1::1722150204::0::1::::Unit<>CharacterBody2D<>::
 Unit.tscn::PackedScene::6830615025341583550::1722569068::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>uid://bpcehk8uwopwx::::res://Components/HurtboxComponent.tscn<>uid://ndmw5kk3tkmy::::res://Components/HitBoxComponent.tscn
-::res://Units/Crossbowman/::1723075571
+::res://Units/Crossbowman/::1723094786
 Crossbowman.gd::GDScript::-1::1722987608::0::1::::Knight<>CharacterBody2D<>::
-Crossbowman.tscn::PackedScene::2301730103704122232::1723075513::0::1::::<><>::uid://dpld85rb0smp5::::res://HealthBar.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Crossbowman/Crossbowman.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn
+Crossbowman.tscn::PackedScene::2301730103704122232::1723094786::0::1::::<><>::uid://dpld85rb0smp5::::res://HealthBar.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>res://Units/Crossbowman/Crossbowman.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn
 ::res://Units/Crossbowman/Soldier/::1723075571
-::res://Units/Crossbowman/Soldier/Soldier/::1723075571
+::res://Units/Crossbowman/Soldier/Soldier/::1723075572
 Soldier-Attack01.png::CompressedTexture2D::2014994727117418737::1723075571::1723075572::1::::<><>::
 Soldier-Attack02.png::CompressedTexture2D::1188388940845557870::1723075571::1723075572::1::::<><>::
 Soldier-Attack03.png::CompressedTexture2D::2895413029416101174::1723075571::1723075572::1::::<><>::
@@ -1659,7 +1659,9 @@ Soldier-Hurt.png::CompressedTexture2D::389947732699076961::1723075572::172307557
 Soldier-Idle.png::CompressedTexture2D::2245702828725785170::1723075572::1723075572::1::::<><>::
 Soldier-Walk.png::CompressedTexture2D::4875065383052022954::1723075572::1723075572::1::::<><>::
 Soldier.png::CompressedTexture2D::8843522348444030716::1723075572::1723075572::1::::<><>::
-::res://Units/Knight/::1723075439
+::res://Units/Knight/::1723094949
+Crossbowman.gd::GDScript::-1::1723094941::0::1::::Knight<>CharacterBody2D<>::
+Knight.tscn::PackedScene::6828530983330539757::1723094941::0::1::::<><>::res://Units/Crossbowman/Crossbowman.gd<>uid://dpld85rb0smp5::::res://HealthBar.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn
 ::res://Units/Knight/Knight_art/::1722055227
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1722016322::1722055227::1::::<><>::
 ::res://Units/Knight/Knight_art/Knight with shadows/::1722055227

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 #Heavily armored unit with decent damage
-class_name Crossbowman
+class_name Knight
 
 @export var health_component : HealthComponent
 @export var wpnRange:int = 30

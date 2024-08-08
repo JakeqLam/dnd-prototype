@@ -13,3 +13,4 @@ res://Components/EnemyStates/enemy_follow.gd
 res://Units/Knight.tscn
 res://Units/Crossbowman/Knight.tscn
 res://Units/Crossbowman/Crossbowman.tscn
+res://Units/Crossbowman/Crossbowman.gd

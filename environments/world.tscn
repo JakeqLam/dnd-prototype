@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=16 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="PackedScene" uid="uid://y1356xkwesrs" path="res://Components/CameraComponent.tscn" id="1_rwjio"]
 [ext_resource type="Script" path="res://Components/CameraComponent.gd" id="2_2ks7r"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
 [ext_resource type="PackedScene" uid="uid://718fnirmhlum" path="res://Units/Crossbowman/Crossbowman.tscn" id="6_5wgyb"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
+[ext_resource type="PackedScene" uid="uid://c4j154hw1rhe8" path="res://Units/Knight/Knight.tscn" id="9_55607"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
 bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
@@ -444,3 +445,6 @@ position = Vector2(654, 240)
 [node name="Skeleton2" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_oi0kb")]
 position = Vector2(591, 209)
 health_component = NodePath("../Skeleton/HealthComponent")
+
+[node name="Knight2" parent="." instance=ExtResource("9_55607")]
+position = Vector2(504, 293)

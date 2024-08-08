@@ -454,6 +454,7 @@ offset_bottom = -9.195
 parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 light_mask = 4
 visibility_layer = 2
 z_index = 1
@@ -462,17 +463,20 @@ shape = SubResource("CircleShape2D_pogrd")
 debug_color = Color(0.185944, 0.637824, 0.232843, 0.0823529)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 z_index = 1
 y_sort_enabled = true
 texture = ExtResource("3_c3ukp")
 hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_x0sr8")
 }
 
 [node name="Selection" type="Panel" parent="."]
+unique_name_in_owner = true
 visibility_layer = 2
 y_sort_enabled = true
 offset_left = -9.0
