@@ -10,3 +10,6 @@ res://Components/PlayerStates/PlayerController.gd
 res://Components/PlayerStates/attack.gd
 res://Components/EnemyStates/enemy_idle.gd
 res://Components/EnemyStates/enemy_follow.gd
+res://Units/Knight.tscn
+res://Units/Crossbowman/Knight.tscn
+res://Units/Crossbowman/Crossbowman.tscn
