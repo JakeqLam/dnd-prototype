@@ -454,4 +454,4 @@ position = Vector2(524, 266)
 position = Vector2(466, 350)
 
 [node name="Knight" parent="." instance=ExtResource("10_cybv3")]
-position = Vector2(384, 297)
+position = Vector2(546, 290)

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723246215
+::res://::1723257315
 dungeon.webp::CompressedTexture2D::5664106018678720293::1721713547::1722055227::1::::<><>::
 export_presets.cfg::TextFile::-1::1721713547::0::1::::<><>::
 ::res://Assets/::1722259574
@@ -1981,7 +1981,7 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1722016322::17223
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1722016322::1722359689::1::::<><>::
 ::res://Assets/tilesets/particles/::1722359689
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1722016322::1722359689::1::::<><>::
-::res://Components/::1723256296
+::res://Components/::1723321811
 CameraComponent.gd::GDScript::-1::1723256296::0::1::::<>Camera2D<>::
 CameraComponent.tscn::PackedScene::1739961382771227548::1723248592::0::1::::<><>::
 HealthComponent.gd::GDScript::-1::1723236240::0::1::::HealthComponent<>Node2D<>::
@@ -1989,7 +1989,7 @@ HitboxComponent.gd::GDScript::-1::1722485512::0::1::::<>Area2D<>::
 HitBoxComponent.tscn::PackedScene::919417583576784496::1723254104::0::1::::<><>::res://Components/HitboxComponent.gd
 HurtboxComponent.gd::GDScript::-1::1722108595::0::1::::<>Area2D<>::
 HurtboxComponent.tscn::PackedScene::3443638039450829903::1722118493::0::1::::<><>::
-ProjectileComponent.gd::GDScript::-1::1723237374::0::1::::<>Area2D<>::
+ProjectileComponent.gd::GDScript::-1::1723321811::0::1::::<>Area2D<>::
 ProjectileComponent.tscn::PackedScene::2442893526380407511::1723236016::0::1::::<><>::res://Components/ProjectileComponent.gd<>uid://r8b47gpphqtn::::res://Units/Projectiles/wood-arrow.png
 ::res://Components/EnemyStates/::1722998134
 EnemyController.gd::GDScript::-1::1722987533::0::1::::EnemyController<>Node<>::
@@ -2041,9 +2041,9 @@ slash_effect_anim_f0.png::CompressedTexture2D::401035806399906210::1560833705::1
 slash_effect_anim_f1.png::CompressedTexture2D::4031256320518639958::1560833714::1722218438::1::::<><>::
 slash_effect_anim_f2.png::CompressedTexture2D::6606703336785959032::1560833723::1722218438::1::::<><>::
 slash_effect_anim_spritesheet.png::CompressedTexture2D::2119624786118476643::1560832919::1722218438::1::::<><>::
-::res://Environments/::1723257206
+::res://Environments/::1723321813
 UnitManagerComponent.gd::GDScript::-1::1723256389::0::1::::<>Node2D<>::
-world.tscn::PackedScene::6469066510429512572::1723257206::0::1::::<><>::uid://y1356xkwesrs::::res://Components/CameraComponent.tscn<>res://Components/CameraComponent.gd<>uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://718fnirmhlum::::res://Units/Crossbowman/Crossbowman.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png<>res://Environments/UnitManagerComponent.gd
+world.tscn::PackedScene::6469066510429512572::1723321813::0::1::::<><>::uid://y1356xkwesrs::::res://Components/CameraComponent.tscn<>res://Components/CameraComponent.gd<>uid://djny0ed3vcei4::::res://Environments/tilesets/plains.png<>uid://dccxj7wxom2tt::::res://Environments/tilesets/grass.png<>uid://bw4md1mc31gwl::::res://Units/mobs/Skeleton/Skeleton.tscn<>uid://b73stj2stjpgn::::res://Environments/tilesets/objects/objects.png<>uid://718fnirmhlum::::res://Units/Crossbowman/Crossbowman.tscn<>uid://b3iower5ond5n::::res://Environments/tilesets/more-tilesets/decor_16x16.png<>res://Environments/UnitManagerComponent.gd<>uid://c4j154hw1rhe8::::res://Units/Knight/Knight.tscn
 ::res://Environments/tilesets/::1722359689
 grass.png::CompressedTexture2D::7305182772639388965::1721713547::1722359689::1::::<><>::
 plains.png::CompressedTexture2D::7819300623326541533::1721713547::1722359689::1::::<><>::
@@ -2083,6 +2083,12 @@ rock_in_water_05.png::CompressedTexture2D::264355232167299568::1721713547::17223
 rock_in_water_06.png::CompressedTexture2D::3142798174349994144::1721713547::1722359689::1::::<><>::
 ::res://Environments/tilesets/particles/::1722359689
 dust_particles_01.png::CompressedTexture2D::4863903166407198910::1721713547::1722359689::1::::<><>::
+::res://SFX/::1723321900
+DES - Bow Shoot 5.wav::AudioStreamWAV::1455964781513927065::1723320788::1723320789::1::::<><>::
+sfx_big_bettle_wake_bones_only_01_wav.wav::AudioStreamWAV::479371736212258659::1723321900::1723321901::1::::<><>::
+String Pull (2).wav::AudioStreamWAV::763019910829929620::1723320743::1723320744::1::::<><>::
+String Release (1).wav::AudioStreamWAV::6036581345669631632::1723320751::1723320753::1::::<><>::
+Target Impact - Default (1).wav::AudioStreamWAV::7763854510328616376::1723320766::1723320767::1::::<><>::
 ::res://UI/::1723246206
 DamageIndicator.gd::GDScript::-1::1722473057::0::1::::<>Node2D<>::
 DamageIndicator.tscn::PackedScene::2321965048131902194::1722568794::0::1::::<><>::res://UI/DamageIndicator.gd
@@ -2100,9 +2106,9 @@ Xolonium-Regular.ttf::FontFile::5375469398433749905::1721713547::1722055226::1::
 ::res://Units/::1723246451
 Unit.gd::GDScript::-1::1722150204::0::1::::Unit<>CharacterBody2D<>::
 Unit.tscn::PackedScene::6830615025341583550::1723246451::0::1::::<><>::res://Units/Unit.gd<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>uid://bpcehk8uwopwx::::res://Components/HurtboxComponent.tscn<>uid://ndmw5kk3tkmy::::res://Components/HitBoxComponent.tscn
-::res://Units/Crossbowman/::1723257290
+::res://Units/Crossbowman/::1723321812
 Crossbowman.gd::GDScript::-1::1723256395::0::1::::Crossbowman<>CharacterBody2D<>::
-Crossbowman.tscn::PackedScene::2301730103704122232::1723257290::0::1::::<><>::res://Units/Crossbowman/Crossbowman.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://dbyclr0g4chln::::res://Units/Projectiles/wood-arrow.tscn<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://3ycw0c8xekxl::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Attack01.png<>uid://bb14d6npej6c3::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Death.png<>uid://tchabq2bosab::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Hurt.png<>uid://bb2r24y8im321::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Walk.png<>uid://bhitbaggt0nnq::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Attack03.png<>uid://b7onaqb4ln62y::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Idle.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn
+Crossbowman.tscn::PackedScene::2301730103704122232::1723321812::0::1::::<><>::res://Units/Crossbowman/Crossbowman.gd<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://dbyclr0g4chln::::res://Units/Projectiles/wood-arrow.tscn<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://3ycw0c8xekxl::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Attack01.png<>uid://bb14d6npej6c3::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Death.png<>uid://tchabq2bosab::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Hurt.png<>uid://bb2r24y8im321::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Walk.png<>uid://bhitbaggt0nnq::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Attack03.png<>uid://b7onaqb4ln62y::::res://Units/Crossbowman/Soldier/Soldier/Soldier-Idle.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn<>uid://u0jr6qlwo84l::::res://SFX/DES - Bow Shoot 5.wav
 ::res://Units/Crossbowman/Soldier/::1723075571
 ::res://Units/Crossbowman/Soldier/Soldier/::1723075572
 Soldier-Attack01.png::CompressedTexture2D::2014994727117418737::1723075571::1723075572::1::::<><>::
@@ -2125,9 +2131,9 @@ Soldier-Hurt.png::CompressedTexture2D::389947732699076961::1723075572::172307557
 Soldier-Idle.png::CompressedTexture2D::2245702828725785170::1723075572::1723075572::1::::<><>::
 Soldier-Walk.png::CompressedTexture2D::4875065383052022954::1723075572::1723075572::1::::<><>::
 Soldier.png::CompressedTexture2D::8843522348444030716::1723075572::1723075572::1::::<><>::
-::res://Units/Knight/::1723257206
+::res://Units/Knight/::1723321813
 Knight.gd::GDScript::-1::1723254431::0::1::::Knight<>CharacterBody2D<>::
-Knight.tscn::PackedScene::6828530983330539757::1723257206::0::1::::<><>::res://Units/Crossbowman/Crossbowman.gd<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn
+Knight.tscn::PackedScene::6828530983330539757::1723321813::0::1::::<><>::res://Units/Crossbowman/Crossbowman.gd<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://uac60mxbct7l::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png<>uid://b3mk747e50x3a::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png<>uid://dp8tax823r2xo::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png<>uid://dlwk5i84ve2an::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Death.png<>uid://c8dy8jd4cu2j6::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Hurt.png<>uid://b0yt31lb6jm23::::res://Units/Knight/Knight_art/Knight with shadows/Knight-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/PlayerStates/idle.gd<>res://Components/PlayerStates/walk.gd<>res://Components/PlayerStates/attack.gd<>res://Components/PlayerStates/death.gd<>res://Components/PlayerStates/block.gd<>res://Components/PlayerStates/hurt.gd<>uid://ixw2h120p7tr::::res://Components/PlayerStates/PlayerController.tscn<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn
 ::res://Units/Knight/Knight_art/::1722055227
 Knight-idle.png::CompressedTexture2D::3908080281521824412::1722016322::1722055227::1::::<><>::
 ::res://Units/Knight/Knight_art/Knight with shadows/::1722055227
@@ -2187,9 +2193,9 @@ ogre-run-02.png::CompressedTexture2D::7893688472641331715::1722366849::172236685
 ogre-run-03.png::CompressedTexture2D::7505962298745402505::1722366849::1722366857::1::::<><>::
 ogre-run-04.png::CompressedTexture2D::1501129614036570892::1722366849::1722366857::1::::<><>::
 ogre-run-05.png::CompressedTexture2D::8888379618324188716::1722366849::1722366857::1::::<><>::
-::res://Units/mobs/Skeleton/::1723257206
+::res://Units/mobs/Skeleton/::1723321813
 Skeleton.gd::GDScript::-1::1722999332::0::1::::Skeleton<>CharacterBody2D<>::
-Skeleton.tscn::PackedScene::3991177544166533855::1723257206::0::1::::<><>::res://Units/mobs/Skeleton/Skeleton.gd<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/EnemyStates/enemy_idle.gd<>res://Components/EnemyStates/enemy_follow.gd<>res://Components/EnemyStates/enemy_attack.gd<>res://Components/EnemyStates/enemy_block.gd<>res://Components/EnemyStates/enemy_hurt.gd<>res://Components/EnemyStates/enemy_death.gd<>uid://dybiqwlm7ddwt::::res://Components/EnemyStates/EnemyController.tscn
+Skeleton.tscn::PackedScene::3991177544166533855::1723321813::0::1::::<><>::res://Units/mobs/Skeleton/Skeleton.gd<>uid://dpld85rb0smp5::::res://UI/HealthBar.tscn<>uid://ds74uayhpq5ba::::res://Effects/VFXSpawner.tscn<>uid://b7vdrbhufxdct::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Idle.png<>uid://dudqwhadapw7u::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Attack01.png<>uid://c1eqw5jy2ds8j::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Block.png<>uid://eapxcn30ymuu::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Death.png<>uid://cxcvboiwrb31a::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Hurt.png<>uid://b3bfq4skpiq5s::::res://Units/mobs/Skeleton/Skeleton_art/Skeleton with shadows/Skeleton-Walk.png<>res://Components/HealthComponent.gd<>res://Components/HitboxComponent.gd<>res://Components/StateMachines/StateMachine.gd<>res://Components/EnemyStates/enemy_idle.gd<>res://Components/EnemyStates/enemy_follow.gd<>res://Components/EnemyStates/enemy_attack.gd<>res://Components/EnemyStates/enemy_block.gd<>res://Components/EnemyStates/enemy_hurt.gd<>res://Components/EnemyStates/enemy_death.gd<>uid://dybiqwlm7ddwt::::res://Components/EnemyStates/EnemyController.tscn
 ::res://Units/mobs/Skeleton/Skeleton_art/::1722016322
 ::res://Units/mobs/Skeleton/Skeleton_art/Skeleton/::1722055227
 Skeleton-Attack01.png::CompressedTexture2D::6057620046301324234::1722016322::1722055227::1::::<><>::
@@ -2211,7 +2217,7 @@ Skeleton-Hurt.png::CompressedTexture2D::6392591117918774076::1722016322::1722055
 Skeleton-Idle.png::CompressedTexture2D::4676028186673354027::1722016322::1722055227::1::::<><>::
 Skeleton-Walk.png::CompressedTexture2D::4354106392436745150::1722016322::1722055227::1::::<><>::
 Skeleton.png::CompressedTexture2D::6583495299705292044::1722016322::1722055227::1::::<><>::
-::res://Units/Projectiles/::1723247415
+::res://Units/Projectiles/::1723321830
 wood-arrow.gd::GDScript::-1::1723237357::0::1::::<>Node2D<>::
 wood-arrow.png::CompressedTexture2D::1261449003464433371::1723180466::1723181445::1::::<><>::
-wood-arrow.tscn::PackedScene::7279137970361773183::1723247415::0::1::::<><>::res://Units/Projectiles/wood-arrow.gd<>res://Components/ProjectileComponent.gd<>uid://r8b47gpphqtn::::res://Units/Projectiles/wood-arrow.png
+wood-arrow.tscn::PackedScene::7279137970361773183::1723321830::0::1::::<><>::res://Units/Projectiles/wood-arrow.gd<>res://Components/ProjectileComponent.gd<>uid://r8b47gpphqtn::::res://Units/Projectiles/wood-arrow.png<>uid://diu4sxgo57q37::::res://SFX/Target Impact - Default (1).wav

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u0jr6qlwo84l"
+path="res://.godot/imported/DES - Bow Shoot 5.wav-8870b5df9e12cf6f95f4d03836dfd267.sample"
+
+[deps]
+
+source_file="res://SFX/DES - Bow Shoot 5.wav"
+dest_files=["res://.godot/imported/DES - Bow Shoot 5.wav-8870b5df9e12cf6f95f4d03836dfd267.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

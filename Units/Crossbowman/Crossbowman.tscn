@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://718fnirmhlum"]
+[gd_scene load_steps=36 format=3 uid="uid://718fnirmhlum"]
 
 [ext_resource type="Script" path="res://Units/Crossbowman/Crossbowman.gd" id="2_jgudi"]
 [ext_resource type="PackedScene" uid="uid://ds74uayhpq5ba" path="res://Effects/VFXSpawner.tscn" id="2_oyybm"]
@@ -20,9 +20,10 @@
 [ext_resource type="Script" path="res://Components/PlayerStates/block.gd" id="16_l8m1v"]
 [ext_resource type="Script" path="res://Components/PlayerStates/hurt.gd" id="17_6t14m"]
 [ext_resource type="PackedScene" uid="uid://ixw2h120p7tr" path="res://Components/PlayerStates/PlayerController.tscn" id="18_13evc"]
+[ext_resource type="AudioStream" uid="uid://u0jr6qlwo84l" path="res://SFX/DES - Bow Shoot 5.wav" id="21_0edyx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
-radius = 9.0
+radius = 7.9988
 
 [sub_resource type="Animation" id="Animation_fkxt2"]
 length = 0.001
@@ -75,10 +76,46 @@ tracks/3/keys = {
 "update": 1,
 "values": [ExtResource("8_rc2as")]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_0edyx")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [10.0]
+}
 
 [sub_resource type="Animation" id="Animation_wwuk7"]
 resource_name = "attack01"
-length = 1.3
+length = 1.4
 loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
@@ -142,6 +179,42 @@ tracks/4/keys = {
 "args": [],
 "method": &"spawn_projectile"
 }]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_0edyx")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.0]
 }
 
 [sub_resource type="Animation" id="Animation_amw7o"]
@@ -501,7 +574,7 @@ visibility_layer = 5
 z_index = 1
 y_sort_enabled = true
 collision_layer = 2
-collision_mask = 5
+collision_mask = 7
 script = ExtResource("2_jgudi")
 playerController = NodePath("PlayerController")
 health_component = NodePath("HealthComponent")
@@ -532,13 +605,12 @@ autoplay = "idle"
 
 [node name="Selection" type="Panel" parent="."]
 unique_name_in_owner = true
-visible = false
 visibility_layer = 2
 y_sort_enabled = true
-offset_left = -9.0
-offset_top = -2.0
-offset_right = 9.0
-offset_bottom = 16.0
+offset_left = -7.455
+offset_top = -3.11
+offset_right = 7.545
+offset_bottom = 11.89
 theme_override_styles/panel = SubResource("StyleBoxFlat_06236")
 metadata/_edit_use_anchors_ = true
 
@@ -586,7 +658,7 @@ parent = NodePath("..")
 modulate = Color(0, 0.545098, 1, 1)
 light_mask = 2
 visibility_layer = 4
-position = Vector2(-4, 0)
+position = Vector2(-4, -1)
 shape = SubResource("CapsuleShape2D_kbc84")
 disabled = true
 
@@ -627,6 +699,8 @@ unique_name_in_owner = true
 parent = NodePath("..")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_0edyx")
+volume_db = 10.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/attack" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/death" method="_on_animation_player_animation_finished"]

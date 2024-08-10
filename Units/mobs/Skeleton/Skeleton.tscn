@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bw4md1mc31gwl"]
+[gd_scene load_steps=34 format=3 uid="uid://bw4md1mc31gwl"]
 
 [ext_resource type="Script" path="res://Units/mobs/Skeleton/Skeleton.gd" id="2_nemj3"]
 [ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://UI/HealthBar.tscn" id="2_p0ssw"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://Components/EnemyStates/enemy_hurt.gd" id="16_to4aj"]
 [ext_resource type="Script" path="res://Components/EnemyStates/enemy_death.gd" id="17_4wcgo"]
 [ext_resource type="PackedScene" uid="uid://dybiqwlm7ddwt" path="res://Components/EnemyStates/EnemyController.tscn" id="19_lewhv"]
+[ext_resource type="AudioStream" uid="uid://g3hgg6lvr7kx" path="res://SFX/sfx_big_bettle_wake_bones_only_01_wav.wav" id="20_bqnp3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pogrd"]
 radius = 9.0
@@ -72,6 +73,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("bone_Impact:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("20_bqnp3")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("bone_Impact:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_xvul8"]
@@ -289,6 +314,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("7_tqrlu")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("bone_Impact:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("20_bqnp3")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("bone_Impact:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_ligug"]
@@ -561,6 +610,9 @@ weapon = NodePath("../HitboxComponent")
 hurtbox = NodePath("../HurtboxComponent")
 VFX = NodePath("../VFXSpawner")
 atkTimer = NodePath("../AttackSpeedTimer")
+
+[node name="bone_Impact" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_bqnp3")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/enemy_block" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/enemy_hurt" method="_on_animation_player_animation_finished"]
