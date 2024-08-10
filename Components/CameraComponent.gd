@@ -23,11 +23,12 @@ signal area_selected
 signal start_move_selection
 
 @onready var box = get_node("../UI/Panel")
+@onready var unitManager = get_node("../UnitManagerComponent")
 
 func _ready():
 	box.visible = false
-	connect("area_selected", Callable(get_parent(), "_on_area_selected"))
-	connect("unit_select", Callable(get_parent(), "_on_unit_select"))
+	connect("area_selected", Callable(unitManager, "_on_area_selected"))
+	connect("unit_select", Callable(unitManager, "_on_unit_select"))
 	
 func _process(delta):
 	#WASD camera support
@@ -62,7 +63,7 @@ func _process(delta):
 			endV= mousePos
 			isDragging = false
 			draw_area(false)
-			emit_signal("area_selected", self)
+			emit_signal("area_selected",self)
 		else:
 			end = start
 			isDragging = false

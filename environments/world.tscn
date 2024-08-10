@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=17 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="PackedScene" uid="uid://y1356xkwesrs" path="res://Components/CameraComponent.tscn" id="1_rwjio"]
 [ext_resource type="Script" path="res://Components/CameraComponent.gd" id="2_2ks7r"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b73stj2stjpgn" path="res://Environments/tilesets/objects/objects.png" id="5_qikpr"]
 [ext_resource type="PackedScene" uid="uid://718fnirmhlum" path="res://Units/Crossbowman/Crossbowman.tscn" id="6_5wgyb"]
 [ext_resource type="Texture2D" uid="uid://b3iower5ond5n" path="res://Environments/tilesets/more-tilesets/decor_16x16.png" id="6_pjv10"]
-[ext_resource type="PackedScene" uid="uid://c4j154hw1rhe8" path="res://Units/Knight/Knight.tscn" id="9_55607"]
+[ext_resource type="Script" path="res://Environments/UnitManagerComponent.gd" id="9_ks85q"]
+[ext_resource type="PackedScene" uid="uid://c4j154hw1rhe8" path="res://Units/Knight/Knight.tscn" id="10_cybv3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpijq"]
 bg_color = Color(0.0627451, 0.796078, 0, 0.180392)
@@ -416,13 +417,16 @@ offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jpijq")
 
 [node name="CameraComponent" parent="." instance=ExtResource("1_rwjio")]
-offset = Vector2(600, 250)
+offset = Vector2(600, 300)
 script = ExtResource("2_2ks7r")
 SPEED = 25.0
 ZOOM_SPEED = 30.0
 ZOOM_MARGIN = 0.1
 ZOOM_MIN = 0.5
 ZOOM_MAX = 3.0
+
+[node name="UnitManagerComponent" type="Node2D" parent="."]
+script = ExtResource("9_ks85q")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -436,15 +440,18 @@ layer_1/y_sort_enabled = true
 layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(851943, 2, 5, 720894, 2, 5, -65538, 2, 5, -65561, 2, 5, -327701, 2, 5, 720869, 2, 5, 1114087, 2, 5, 1048555, 2, 5, 1114111, 2, 5, -327687, 2, 5, -327683, 2, 5, 983013, 524290, 5, 1114109, 524290, 5, 1179630, 655362, 5, 851968, 655362, 5, -27, 655362, 7, -393226, 655362, 7, -131072, 655362, 7, -262168, 131074, 1, -262153, 131074, 1, 917481, 131074, 1, 983036, 131074, 1, 393216, 131074, 1, 589798, 131074, 1, 327674, 655362, 5, -65555, 655362, 5, 786411, 65538, 1, 262141, 2, 5, -196619, 2, 5, 131051, 393218, 7, 65532, 393218, 7, -11, 393218, 7, 655349, 131075, 4, 458733, 131075, 4, 262134, 196611, 4, 524280, 196611, 4)
 
-[node name="Knight" parent="." instance=ExtResource("6_5wgyb")]
-position = Vector2(522, 244)
-
 [node name="Skeleton" parent="." instance=ExtResource("5_oi0kb")]
 position = Vector2(654, 240)
 
 [node name="Skeleton2" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_oi0kb")]
-position = Vector2(591, 209)
+position = Vector2(687, 311)
 health_component = NodePath("../Skeleton/HealthComponent")
 
-[node name="Knight2" parent="." instance=ExtResource("9_55607")]
-position = Vector2(504, 293)
+[node name="Crossbowman" parent="." instance=ExtResource("6_5wgyb")]
+position = Vector2(524, 266)
+
+[node name="Crossbowman2" parent="." instance=ExtResource("6_5wgyb")]
+position = Vector2(466, 350)
+
+[node name="Knight" parent="." instance=ExtResource("10_cybv3")]
+position = Vector2(384, 297)

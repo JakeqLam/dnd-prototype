@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbyclr0g4chln"]
+
+[ext_resource type="Script" path="res://Units/Projectiles/wood-arrow.gd" id="1_qcnbk"]
+[ext_resource type="Script" path="res://Components/ProjectileComponent.gd" id="2_3ubjn"]
+[ext_resource type="Texture2D" uid="uid://r8b47gpphqtn" path="res://Units/Projectiles/wood-arrow.png" id="2_fuo07"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbc84"]
+radius = 1.0
+height = 10.0
+
+[node name="WoodArrow" type="Node2D" groups=["projectile"]]
+script = ExtResource("1_qcnbk")
+
+[node name="ProjectileComponent" type="Area2D" parent="." node_paths=PackedStringArray("projectileType")]
+light_mask = 2
+visibility_layer = 4
+position = Vector2(-1, 0)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_3ubjn")
+projectileType = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileComponent"]
+modulate = Color(0, 0.545098, 1, 1)
+light_mask = 2
+visibility_layer = 5
+position = Vector2(1, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_kbc84")
+
+[node name="Sprite2D" type="Sprite2D" parent="ProjectileComponent"]
+position = Vector2(1, 0)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("2_fuo07")
+
+[connection signal="area_entered" from="ProjectileComponent" to="ProjectileComponent" method="_on_area_entered"]
+[connection signal="body_entered" from="ProjectileComponent" to="ProjectileComponent" method="_on_body_entered"]

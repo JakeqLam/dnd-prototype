@@ -1,12 +1,14 @@
+AudioStreamPlayer2D
+Node2D
+Node
+VisibleOnScreenNotifier2D
+Sprite2D
 TextureProgressBar
 CanvasLayer
 CanvasModulate
 Camera2D
-Node
 Timer
 AnimationPlayer
-Sprite2D
-Node2D
 CollisionShape2D
 Area2D
 Label

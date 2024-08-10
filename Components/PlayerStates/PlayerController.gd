@@ -9,7 +9,7 @@ class_name PlayerController
 @onready var hurtboxCol = get_node("../HurtboxComponent/CollisionShape2D")
 @onready var hitboxCol = get_node("../HitboxComponent/CollisionShape2D")
 @onready var sprite = get_node("../Sprite2D")
-
+@onready var selection = get_node("../Selection")
 #Wired up components
 @export var player: CharacterBody2D
 @export var animPlayer = AnimationPlayer
@@ -19,10 +19,18 @@ class_name PlayerController
 @export var atkTimer: Timer
 
 var enemyTargets = []
+var playerUnits = []
+
 var atkCooldown = false
 var atkSpd: float = 3.0
 
 #Setting UI functions
+
+#selecting a unit
+func enable_selected(value):
+	selection.visible = value
+
+#onHover
 
 #Moving functions
 func move_unit_to_positon(target):
@@ -47,6 +55,9 @@ func move_unit_to_positon(target):
 			weapon.position.x = 16
 			weapon.position.y = -1
 		player.move_and_slide()
+
+#Attack move
+
 #Unit Combat Systems
 func attack_target():
 	atkSpd = player.wpnSpd 
@@ -57,13 +68,17 @@ func attack_target():
 		atkTimer.start()
 		atkCooldown = true
 		return true
-	else:
-		return false
+	return false
 func _on_attack_speed_timer_timeout():
 	if player.isDead == false:
 		if enemy_within_range():
 			atkCooldown = false
-
+func spawn_projectile():
+	var PROJECTILE = player.projectile
+	if PROJECTILE:
+		var projectile = PROJECTILE.instantiate()
+		get_tree().current_scene.add_child(projectile)
+		projectile.global_position =  player.global_position
 #Unit targeting Systems
 func getEnemyTargets():
 	enemyTargets = get_tree().get_nodes_in_group("EnemyTargets")

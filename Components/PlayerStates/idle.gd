@@ -15,12 +15,13 @@ func Enter():
 	animPlayer.play("idle")
 	
 func _input(event: InputEvent):
-	if event.is_action_pressed("right_click"):
-			player.toggle_cursor_state(true)
-			if player.isDead == false:
-				Transitioned.emit(self,"walk")
-	if event.is_action_released("right_click"):
-			player.toggle_cursor_state(false)
+	if player.isSelected == true:
+		if event.is_action_pressed("right_click"):
+				player.toggle_cursor_state(true)
+				if player.isDead == false:
+					Transitioned.emit(self,"walk")
+		if event.is_action_released("right_click"):
+				player.toggle_cursor_state(false)
 	return null
 func Physics_Update(_delta):
 	

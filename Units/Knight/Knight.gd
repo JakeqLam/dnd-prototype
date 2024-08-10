@@ -3,6 +3,8 @@ extends CharacterBody2D
 class_name Knight
 
 @export var health_component : HealthComponent
+@export var playerController : PlayerController
+
 @export var wpnRange:int = 30
 @export var wpnDmgMin:int = 16
 @export var wpnDmgMax:int = 25
@@ -15,10 +17,13 @@ class_name Knight
 var follow_cursor:bool = false
 var currentHP:float = 100
 var isDead:bool = false
+var atkType = "melee"
 
 func toggle_cursor_state(cursorState: bool):
 	follow_cursor = cursorState
-
+func toggle_selected(isSelected: bool):
+	playerController.set_selected(isSelected)
+	
 func _process(_delta):
 	isDead = health_component.getIsDead()
 	

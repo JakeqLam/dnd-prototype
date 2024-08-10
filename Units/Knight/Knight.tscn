@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://c4j154hw1rhe8"]
 
 [ext_resource type="Script" path="res://Units/Crossbowman/Crossbowman.gd" id="1_ys3h1"]
-[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://HealthBar.tscn" id="2_unfvj"]
+[ext_resource type="PackedScene" uid="uid://dpld85rb0smp5" path="res://UI/HealthBar.tscn" id="2_unfvj"]
 [ext_resource type="Texture2D" uid="uid://uac60mxbct7l" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Idle.png" id="3_k0bnc"]
 [ext_resource type="Texture2D" uid="uid://b3mk747e50x3a" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Attack01.png" id="4_i5fud"]
 [ext_resource type="Texture2D" uid="uid://dp8tax823r2xo" path="res://Units/Knight/Knight_art/Knight with shadows/Knight-Block.png" id="5_8ypo6"]
@@ -449,12 +449,13 @@ height = 24.0
 radius = 14.0
 height = 28.0
 
-[node name="Knight" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
+[node name="Knight" type="CharacterBody2D" node_paths=PackedStringArray("playerController", "health_component") groups=["player"]]
 z_index = 1
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_ys3h1")
+playerController = NodePath("PlayerController")
 health_component = NodePath("HealthComponent")
 wpnSpd = 3.15
 moveSpeed = 40
@@ -467,6 +468,8 @@ offset_bottom = -9.195
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
+light_mask = 2
+visibility_layer = 5
 position = Vector2(0.01, 6.625)
 shape = SubResource("CircleShape2D_pogrd")
 debug_color = Color(0.185944, 0.637824, 0.232843, 0.0823529)
@@ -480,6 +483,7 @@ autoplay = "idle"
 
 [node name="Selection" type="Panel" parent="."]
 unique_name_in_owner = true
+visible = false
 visibility_layer = 2
 y_sort_enabled = true
 offset_left = -9.0
